@@ -1,0 +1,1 @@
+# [Another Term](https://github.com/green-green-avk/AnotherTerm) [documentation](https://green-green-avk.github.io/AnotherTerm-docs/) ([wiki](https://github.com/green-green-avk/AnotherTerm/wiki) replacement)
