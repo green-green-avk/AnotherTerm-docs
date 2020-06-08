@@ -1,0 +1,40 @@
+---
+---
+
+@import 'jekyll-theme-hacker';
+
+.btn:active {
+	background: #A3AE67;
+}
+
+.tab-bottom {
+	float: right;
+	float: inline-end;
+	margin-top: 0;
+	width: 2em;
+	height: 2em;
+	padding: 0.5em;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.tab-right {
+	vertical-align: middle;
+	margin: 0;
+	width: 1em;
+	height: 1em;
+	padding: 0.5em;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+kbd {
+	display: inline-block;
+	white-space: nowrap;
+	margin: 0 0.1em;
+	padding: 0.1em 0.6em;
+	border: 1px solid #A3AE67;
+	border-radius: 8px;
+}
+
+.clipboard {}
