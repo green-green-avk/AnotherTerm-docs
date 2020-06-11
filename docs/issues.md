@@ -15,7 +15,8 @@ if it executes bytecode from a signed APK.
 It effectively blocks new files creation by **termsh** (as it interferes with the chrooted paths resolution logic).
 The debug version of the **Another Term** APK with the default Android Studio signature works correct though.
 
-The workaround is pretty simple but I'm lazy: the only known affected device is too old...
+The workaround is relatively simple but pretty ugly and I'm lazy:
+the only known affected device is too old...
 Please, ask me if you think, you need it.
 
 ## USB UART dongles support
