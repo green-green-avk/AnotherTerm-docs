@@ -34,22 +34,20 @@
       </div>
     </header>
 
-    <div class="container">
-{% if page.title %}
-      <h1>{{ page.title | markdownify }}</h1>
-{% endif %}
-      <section id="main_content">
-        {{ content }}
+    <div class="toc">
+      <section id="toc">
+{{ toc_include | markdownify }}
       </section>
     </div>
 
-    <footer>
-      <div class="container">
-        <section id="toc">
-{{ toc_include | markdownify }}
-        </section>
-      </div>
-    </footer>
+    <div class="container">
+      <section id="main_content">
+{% if page.title %}
+        <h1>{{ page.title | markdownify }}</h1>
+{% endif %}
+        {{ content }}
+      </section>
+    </div>
 
     <footer>
       <div class="container">
