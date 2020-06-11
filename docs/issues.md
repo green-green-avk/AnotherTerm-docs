@@ -2,7 +2,8 @@
 title: Known Issues
 ---
 ## Touch screen mouse
-Not all Android setups have the same touch event propagation logic.
+Not all Android setups have the same touch event propagation logic and could improperly support
+[`android:windowEnableSplitTouch="true"`](https://developer.android.com/reference/android/R.attr.html#windowEnableSplitTouch){:target="_blank"}.
 As a result the touch screen mouse feature does not work properly on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2.
 
 The workaround can be a bit complicated...
