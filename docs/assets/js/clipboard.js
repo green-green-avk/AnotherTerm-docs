@@ -2,7 +2,8 @@
 ---
 (function() {
 	if (navigator == null || navigator.clipboard == null) return;
-	const elts = document.getElementsByClassName("clipboard");
+	const elts = Array.from(document.getElementsByClassName("clipboard"))
+		.concat(Array.from(document.getElementsByTagName("clipboard")));
 	for (const elt_c of elts) {
 		const pres = elt_c.getElementsByTagName("pre");
 		const elt = pres.length == 1 ? pres[0] : elt_c;

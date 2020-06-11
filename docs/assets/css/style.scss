@@ -3,6 +3,12 @@
 
 @import 'jekyll-theme-hacker';
 
+footer { background: rgba(0, 0, 0, 0.1); width: 100%; border-top: 1px dashed #b5e853; padding: 20px 0; margin: 40px 0 0 0; }
+
+ul[type="none"] > li { list-style: none; }
+
+ul.no-bullet > li { list-style: none; }
+
 .btn:active {
 	background: #A3AE67;
 }

@@ -1,0 +1,17 @@
+*:not(pre) > code {
+	background: rgba(0, 0, 0, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 0px 3px;
+	margin: 0px -3px;
+	color: #A3AE67;
+	border-radius: 2px;
+}
+
+clipboard {
+	background: rgba(0, 0, 0, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 0px 3px;
+	margin: 0px -3px;
+	color: #A3AE67;
+	border-radius: 2px;
+}

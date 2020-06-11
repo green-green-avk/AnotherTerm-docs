@@ -1,11 +1,29 @@
 ---
-title: 'Linux rootfs sources: linuxcontainers.org'
+title: Installing Linux under PRoot
 ---
+The information provided here is about running third-party software.
+The Another Term author is not responsible for any results of use or misuse of it.
+Use it on your own risk!
+
+## Preface
+
+Technically any Linux distribution can be used:
+[debootstrap](https://wiki.debian.org/Debootstrap){:target="_blank"} utility to prepare a Debian rootfs for example;
+though I see no reason to ignore already prebuilt rootfses (see below).
+
+**Note:** Yes, **Termux** has its own *"minimal base distribution"* but I see no reason to mess with it
+as long as **linuxcontainers.org** already provides us with a very good prebuilt rootfses
+that could be installed just by copy-paste of a short quick install snippet (see next section):
+* **Alpine** if you need it small: ≈15MB with `openssh-client` added (as of version 3.9);
+* **Debian** or **CentOS** if you need it comfortable with a big software repository.
+
+## Making it quick: linuxcontainers.org to the rescue
+
 Their images are licensed under: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/){:target="_blank"}
 
 List of the images: [Page](https://us.images.linuxcontainers.org/){:target="_blank"} / [Index file](https://us.images.linuxcontainers.org/meta/1.0/index-user){:target="_blank"}
 
-Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/install-linuxcontainers.sh>
+Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/install-linuxcontainers.sh>{:target="_blank"}
 
 Install script usage:
 ```
@@ -45,3 +63,10 @@ Copy-paste snippets for download and install (you can specify any distribution a
 ( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S -a debian buster )
 ```
   {:.clipboard}
+
+## Other prebuilt Linux rootfses list
+* PRoot list: <https://proot-me.github.io/#downloads>{:target="_blank"}
+* Alpine: <https://www.alpinelinux.org/downloads/>{:target="_blank"}
+* UserLAnd:
+  * Debian: <https://github.com/CypherpunkArmory/UserLAnd-Assets-Debian/tree/master/assets>{:target="_blank"}
+  * And many others: <https://github.com/CypherpunkArmory?tab=repositories>{:target="_blank"}
