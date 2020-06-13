@@ -20,4 +20,4 @@
 		});
 		elt.parentNode.insertBefore(btn, elt.nextSibling);
 	}
-})()
+})();

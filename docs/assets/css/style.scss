@@ -22,8 +22,17 @@ ul[type="none"] > li { list-style: none; }
 
 ul.no-bullet > li { list-style: none; }
 
+.btn {
+	transition: all 1s ease-out;
+}
+
+.btn:hover {
+	border-color: #A3AE67;
+}
+
 .btn:active {
 	background: #A3AE67;
+	transition: none;
 }
 
 .tab-bottom {
