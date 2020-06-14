@@ -1,5 +1,6 @@
 ---
 title: Installing Linux under PRoot
+head: installing-linux-under-proot.head.html
 ---
 The information provided here is about running third-party software.
 The Another Term author is not responsible for any results of use or misuse of it.
@@ -39,30 +40,16 @@ Uninstall:
 rm -rf "$DATA_DIR/proots/<target_subdir_name>"
 ```
 
-Copy-paste snippets for download and install (you can specify any distribution and release from the list):
+Copy-paste snippets for download and install:
 
-&nbsp;
-* Alpine Edge
-```sh
-( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S -a alpine edge )
-```
-  {:.clipboard}
+<div>
+<select id="distro" class="btn"></select><select id="version" class="btn"></select>
+<pre id="arches" style="display: inline-block; margin: 0; vertical-align: middle; white-space: pre-wrap;"></pre>
+<pre id="snippet" class="clipboard"></pre>
+</div>
+
 [[Alpine key map settings](termkeymap:/v2?4489=%1B%5B15%3B2~&448b=%1B%5B18%3B2~&4485=%1BO2P&488=%1BO2S&48b=%1B%5B18%3B2~&48a=%1B%5B17%3B2~&487=%1BO2R&4487=%1BO2R&485=%1BO2P&489=%1B%5B15%3B2~&486=%1BO2Q&448a=%1B%5B17%3B2~&4486=%1BO2Q&4488=%1BO2S&name=Alpine)]
 (for its specific mapping of <kbd>Shift</kbd>-<kbd>F*</kbd>)
-
-&nbsp;
-* CentOS 8
-```sh
-( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S -a centos 8 )
-```
-  {:.clipboard}
-
-&nbsp;
-* Debian Buster
-```sh
-( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S -a debian buster )
-```
-  {:.clipboard}
 
 ## Other prebuilt Linux rootfses list
 * PRoot list: <https://proot-me.github.io/#downloads>{:target="_blank"}
