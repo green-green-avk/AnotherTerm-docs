@@ -65,4 +65,37 @@ kbd {
 	border-radius: 8px;
 }
 
+overlay {
+	pointer-events: none;
+	display: grid;
+	position: fixed;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	justify-items: center;
+	align-items: center;
+}
+
+overlay.roger {
+	animation: 2s ease-out roger;
+}
+
+@keyframes roger {
+	from {opacity: 0;}
+	10% {opacity: 1;}
+	50% {opacity: 1;}
+	to {opacity: 0;}
+}
+
+roger {
+	pointer-events: none;
+	display: inline-block;
+	font-size: 2em;
+	padding: 1em;
+	background: rgba(0, 0, 0, 0.75);
+	border-radius: 2em;
+	border: 0.1em solid rgba(127, 127, 127, 0.75);
+}
+
 .clipboard {}
