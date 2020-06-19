@@ -28,8 +28,7 @@ It has been solved by introducing `TERMSH_UID` environment variable to be set to
 
 ## Dedicated menu options
 
-<kbd>Send SIGINT</kbd> and <kbd>Send SIGHUP</kbd> --- If the terminal is in a mode, it does not intercept control bytes,
-these options help to send appropriate signals to the foreground process group.
+<kbd>Send a Signal</kbd> --- If the terminal is in a mode, it does not intercept control bytes,
+this option helps to send a signal to the foreground process group.
 
-<kbd>Revoke permissions</kbd> &#x2014; Tools (only **termsh** now) for interaction with the Android environment are supposed
-to be controlled on what they can do. This option removes any granted permissions from the current session permanently.
+<kbd>Session Permissions</kbd> --- Acts exactly as named: provides a way to view / change them.
