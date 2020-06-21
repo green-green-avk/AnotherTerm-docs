@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define `TERMSH_UID` environment variable (see description below) in case,
 you are using any chrooted environment where emulated user ID is not the same as the real one.
 
-Manual as of version <kbd>MkIII</kbd> and later:
+Manual as of version <kbd>MkIIIi</kbd> and later:
 
 ## Location
 
@@ -166,9 +166,10 @@ stdin or stdout will be used respectively.
 cat [&lt;URI&gt; ...]
 </pre></dt>
 <dd>
-Concatenate the stdin (if not a tty or no arguments given)
-and specified URIs content to the stdout.
+Concatenate specified URIs content to the <i>stdout</i>, <code>-</code> is used to represent
+the <i>stdin</i>.
 URIs scheme could be <code>content</code>, <code>http</code> or <code>https</code>.
+If no URIs are given, the <i>stdin</i> will be used.
 <ul type="none">
 <li><code>--insecure</code> &#x2014; connect via HTTPS even in case of invalid certificate.</li>
 </ul>
