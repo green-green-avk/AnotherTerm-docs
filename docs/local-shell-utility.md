@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define `TERMSH_UID` environment variable (see description below) in case,
 you are using any chrooted environment where emulated user ID is not the same as the real one.
 
-Manual as of version <kbd>MkIIIi</kbd> and later:
+Manual as of version <kbd>MkIIIk</kbd> and later:
 
 ## Location
 
@@ -149,29 +149,32 @@ if a URI is specified.
 </dd><br/>
 
 <dt><pre>
-copy [-f|--force] [-fp|--from-path|-fu|--from-uri &lt;from&gt;] [-tp|--to-path|-tu|--to-uri &lt;to&gt;]
+copy [-f|--force] [--insecure] [--progress] [-fp|--from-path|-fu|--from-uri &lt;from&gt;] [-tp|--to-path|-tu|--to-uri &lt;to&gt;]
 </pre></dt>
 <dd>
 Copy content. Only single files are supported now.
-Source URI scheme could be <code>content</code>, <code>http</code> or <code>https</code>.
+The source URI scheme could be <code>content</code>, <code>http</code> or <code>https</code>.
+The destination URI scheme could be <code>content</code> only.
 If <code>&lt;from&gt;</code> or <code>&lt;to&gt;</code> is not specified,
 <i>stdin</i> or <i>stdout</i> will be used respectively.
 <ul type="none">
-<li><code>--insecure</code> &#x2014; connect via HTTPS even in case of invalid certificate.</li>
 <li><code>-f|--force</code> &#x2014; permit destination overwriting.</li>
+<li><code>--insecure</code> &#x2014; connect via HTTPS even in case of invalid certificate.</li>
+<li><code>--progress</code> &#x2014; output current progress to <i>stderr</i>.</li>
 </ul>
 </dd><br/>
 
 <dt><pre>
-cat [&lt;URI&gt; ...]
+cat [--insecure] [--progress] [&lt;URI&gt; ...]
 </pre></dt>
 <dd>
 Concatenate specified URIs content to the <i>stdout</i>, <code>-</code> is used to represent
 the <i>stdin</i>.
-URIs scheme could be <code>content</code>, <code>http</code> or <code>https</code>.
+The URIs scheme could be <code>content</code>, <code>http</code> or <code>https</code>.
 If no URIs are given, the <i>stdin</i> will be used.
 <ul type="none">
 <li><code>--insecure</code> &#x2014; connect via HTTPS even in case of invalid certificate.</li>
+<li><code>--progress</code> &#x2014; output current progress to <i>stderr</i>.</li>
 </ul>
 <h4>Examples:</h4>
 <pre>
@@ -191,7 +194,7 @@ Get the name provided by content provider (or deduced from the URI)*
 </dd><br/>
 
 <dt><pre>
-size &lt;URI&gt;
+size [--insecure] &lt;URI&gt;
 </pre></dt>
 <dd>
 Get the size provided by content provider (or <code>null</code> if not defined)
@@ -305,7 +308,7 @@ with one millisecond granularity.</p>
 
 <h2>Notes:</h2>
 <ul type="none">
-<li>* <code>unnamed</code> is used if name deduction fails and
+<li>* If file name deduction fails, <code>unnamed</code> is used and
 exit code <code>2</code> is returned.</li>
 <li>** Any UI element started by a script will not be shown and block
 until related shell session UI become active.</li>
