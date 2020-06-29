@@ -5,8 +5,8 @@ title: '**termsh**'
 It resides in the native libraries directory in order to prevent accidental deletion
 and the "execute" field in the favorite editor contains proper `TERMSH` variable definition by default.
 
-**Note:** Please, don't forget to define `TERMSH_UID` environment variable (see description below) in case,
-you are using any chrooted environment where emulated user ID is not the same as the real one.
+**Note:** Please, don't forget to define [`TERMSH_UID`](#TERMSH_UID) environment variable (see description below) in case,
+you are using any chrooted environment where an emulated user ID is not the same as the real one.
 
 Manual as of version <kbd>MkIIIk</kbd> and later:
 
@@ -306,16 +306,16 @@ with one millisecond granularity.</p>
 
 </dl>
 
-<h2>Notes:</h2>
-<ul type="none">
-<li>* If file name deduction fails, <code>unnamed</code> is used and
-exit code <code>2</code> is returned.</li>
-<li>** Any UI element started by a script will not be shown and block
-until related shell session UI become active.</li>
-</ul>
+## Notes
 
-<h2>Environment variables:</h2>
-<ul type="none">
-<li><code>TERMSH_UID</code> &#x2014; a real UID of this application used for spoofing detection.
-It should be set by the user in case the emulated UID is different (chrooted environment, for example).</li>
-</ul>
+{: .no-bullet}
+* \* --- If file name deduction fails, `unnamed` is used and
+exit code `2` is returned.
+* ** --- Any UI element started by a script will not be shown and block
+until related shell session UI become active.
+
+## Environment variables
+
+{: .no-bullet}
+* `TERMSH_UID`{:#TERMSH_UID}{:.clipboard} --- a real UID of this application used for spoofing detection.
+It should be set by the user in case the emulated UID is different (chrooted environment, for example).
