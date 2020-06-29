@@ -2,7 +2,7 @@
 layout: doc-xhtml
 title: '**termsh**'
 ---
-Now it resides in the native libraries directory in order to prevent accidental deletion
+It resides in the native libraries directory in order to prevent accidental deletion
 and the "execute" field in the favorite editor contains proper `TERMSH` variable definition by default.
 
 **Note:** Please, don't forget to define `TERMSH_UID` environment variable (see description below) in case,
