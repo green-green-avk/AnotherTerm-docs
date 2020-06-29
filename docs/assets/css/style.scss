@@ -56,6 +56,10 @@ ul.no-bullet > li { list-style: none; }
 	border-bottom-left-radius: 0;
 }
 
+*:not(section):target {
+	text-shadow: white 0 0 2ex, white 0 0 2ex;
+}
+
 kbd {
 	display: inline-block;
 	white-space: nowrap;

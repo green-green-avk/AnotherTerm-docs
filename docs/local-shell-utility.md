@@ -224,7 +224,7 @@ Connect to an USB serial dongle and use <i>stdin</i> / <i>stdout</i>.
 <p><b>Note:</b> Alas, UART port settings
 (<code>&lt;baudrate&gt;</code>, <code>&lt;databits&gt;</code>, <code>&lt;stopbits&gt;</code>, <code>&lt;parity&gt;</code>, <code>&lt;flowcontrol&gt;</code>)
 cannot be applied to Bluetooth dongles using the Android Bluetooth stack.<br/>
-See <a target="_blank" href="https://green-green-avk.github.io/AnotherTerm-docs/issues.html#bluetooth-uart-dongles-support">details</a>.</p>
+See <a target="_blank" href="issues.html#bluetooth-uart-dongles-support">details</a>.</p>
 </dd><br/>
 
 <dt><pre>

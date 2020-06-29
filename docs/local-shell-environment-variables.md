@@ -39,5 +39,5 @@ vars:
 ---
 
 {: .no-bullet}{% for var in page.vars %}
-* `{{ var.name }}`{:.clipboard} --- {{ var.desc }}
+* `{{ var.name }}`{:#{{ var.name }}}{:.clipboard} --- {{ var.desc }}
 {% endfor %}
