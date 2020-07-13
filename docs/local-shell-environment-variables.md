@@ -17,14 +17,25 @@ vars:
   - name: EXTERNAL_DATA_DIR
     desc: an alias to `SHARED_DATA_DIR`.
 
+  - name: PUBLIC_DATA_DIR
+    desc: |
+      the root of the "sdcard".
+      `READ_EXTERNAL_STORAGE` / `WRITE_EXTERNAL_STORAGE` permissions are required.
+
   - name: LIB_DIR
     desc: native binaries path.
 
+  - name: APP_APK
+    desc: |
+      path to the **Another Term** APK.
+
   - name: APP_ID
-    desc: application id.
+    desc: |
+      **Another Term** application id.
 
   - name: APP_VERSION
-    desc: application version.
+    desc: |
+      **Another Term** version.
 
   - name: MY_DEVICE_ABIS
     desc: supported architectures list from the most preferable to the least preferable.
