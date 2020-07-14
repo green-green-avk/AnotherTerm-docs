@@ -33,7 +33,7 @@
 		return '( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S -a ' + distro + ' ' + version + ' )';
 	}
 	// Temporary solution with a CORS proxy. I'll setup my own mirror later.
-	const src = "https://api.allorigins.win/raw?url=https://us.images.linuxcontainers.org/meta/1.0/index-user";
+	const src = "https://cors-anywhere.herokuapp.com/https://us.images.linuxcontainers.org/meta/1.0/index-user";
 	fetch(src).then(resp => {
 			if (!resp.ok) throw resp.statusText;
 			return resp.text();
