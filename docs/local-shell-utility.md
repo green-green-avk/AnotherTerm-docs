@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define [`TERMSH_UID`](#TERMSH_UID) environment variable (see description below) in case,
 you are using any chrooted environment where an emulated user ID is not the same as the real one.
 
-Manual as of version <kbd>MkIIIk</kbd> and later:
+Manual as of version <kbd>MkIIIo</kbd> and later:
 
 ## Location
 
@@ -101,22 +101,26 @@ to use <code>&lt;package&gt;</code> as it's prefix:<br/>
 </dd><br/>
 
 <dt><pre>
-send [&lt;options...&gt;] [--] [&lt;file|URI&gt;]
+send [&lt;options...&gt;] [--] [&lt;file|URI&gt; ...]
 </pre></dt>
 <dd>
-Send (android.intent.action.SEND).
-If no <code>&lt;file|URI&gt;</code> is specified, <i>stdin</i> is used.
+Send (<code>android.intent.action.SEND</code> or <code>android.intent.action.SEND_MULTIPLE</code>).
+<br/><code>&lt;file|URI&gt;</code> is treated as a file path if it does not match
+<code>/^(?:[a-z0-9+.-]+):\/\//i</code>.
+<br/><code>-</code> is used to represent the <i>stdin</i>.
+<br/>If no <code>&lt;file|URI&gt;</code> is specified, the <i>stdin</i> is used.
 <br/>Command exits after a stream was sent or after interaction with user
 if a file or URI is specified.
 <ul type="none">
 <li><code>-N|--notify</code> &#x2014; post a notification instead of open the chooser dialog.</li>
-<li><code>-m|--mime &lt;mime&gt;</code> &#x2014; Mime type, <code>*/*</code> - default.</li>
-<li><code>-n|--name &lt;name&gt;</code> &#x2014; name to use for representing a stream.</li>
+<li><code>-m|--mime &lt;mime&gt;</code> &#x2014; Mime type for an <i>stdin</i> stream or
+a single <code>&lt;file|URI&gt;</code> argument, <code>*/*</code> - default.</li>
+<li><code>-n|--name &lt;name&gt;</code> &#x2014; name to use for representing
+an <i>stdin</i> stream.</li>
 <li><code>-s|--size &lt;size&gt;</code> &#x2014; size in bytes to provide in the query answer
-if input is a stream.
+if input is an <i>stdin</i> stream.
 GMail client, for example, treats absence of the size as zero size even in case of a stream.</li>
-<li><code>-p|--prompt &lt;prompt&gt;</code> &#x2014; to show in chooser dialog.</li>
-<li><code>-u|--uri</code> &#x2014; use URI instead of file.</li>
+<li><code>-p|--prompt &lt;prompt&gt;</code> &#x2014; to show in the chooser dialog.</li>
 </ul>
 </dd><br/>
 
