@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define [`TERMSH_UID`](#TERMSH_UID) environment variable (see description below) in case,
 you are using any chrooted environment where an emulated user ID is not the same as the real one.
 
-Manual as of version <kbd>MkIIIo</kbd> and later:
+Manual as of version <kbd>MkIIIq</kbd> and later:
 
 ## Location
 
@@ -45,7 +45,7 @@ Display notification, <i>stdin</i> will be used if no message argument provided.
 </ul>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_uri"><pre>
 uri [--] &lt;file&gt;
 uri [-m|--mime &lt;mime&gt;] [-n|--name &lt;name&gt;] [-s|--size &lt;size&gt;]
 uri -c|--close-stream [--] &lt;URI&gt;
@@ -62,7 +62,7 @@ when stream is read to its EOF or it can be closed by
 <li><code>-n|--name &lt;name&gt;</code> &#x2014; name to use for representing a stream.</li>
 <li><code>-s|--size &lt;size&gt;</code> &#x2014; size in bytes to provide in the query answer
 if input is a stream.
-GMail client, for example, treats absence of the size as zero size even in case of a stream.</li>
+The Google GMail client, for example, treats absence of the size as zero size even in case of a stream.</li>
 <li><code>-w|--wait</code> &#x2014; wait for the stream until it reaches EOF then closes it and exits;
 <code>$TERMSH</code> termination is also closes the stream. Use when you need to keep a shell pipe line running;<br/>
 example: <code>tar -czv * | $TERMSH uri -w</code></li>
@@ -104,24 +104,46 @@ to use <code>&lt;package&gt;</code> as it's prefix:<br/>
 send [&lt;options...&gt;] [--] [&lt;file|URI&gt; ...]
 </pre></dt>
 <dd>
-Send (<code>android.intent.action.SEND</code> or <code>android.intent.action.SEND_MULTIPLE</code>).
+Send (<i><code>android.intent.action.SEND</code></i> or
+<i><code>android.intent.action.SEND_MULTIPLE</code></i>).
 <br/><code>&lt;file|URI&gt;</code> is treated as a file path if it does not match
 <code>/^(?:[a-z0-9+.-]+):\/\//i</code>.
 <br/><code>-</code> is used to represent the <i>stdin</i>.
-<br/>If no <code>&lt;file|URI&gt;</code> is specified, the <i>stdin</i> is used.
 <br/>Command exits after a stream was sent or after interaction with user
 if a file or URI is specified.
 <ul type="none">
 <li><code>-N|--notify</code> &#x2014; post a notification instead of open the chooser dialog.</li>
-<li><code>-m|--mime &lt;mime&gt;</code> &#x2014; Mime type for an <i>stdin</i> stream or
-a single <code>&lt;file|URI&gt;</code> argument, <code>*/*</code> - default.</li>
+<li><code>-m|--mime &lt;mime&gt;</code> &#x2014; Mime type for an <i>stdin</i> stream,
+<code>*/*</code> - default.</li>
 <li><code>-n|--name &lt;name&gt;</code> &#x2014; name to use for representing
 an <i>stdin</i> stream.</li>
 <li><code>-s|--size &lt;size&gt;</code> &#x2014; size in bytes to provide in the query answer
 if input is an <i>stdin</i> stream.
-GMail client, for example, treats absence of the size as zero size even in case of a stream.</li>
+The Google GMail client, for example, treats absence of the size as zero size even in case of a stream.</li>
 <li><code>-p|--prompt &lt;prompt&gt;</code> &#x2014; to show in the chooser dialog.</li>
+<li><code>--text &lt;text&gt;</code> &#x2014;
+<i><code>android.intent.extra.TEXT</code></i>.</li>
+<li><code>--html &lt;HTML&gt;</code> &#x2014;
+<i><code>android.intent.extra.HTML_TEXT</code></i>.
+<br/><i><code>android.intent.extra.TEXT</code></i> will be set to
+<code>Html.fromHtml(&lt;HTML&gt;)</code>
+if no <code>--text &lt;text&gt;</code> is specified.</li>
+<li><code>--subject &lt;subject&gt;</code> &#x2014;
+<i><code>android.intent.extra.SUBJECT</code></i>.</li>
+<li><code>--email-to &lt;address[ address]...&gt;</code> &#x2014;
+<i><code>android.intent.extra.EMAIL</code></i>.</li>
+<li><code>--email-cc &lt;address[ address]...&gt;</code> &#x2014;
+<i><code>android.intent.extra.CC</code></i>.</li>
+<li><code>--email-bcc &lt;address[ address]...&gt;</code> &#x2014;
+<i><code>android.intent.extra.BCC</code></i>.</li>
 </ul>
+<h4>Examples:</h4>
+<p><pre>convert cat.jpg -grayscale average - | "$TERMSH" send -m image/jpeg --subject 'My cat' --text 'Attached.' -</pre>
+<b>Note:</b> Many applications, including the Google GMail client,
+require the stream size to be known beforehand...
+Streaming will not work with them in the case above.</p>
+<p><pre>convert cat.jpg -grayscale average cat_gray.jpg &amp;&amp; "$TERMSH" send --subject 'My cat' --text 'Attached.' cat_gray.jpg</pre>
+This will.</p>
 </dd><br/>
 
 <dt><pre>

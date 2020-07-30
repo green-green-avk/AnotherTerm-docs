@@ -1,4 +1,4 @@
-- title: Intro
+- title: Introduction
   url: /
 - title: Local Shell
   url: /local-shell.html
@@ -8,12 +8,17 @@
 - title: '**termsh**'
   url: /local-shell-utility.html
   level: 1
+- title: Content sharing with Another Term
+  url: /local-shell-share-input.html
+  level: 1
 - title: Plugins
   url: /local-shell-plugins.html
   level: 1
 - title: Installing Linux under PRoot
   url: /installing-linux-under-proot.html
+  level: 1
 - title: Installing **libusb** for nonrooted Android
   url: /installing-libusb-for-nonrooted-android.html
+  level: 1
 - title: Known Issues
   url: /issues.html
