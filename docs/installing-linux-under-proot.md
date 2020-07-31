@@ -35,6 +35,8 @@ Install script usage:
 
 If you want to access the application's private directory (where all your PRoot rootfses with their metadata are located) from your PRooted environment, see `/etc/proot/run.cfg`.
 
+PRoot run script source: <htts://github.com/green-green-avk/AnotherTerm-scripts/blob/master/assets/run-tpl>{:target="_blank"}
+
 Uninstall:
 ```sh
 rm -rf "$DATA_DIR/proots/<target_subdir_name>"
