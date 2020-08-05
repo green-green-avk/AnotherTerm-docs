@@ -11,6 +11,9 @@
 - title: Content sharing with Another Term
   url: /local-shell-share-input.html
   level: 1
+- title: Start a session by an intent
+  url: /start-a-session-by-an-intent.html
+  level: 1
 - title: Plugins
   url: /local-shell-plugins.html
   level: 1
