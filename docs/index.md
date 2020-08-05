@@ -14,7 +14,8 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 ## Shell features
 
-* passing content between shell and Android applications — [termsh commands list](local-shell-utility.html#main_content);
+* passing content between shell and Android applications — see [**termsh** commands list](local-shell-utility.html#main_content)
+  and [content sharing with Another Term](local-shell-share-input.html#main_content);
 
 * implemented a bit better than Termux:
   * passing descriptors via *SCM_RIGHTS* ancillary messages instead of copying data;
