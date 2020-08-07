@@ -21,7 +21,7 @@ Manual as of version <kbd>MkIIIq</kbd> and later:
 ```
 <ul type="none">
 <li><code>-r|--raw</code> &#x2014; raw mode as set by <code>cfmakeraw()</code> libc function.
-(Beware, <kbd>Ctrl</kbd>-<kbd>C</kbd> etc. are not captured by the terminal in this mode.)</li>
+(Beware, <kbd>Ctrl</kbd>-<kbd>C</kbd> etc. are not captured by a PTY in this mode.)</li>
 </ul>
 
 <h3>Commands:</h3>
