@@ -6,7 +6,7 @@ Not all Android setups have the same touch event propagation logic and could imp
 [`android:windowEnableSplitTouch="true"`](https://developer.android.com/reference/android/R.attr.html#windowEnableSplitTouch){:target="_blank"}.
 As a result the touch screen mouse feature does not work properly on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2.
 
-The workaround can be a bit complicated...
+The workaround looks relatively simple.
 Please, ask me if you think, you need it.
 
 ## termsh
@@ -15,7 +15,7 @@ if it executes bytecode from a signed APK.
 It effectively blocks new files creation by **termsh** (as it interferes with the chrooted paths resolution logic).
 The debug version of the **Another Term** APK with the default Android Studio signature works correct though.
 
-The workaround is relatively simple but pretty ugly and I'm lazy:
+The workaround is possible but pretty ugly and I'm lazy:
 the only known affected device is too old...
 Please, ask me if you think, you need it.
 
