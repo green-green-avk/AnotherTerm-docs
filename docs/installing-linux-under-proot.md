@@ -2,9 +2,9 @@
 title: Installing Linux under PRoot
 head: installing-linux-under-proot.head.html
 ---
-The information provided here is about running third-party software.
+***Note:** The information provided here is about running third-party software.
 The Another Term author is not responsible for any results of use or misuse of it.
-Use it on your own risk!
+Use it on your own risk!*
 
 ## Preface
 
@@ -17,6 +17,10 @@ as long as **linuxcontainers.org** already provides us with a very good prebuilt
 that could be installed just by copy-paste of a short quick install snippet (see next section):
 * **Alpine** if you need it small: ≈15MB with `openssh-client` added (as of version 3.9);
 * **Debian** or **CentOS** if you need it comfortable with a big software repository.
+
+**One more note:** Please, don't hesitate to open new [issues](https://github.com/green-green-avk/AnotherTerm/issues){:target="_blank"}
+(there is no template just write as you wish) if something doesn't work as expected.
+Things are changing and new 3rd-party distributions could trigger some old god-forsaken bugs (mostly in **PRoot**).
 
 ## Making it quick: linuxcontainers.org to the rescue
 
