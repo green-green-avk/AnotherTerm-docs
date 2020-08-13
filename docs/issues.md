@@ -9,15 +9,13 @@ As a result the touch screen mouse feature does not work properly on **Samsung G
 The workaround looks relatively simple.
 Please, ask me if you think, you need it.
 
-## termsh
-It seems, access to `/proc/self/fd/` is restricted for the Dalvik VM process on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2
+## ~termsh~
+~It seems, access to `/proc/self/fd/` is restricted for the Dalvik VM process on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2
 if it executes bytecode from a signed APK.
 It effectively blocks new files creation by **termsh** (as it interferes with the chrooted paths resolution logic).
-The debug version of the **Another Term** APK with the default Android Studio signature works correct though.
+The debug version of the **Another Term** APK with the default Android Studio signature works correct though.~
 
-The workaround is possible but pretty ugly and I'm lazy:
-the only known affected device is too old...
-Please, ask me if you think, you need it.
+Fixed in [<kbd>MkIIIv</kbd>](https://github.com/green-green-avk/AnotherTerm/commit/2d9f6b4a4a9a7f1996d7981aab1002ecf46573dc).
 
 ## USB UART dongles support
 Due to an USB bug in Android itself, it's highly recommended not to use the USB UART
