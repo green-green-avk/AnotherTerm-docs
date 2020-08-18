@@ -17,8 +17,8 @@ Intent parameters to start a session:
 
 **Intent target:** *service*
 
-**Package:**
-`green_green_avk.anotherterm`{:.clipboard}
+**Package (application ID):**
+`green_green_avk.anotherterm`{:.clipboard}[.*variant*]
 
 **Class:**
 `green_green_avk.anotherterm.ControlService`{:.clipboard}

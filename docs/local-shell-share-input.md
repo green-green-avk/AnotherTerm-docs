@@ -8,7 +8,7 @@ from a user selected profile.
 
 Environment variables:
 
-* `INPUT_HTML`{:.clipboard}[&lt;2-n&gt;][`_URI`{:.clipboard}] &#x2014;
+* `INPUT_HTML`{:.clipboard}[2|3|...][`_URI`{:.clipboard}] &#x2014;
   *`android.intent.extra.HTML_TEXT`*
   or *`android.intent.extra.TEXT`* if former is not defined.
   <br/>Suffix `_URI` is used
