@@ -23,5 +23,5 @@
 - title: Installing **libusb** for nonrooted Android
   url: /installing-libusb-for-nonrooted-android.html
   level: 1
-- title: Known Issues
+- title: Bugs and issues
   url: /issues.html

@@ -1,6 +1,30 @@
 ---
-title: Known Issues
+title: Bugs and issues
 ---
+## First of all
+Please, don't hesitate to post them [here](https://github.com/green-green-avk/AnotherTerm/issues) or:
+
+* Linux installation related:
+  [scripts](https://github.com/green-green-avk/AnotherTerm-scripts) /
+  [**PRoot**](https://github.com/green-green-avk/proot/issues) /
+  [**minitar**](https://github.com/green-green-avk/build-libarchive-minitar-android/issues);
+* **libusb** wrapper related:
+  [application service module](https://github.com/green-green-avk/LibUsbManager/issues) /
+  [wrapper library](https://github.com/green-green-avk/libusb-1.0.23-android-helper-service-patch/issues);
+
+or into the other linked repositories of [this project](https://github.com/users/green-green-avk/projects/1).
+
+From time to time I could see some strange "purely Android framework" crash reports on the **Google Play Console**.
+
+**For example:** Someone tried to select something in a text edit field and **Another Term** crashed because there is a problem
+either within the spanned text in this field or the framework itself.
+
+These crash reports are of no use for me as long as they contain nothing but function names / line numbers for a security reason
+and all of them are from the Android framework code.
+
+Your bug reports seem the only way to help with it.
+(I think, it's not a good case to use **Google Analytics**; you probably too.)
+
 ## Touch screen mouse
 Not all Android setups have the same touch event propagation logic and could improperly support
 [`android:windowEnableSplitTouch="true"`](https://developer.android.com/reference/android/R.attr.html#windowEnableSplitTouch){:target="_blank"}.
