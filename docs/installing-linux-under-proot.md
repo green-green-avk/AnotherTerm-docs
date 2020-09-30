@@ -28,6 +28,8 @@ Their images are licensed under: [CC BY-NC-SA 4.0](https://creativecommons.org/l
 
 List of the images: [Page](https://us.images.linuxcontainers.org/){:target="_blank"} / [Index file](https://us.images.linuxcontainers.org/meta/1.0/index-user){:target="_blank"}
 
+PRoot version used: <https://github.com/green-green-avk/proot>{:target="_blank"}
+
 Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/install-linuxcontainers.sh>{:target="_blank"}
 
 Install script usage:
