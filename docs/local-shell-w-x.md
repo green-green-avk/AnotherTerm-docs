@@ -12,7 +12,7 @@ from any file tree locations that is writable by it on Androids&#xA0;10 and high
 
 ## Mitigation
 
-In the nearest days <b>Another Term</b> will be split into two flavors:
+Before November&#xA0;1&#xA0;2020, **Another Term** will be split into two flavors:
 
 * `green_green_avk.anotherterm.oldgood` is still targeting API&#xA0;28
 and published at GitHub only.
@@ -23,9 +23,12 @@ and still published at Google Play.
 will be published in order to provide **PRoot** / **minitar** /
 *possibly some launcher for binaries* for Androids&#xA0;10 and higher.
 
+**Note:** <kbd>MkIIIv18</kbd> will still target API&nbsp;28.
+Only the version after it will target API&nbsp;29.
+
 ## Using **Another Term Shell Plugin - Android&#xA0;10 Essentials**
 
-*<kbd>* Draft *</kbd>*
+***<kbd>* Draft *</kbd>***
 
 1) Install it from Google Play.
 
