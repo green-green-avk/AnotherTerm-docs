@@ -32,3 +32,5 @@ It has been solved by introducing `TERMSH_UID` environment variable to be set to
 this option helps to send a signal to the foreground process group.
 
 <kbd>Session Permissions</kbd> --- Acts exactly as named: provides a way to view / change them.
+
+## [Android&nbsp;10 **w^x** policy](local-shell-w-x.html#main_content){:target="_blank"}

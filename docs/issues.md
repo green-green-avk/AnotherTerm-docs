@@ -36,7 +36,10 @@ As a result the touch screen mouse feature does not work properly on **Samsung G
 The workaround looks relatively simple.
 Please, ask me if you think, you need it.
 
-### termsh
+### Android&nbsp;10 **w^x** policy
+See [here](local-shell-w-x.html#main_content){:target="_blank"}.
+
+### **termsh**
 It seems, access to `/proc/self/fd/` is restricted for the Dalvik VM process on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2
 if it executes bytecode from a signed APK.
 It effectively blocks new files creation by **termsh** (as it interferes with the chrooted paths resolution logic).
