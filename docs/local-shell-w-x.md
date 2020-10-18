@@ -32,18 +32,14 @@ Only the version after it will target API&nbsp;29.
 
 1) Install it from Google Play.
 
-2) Create symlinks
+2) Enable it and set it "Always accessible" in the **Another Term** "Plugins" settings.
+
+3) Call
 ```sh
-cd "$DATA_DIR"
-ln -s "$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials minitar)" minitar
-mkdir -p root/bin
-mkdir -p root/libexec/proot
-ln -s "$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot)" root/bin/proot
-ln -s "$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot-userland)" root/bin/proot-userland
-ln -s "$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot-loader)" root/libexec/proot/loader
-ln -s "$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot-loader32)" root/libexec/proot/loader32
+"$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials minitar)" < some.tar.xz
+
+"$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot)" ...
+"$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot-userland)" ...
 ```
-or just call it directly setting [`PROOT_LOADER`](https://github.com/green-green-avk/proot/blob/master/README.md){:target="_blank"}
-and [`PROOT_LOADER_32`](https://github.com/green-green-avk/proot/blob/master/README.md){:target="_blank"} accordingly.
 
 ## [Related Issue](https://github.com/green-green-avk/AnotherTerm/issues/5){:target="_blank"}
