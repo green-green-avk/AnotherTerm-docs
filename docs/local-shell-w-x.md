@@ -28,13 +28,13 @@ Only the version after it will target API&nbsp;29.
 
 ## Using **Another Term Shell Plugin - Android&#xA0;10 Essentials**
 
-***<kbd>* Draft *</kbd>***
-
-1) Install it from Google Play.
+1) Install it from
+[GitHub](https://github.com/green-green-avk/AnotherTermShellPlugin-Android10Essentials/releases){:target="_blank"}
+(as it seems ***incompatible*** with the Google Play policy).
 
 2) Enable it and set it "Always accessible" in the **Another Term** "Plugins" settings.
 
-3) Install as [prescribed](installing-linux-under-proot.html#main_content){:target="_blank"}
+3) Install a new Linux root as [recommended](installing-linux-under-proot.html#main_content){:target="_blank"}
 
 or fixup your existing installations by executing this snippet:
 ```sh
