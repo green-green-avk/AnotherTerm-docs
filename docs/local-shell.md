@@ -11,6 +11,8 @@ Some people see it as the main Android advantage against iOS. iOS requires Qemu 
 * Android preserves the right to kill all the processes related to an application.
 If you want to run some daemon, keep open at least one terminal window in order to keep it alive.
 
+* Androids&nbsp10 and higher have an [w^x policy](local-shell-w-x.html#main_content){:target="_blank"}.
+
 ## About sandboxes
 
 **PRoot** is able to isolate a rootfs environment on some level with relatively fine access permissions granularity.

@@ -30,7 +30,7 @@
 		}
 	}
 	function wrapIntoScript(distro, version) {
-		return '( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S -a ' + distro + ' ' + version + ' )';
+		return '( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && sh ./$S -a ' + distro + ' ' + version + ' )';
 	}
 	// Temporary solution with a CORS proxy. I'll setup my own mirror later.
 	const src = "https://cors-anywhere.herokuapp.com/https://us.images.linuxcontainers.org/meta/1.0/index-user";

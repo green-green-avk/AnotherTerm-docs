@@ -34,7 +34,7 @@ Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/b
 
 Install script usage:
 ```
-./install-linuxcontainers.sh [-a] <distro> <release> [<target_subdir_name>]
+sh ./install-linuxcontainers.sh [-a] <distro> <release> [<target_subdir_name>]
 
   -a -- non-interactive mode
 ```

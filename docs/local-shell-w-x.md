@@ -34,12 +34,18 @@ Only the version after it will target API&nbsp;29.
 
 2) Enable it and set it "Always accessible" in the **Another Term** "Plugins" settings.
 
-3) Call
-```sh
-"$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials minitar)" < some.tar.xz
+3) Install as [prescribed](installing-linux-under-proot.html#main_content){:target="_blank"}
 
-"$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot)" ...
-"$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot-userland)" ...
+or fixup your existing installations by executing this snippet:
+```sh
+for F in $DATA_DIR/proots/*/root/etc/proot/run
+do
+ "$TERMSH" cat 'https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/assets/run-tpl' > "$F"
+ echo 'PROOT="$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot)"' >> "$F.cfg"
+ echo 'PROOT_USERLAND="$("$TERMSH" plugin green_green_avk.anothertermshellplugin_android10essentials proot-userland)"' >> "$F.cfg"
+done
 ```
+{:.clipboard}
+and manually prepending the "Exectute" field value of each related favorite by `sh `.
 
 ## [Related Issue](https://github.com/green-green-avk/AnotherTerm/issues/5){:target="_blank"}
