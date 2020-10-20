@@ -1,6 +1,11 @@
 ---
 title: Local Shell **w^x** policy in Android&nbsp;10
 ---
+***Note:** The information provided here is about changes in
+[the approach](installing-linux-under-proot.html#main_content){:target="_blank"}
+of running third-party software.
+The Another Term author is not responsible for any results of use or misuse of it.
+Use it on your own risk!*
 
 ## Facts
 
@@ -20,7 +25,7 @@ and published at GitHub only.
 * `green_green_avk.anotherterm` becomes targeting API&#xA0;29
 and still published at Google Play.
 **Another Term Shell Plugin - Android&#xA0;10 Essentials**
-will be published in order to provide **PRoot** / **minitar** /
+is published in order to provide **PRoot** / **minitar** /
 *possibly some launcher for binaries* for Androids&#xA0;10 and higher.
 
 **Note:** <kbd>MkIIIv18</kbd> will still target API&nbsp;28.
