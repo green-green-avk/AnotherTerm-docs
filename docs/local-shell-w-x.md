@@ -34,7 +34,7 @@ Only the version after it will target API&nbsp;29.
 ## Using **Another Term Shell Plugin - Android&#xA0;10 Essentials**
 
 1) Install it from
-[GitHub](https://github.com/green-green-avk/AnotherTermShellPlugin-Android10Essentials/releases){:target="_blank"}
+[GitHub](https://github.com/green-green-avk/AnotherTermShellPlugin-Android10Essentials){:target="_blank"}
 (as it seems ***incompatible*** with the Google Play policy).
 
 2) Enable it and set it "Always accessible" in the **Another Term** "Plugins" settings.
