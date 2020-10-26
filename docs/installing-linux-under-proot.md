@@ -22,6 +22,10 @@ that could be installed just by copy-paste of a short quick install snippet (see
 (there is no template just write as you wish) if something doesn't work as expected.
 Things are changing and new 3rd-party distributions could trigger some old god-forsaken bugs (mostly in **PRoot**).
 
+## Android&nbsp;10 note
+
+See [here](local-shell-w-x.html#main_content){:target="_blank"}.
+
 ## Making it quick: linuxcontainers.org to the rescue
 
 Their images are licensed under: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/){:target="_blank"}
@@ -60,6 +64,7 @@ Copy-paste snippets for download and install:
 (for its specific mapping of <kbd>Shift</kbd>-<kbd>F*</kbd>)
 
 ## Other prebuilt Linux rootfses list
+
 * PRoot list: <https://proot-me.github.io/#downloads>{:target="_blank"}
 * Alpine: <https://www.alpinelinux.org/downloads/>{:target="_blank"}
 * UserLAnd:

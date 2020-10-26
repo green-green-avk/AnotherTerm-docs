@@ -36,7 +36,7 @@ As a result the touch screen mouse feature does not work properly on **Samsung G
 The workaround looks relatively simple.
 Please, ask me if you think, you need it.
 
-### Android&nbsp;10 **w^x** policy
+### The "Linux under PRoot" feature and Android&nbsp;10
 See [here](local-shell-w-x.html#main_content){:target="_blank"}.
 
 ### **termsh**

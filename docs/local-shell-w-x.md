@@ -1,5 +1,5 @@
 ---
-title: Local Shell **w^x** policy in Android&nbsp;10
+title: The "Linux under PRoot" feature and Android&nbsp;10
 ---
 ***Note:** The information provided here is about changes in
 [the approach](installing-linux-under-proot.html#main_content){:target="_blank"}
@@ -16,7 +16,7 @@ from November&#xA0;1&#xA0;2020.
 from any file tree locations that is writable by it on Androids&#xA0;10 and higher.
 This new behavior interferes with the "Linux under PRoot" feature in its current state.
 
-## Mitigation
+## Solution
 
 Before November&#xA0;1&#xA0;2020, **Another Term** will be split into two flavors:
 

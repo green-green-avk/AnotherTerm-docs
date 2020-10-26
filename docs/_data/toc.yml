@@ -23,7 +23,7 @@
 - title: Installing **libusb** for nonrooted Android
   url: /installing-libusb-for-nonrooted-android.html
   level: 1
-- title: '**w^x** policy in Android&nbsp;10'
+- title: Android&nbsp;10 note
   url: /local-shell-w-x.html
   level: 1
 - title: Bugs and issues
