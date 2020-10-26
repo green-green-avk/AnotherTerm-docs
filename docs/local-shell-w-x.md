@@ -14,6 +14,7 @@ from November&#xA0;1&#xA0;2020.
 
 2. An application targeted API >= 29 cannot `execve()` any binaries
 from any file tree locations that is writable by it on Androids&#xA0;10 and higher.
+This new behavior interferes with the "Linux under PRoot" feature in its current state.
 
 ## Mitigation
 
@@ -25,8 +26,12 @@ and published at GitHub only.
 * `green_green_avk.anotherterm` becomes targeting API&#xA0;29
 and still published at Google Play.
 **Another Term Shell Plugin - Android&#xA0;10 Essentials**
-is published in order to provide **PRoot** / **minitar** /
-*possibly some launcher for binaries* for Androids&#xA0;10 and higher.
+is published in order to provide **PRoot** and **minitar**
+for Androids&#xA0;10 and higher
+and thus keep the "Linux under PRoot" feature in a working state.
+(**Another Term** is a multi-purpose tool that's why
+it's better to avoid inflating its size with things that can never be used
+or substituted by users' own implementations.)
 
 **Note:** <kbd>MkIIIv18</kbd> will still target API&nbsp;28.
 Only the version after it will target API&nbsp;29.
