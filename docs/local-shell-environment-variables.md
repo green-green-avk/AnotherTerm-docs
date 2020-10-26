@@ -37,6 +37,10 @@ vars:
     desc: |
       **Another Term** version.
 
+  - name: APP_TARGET_SDK
+    desc: |
+      **Another Term** `targetSdkVersion`.
+
   - name: MY_DEVICE_ABIS
     desc: supported architectures list from the most preferable to the least preferable.
 
