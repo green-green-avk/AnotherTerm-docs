@@ -38,9 +38,19 @@ Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/b
 
 Install script usage:
 ```
-sh ./install-linuxcontainers.sh [-a] <distro> <release> [<target_subdir_name>]
+sh ./install-linuxcontainers.sh [-a] [-d] <distro> <release> [<target_subdir_name>]
 
   -a -- non-interactive mode
+  -d -- do not use minitar and PRoot from a plugin if present
+
+Environment variables:
+  REG_USER - user account name;
+  FAV_SHELL - preferable shell;
+  PROOT - proot location;
+  PROOT_USERLAND - proot userland flavor location;
+  ESSENTIALS_PKG - Application ID of a minitar and PRoot plugin to check.
+
+Run without arguments to see defaults.
 ```
 
 If you want to access the application's private directory (where all your PRoot rootfses with their metadata are located) from your PRooted environment, see `/etc/proot/run.cfg`.
