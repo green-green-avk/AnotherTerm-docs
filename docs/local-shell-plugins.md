@@ -6,6 +6,7 @@ They resembles the **Termux** ones but with an access control and an ability to 
 ## Plugins list
 - <https://github.com/green-green-avk/AnotherTermShellPlugin-BatteryInfo>{:target="_blank"}
 - <https://github.com/green-green-avk/AnotherTermShellPlugin-Location>{:target="_blank"}
+- <https://github.com/green-green-avk/AnotherTermShellPlugin-Android10Essentials>{:target="_blank"}
 
 ## API
 For creating new plugins or other than **Another Term** clients to use existing plugins with.
