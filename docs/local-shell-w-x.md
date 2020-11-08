@@ -9,32 +9,29 @@ Use it on your own risk!*
 
 ## Facts
 
-1. Google enforces target API >= 29 (`targetSdkVersion`) for all application updates at Google Play
-from November&#xA0;1&#xA0;2020.
+1. Google has enforced target API >= 29 (`targetSdkVersion`) for all application updates at Google Play
+since November&#xA0;1&#xA0;2020.
 
-2. An application targeted API >= 29 cannot `execve()` any binaries
-from any file tree locations that is writable by it on Androids&#xA0;10 and higher.
+2. Any application targets API >= 29 cannot `execve()` any binaries
+from file tree locations writable by it on Android&#xA0;10 and higher.
 This new behavior interferes with the "Linux under PRoot" feature in its current state.
 
 ## Solution
 
-Before November&#xA0;1&#xA0;2020, **Another Term** will be split into two flavors:
+**Another Term** was split into two flavors:
 
 * `green_green_avk.anotherterm.oldgood` is still targeting API&#xA0;28
 and published at GitHub only.
 
-* `green_green_avk.anotherterm` becomes targeting API&#xA0;29
-and still published at Google Play.
+* `green_green_avk.anotherterm` became targeting API&#xA0;29
+and is still published at Google Play.
 **Another Term Shell Plugin - Android&#xA0;10 Essentials**
-is published in order to provide **PRoot** and **minitar**
-for Androids&#xA0;10 and higher
+was created in order to provide **PRoot** and **minitar**
+for Android&#xA0;10 and higher
 and thus keep the "Linux under PRoot" feature in a working state.
 (**Another Term** is a multi-purpose tool that's why
 it's better to avoid inflating its size with things that can never be used
 or substituted by users' own implementations.)
-
-**Note:** <kbd>MkIIIv18</kbd> will still target API&nbsp;28.
-Only the version after it will target API&nbsp;29.
 
 ## Using **Another Term Shell Plugin - Android&#xA0;10 Essentials**
 
