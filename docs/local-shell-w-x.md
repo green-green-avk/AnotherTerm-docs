@@ -9,12 +9,14 @@ Use it on your own risk!*
 
 ## Facts
 
-1. Google has enforced target API >= 29 (`targetSdkVersion`) for all application updates at Google Play
+1. Google has enforced target API >= 29 (`targetSdkVersion`)
+for all application updates on Google Play
 since November&#xA0;1&#xA0;2020.
 
 2. Any application targets API >= 29 cannot `execve()` any binaries
 from file tree locations writable by it on Android&#xA0;10 and higher.
-This new behavior interferes with the "Linux under PRoot" feature in its current state.
+This new behavior interferes with the "Linux under PRoot" feature
+in its current state.
 
 ## Solution
 
@@ -24,7 +26,7 @@ This new behavior interferes with the "Linux under PRoot" feature in its current
 and published at GitHub only.
 
 * `green_green_avk.anotherterm` became targeting API&#xA0;29
-and is still published at Google Play.
+and is still published on Google Play.
 **Another Term Shell Plugin - Android&#xA0;10 Essentials**
 was created in order to provide **PRoot** and **minitar**
 for Android&#xA0;10 and higher
