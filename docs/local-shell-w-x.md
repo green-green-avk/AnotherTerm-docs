@@ -23,7 +23,9 @@ in its current state.
 **Another Term** was split into two flavors:
 
 * `green_green_avk.anotherterm.oldgood` is still targeting API&#xA0;28
-and [published on GitHub](https://github.com/green-green-avk/AnotherTerm/releases) only.
+and
+[published on GitHub](https://github.com/green-green-avk/AnotherTerm/releases){:target="_blank"}
+only.
 
 * `green_green_avk.anotherterm` became targeting API&#xA0;29
 and is still published on Google Play.
