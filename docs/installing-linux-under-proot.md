@@ -32,9 +32,9 @@ Their images are licensed under: [CC BY-NC-SA 4.0](https://creativecommons.org/l
 
 List of the images: [Page](https://us.images.linuxcontainers.org/){:target="_blank"} / [Index file](https://us.images.linuxcontainers.org/meta/1.0/index-user){:target="_blank"}
 
-PRoot version used: <https://github.com/green-green-avk/proot>{:target="_blank"}
+PRoot version used: <https://github.com/green-green-avk/proot>{:target="_blank"}{:.long-url}
 
-Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/install-linuxcontainers.sh>{:target="_blank"}
+Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/install-linuxcontainers.sh>{:target="_blank"}{:.long-url}
 
 Install script usage:
 ```
@@ -55,7 +55,7 @@ Run without arguments to see defaults.
 
 If you want to access the application's private directory (where all your PRoot rootfses with their metadata are located) from your PRooted environment, see `/etc/proot/run.cfg`.
 
-PRoot run script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/assets/run-tpl>{:target="_blank"}
+PRoot run script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/assets/run-tpl>{:target="_blank"}{:.long-url}
 
 Uninstall:
 ```sh
@@ -75,8 +75,8 @@ Copy-paste snippets for download and install:
 
 ## Other prebuilt Linux rootfses list
 
-* PRoot list: <https://proot-me.github.io/#downloads>{:target="_blank"}
-* Alpine: <https://www.alpinelinux.org/downloads/>{:target="_blank"}
+* PRoot list: <https://proot-me.github.io/#downloads>{:target="_blank"}{:.long-url}
+* Alpine: <https://www.alpinelinux.org/downloads/>{:target="_blank"}{:.long-url}
 * UserLAnd:
-  * Debian: <https://github.com/CypherpunkArmory/UserLAnd-Assets-Debian/tree/master/assets>{:target="_blank"}
-  * And many others: <https://github.com/CypherpunkArmory?tab=repositories>{:target="_blank"}
+  * Debian: <https://github.com/CypherpunkArmory/UserLAnd-Assets-Debian/tree/master/assets>{:target="_blank"}{:.long-url}
+  * And many others: <https://github.com/CypherpunkArmory?tab=repositories>{:target="_blank"}{:.long-url}

@@ -69,6 +69,11 @@ kbd {
 	border-radius: 8px;
 }
 
+.long-url {
+	display: inline-block;
+	overflow-wrap: anywhere;
+}
+
 overlay {
 	pointer-events: none;
 	display: grid;
