@@ -116,8 +116,12 @@ body {
 	font-size: 2.5mm;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 1.25em;
+}
+
 header h1 {
-	font-size: 1.8em;
+	font-size: 1.875em;
 }
 
 header h1:before {
@@ -125,11 +129,11 @@ header h1:before {
 }
 
 header h2 {
-	font-size: 1.2em;
+	font-size: 1.125em;
 }
 
 #main_content h1 {
-	font-size: 1.8em;
+	font-size: 1.875em;
 }
 
 #main_content h2 {
@@ -137,29 +141,31 @@ header h2 {
 }
 
 #main_content h3 {
-	font-size: 1.2em;
+	font-size: 1.125em;
 }
 
 #main_content h4 {
-	font-size: 0.8em;
+	font-size: 0.875em;
 }
 
 #main_content h5 {
-	font-size: 0.6em;
+	font-size: 0.75em;
+	margin-bottom: 0.375em;
 }
 
 #main_content h6 {
-	font-size: 0.5em;
+	font-size: 0.75em;
+	margin-bottom: 0.375em;
 }
 
 ul, ol {
-	margin-left: 0em;
-	padding-left: 0em;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 li {
 	margin-left: 2em;
-	padding-left: 0em;
+	padding-left: 0;
 }
 
 ul li {
@@ -179,7 +185,20 @@ pre {
 }
 
 .btn {
+	padding: 0.5em 1.625em;
+	border-radius: 3em;
 	font-size: 1em;
+	line-height: 1.5;
+}
+
+.btn .icon {
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 0.5em 0 0;
+	padding: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 }
