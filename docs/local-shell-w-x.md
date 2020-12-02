@@ -18,7 +18,7 @@ from file tree locations writable by it on Android&#xA0;10 and higher.
 This new behavior interferes with the "Linux under PRoot" feature
 in its current state.
 
-## Solution
+## Solutions
 
 **Another Term** was split into two flavors:
 
@@ -29,7 +29,7 @@ only.
 
 * `green_green_avk.anotherterm` became targeting API&#xA0;29
 and is still published on Google Play.
-**Another Term Shell Plugin - Android&#xA0;10 Essentials**
+[**Another Term Shell Plugin - Android&#xA0;10 Essentials**](#plugin)
 was created in order to provide **PRoot** and **minitar**
 for Android&#xA0;10 and higher
 and thus keep the "Linux under PRoot" feature in a working state.
@@ -38,6 +38,7 @@ it's better to avoid inflating its size with things that can never be used
 or substituted by users' own implementations.)
 
 ## Using **Another Term Shell Plugin - Android&#xA0;10 Essentials**
+{:#plugin}
 
 1) Install it from
 [GitHub](https://github.com/green-green-avk/AnotherTermShellPlugin-Android10Essentials){:target="_blank"}
