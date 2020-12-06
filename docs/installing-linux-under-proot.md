@@ -53,6 +53,18 @@ Environment variables:
 Run without arguments to see defaults.
 ```
 
+Directory tree:
+```
+$DATA_DIR/root - auxiliary tools installiation dir
+         |proots/<install-dir-1>
+                |...
+                |<install-dir-n>/root/ - rootfs
+                                     |etc/proot/run - the run script
+                                               |run.cfg - the run script configuration
+                                |tmp - PRoot tmp dir
+                                |run - symlink to the run script
+```
+
 If you want to access the application's private directory (where all your PRoot rootfses with their metadata are located) from your PRooted environment, see `/etc/proot/run.cfg`.
 
 PRoot run script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/assets/run-tpl>{:target="_blank"}{:.long-url}
@@ -62,9 +74,17 @@ Uninstall:
 rm -rf "$DATA_DIR/proots/<target_subdir_name>"
 ```
 
+### Steps
+
+1. If you have Android&nbsp;10 or higher, look for additional steps and explanation [here](local-shell-w-x.html#main_content){:target="_blank"}.
+2. Create a "Local Terminal" favorite with the "Favorite management" permission enabled and run it. A terminal screen will appear.
+3. Select a distribution and version in the form below and copy-paste the code snippet to the termial and run.
+4. ???
+5. PROFIT
+
 Copy-paste snippets for download and install:
 
-<div>
+<div style="border-left: 1px dashed #b5e853; border-right: 1px dashed #b5e853; border-radius: 1em; margin: 0 -1em 0 -1em; padding: 0 1em 0 1em;">
 <select id="distro" class="btn"></select><select id="version" class="btn"></select>
 <pre id="arches" style="display: inline-block; margin: 0; vertical-align: middle; white-space: pre-wrap;"></pre>
 <pre id="snippet" class="clipboard"></pre>
