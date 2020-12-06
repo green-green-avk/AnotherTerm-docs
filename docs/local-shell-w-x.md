@@ -1,5 +1,5 @@
 ---
-title: The "Linux under PRoot" feature and Android&nbsp;10
+title: The&nbsp;"Linux under PRoot" feature and Android&nbsp;10
 ---
 ***Note:** The information provided here is about changes in
 [the approach](installing-linux-under-proot.html#main_content){:target="_blank"}
