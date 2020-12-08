@@ -51,12 +51,12 @@ ul.no-bullet li {
 
 .link-shield:hover {
 	background-color: #A3AE67;
-	box-shadow: 0 0 1em 0.5em #A3AE67;
+	box-shadow: 0 0 1em #A3AE67;
 }
 
 .link-shield:active {
 	background-color: #A3AE67;
-	box-shadow: 0 0 1em 0.5em #A3AE67;
+	box-shadow: 0 0 1em #A3AE67;
 	transition: none;
 }
 
@@ -226,4 +226,13 @@ pre {
 	padding: 0.5em;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
+}
+
+.link-icon-left {
+	vertical-align: middle;
+	margin: 0 0 0 -1em;
+	padding: 0;
+	width: 1em;
+	height: auto;
+	transition: all 1s ease-out;
 }

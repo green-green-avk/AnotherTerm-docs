@@ -11,23 +11,61 @@
 		setTimeout(() => overlay.parentNode.removeChild(overlay), 2000);
 		overlay.className = "roger";
 	}
-	const elts = Array.from(document.getElementsByClassName("clipboard"))
-		.concat(Array.from(document.getElementsByTagName("clipboard")));
-	for (const elt_c of elts) {
-		const pres = elt_c.getElementsByTagName("pre");
-		const elt = pres.length == 1 ? pres[0] : elt_c;
-		const isBlock = window.getComputedStyle(elt).display == "block";
-		const btn = document.createElement("img");
-		btn.src = "{{ '/assets/images/clipboard.png' | relative_url }}";
-		btn.className = "btn tab-" + (isBlock ? "bottom" : "right");
-		if (isBlock) {
-			btn.style.position = "relative";
-			btn.style.top = "-" + window.getComputedStyle(elt).marginBottom;
+	(function() {
+		const elts = Array.from(document.getElementsByClassName("clipboard"))
+			.concat(Array.from(document.getElementsByTagName("clipboard")));
+		for (const elt_c of elts) {
+			const pres = elt_c.getElementsByTagName("pre");
+			const elt = pres.length == 1 ? pres[0] : elt_c;
+			const isBlock = window.getComputedStyle(elt).display == "block";
+			const btn = document.createElement("img");
+			btn.src = "{{ '/assets/images/clipboard.png' | relative_url }}";
+			btn.className = "btn tab-" + (isBlock ? "bottom" : "right");
+			if (isBlock) {
+				btn.style.position = "relative";
+				btn.style.top = "-" + window.getComputedStyle(elt).marginBottom;
+			}
+			btn.addEventListener("click", function() {
+				navigator.clipboard.writeText(elt.innerText.trim());
+				roger("Copied to clipboard");
+			});
+			elt.parentNode.insertBefore(btn, elt.nextSibling);
 		}
-		btn.addEventListener("click", function() {
-			navigator.clipboard.writeText(elt.innerText.trim());
-			roger("Copied to clipboard");
-		});
-		elt.parentNode.insertBefore(btn, elt.nextSibling);
-	}
+	})();
+	(function() {
+		const root = document.getElementById("main_content");
+		const elts = Array.from(root.getElementsByTagName("h1"))
+			.concat(Array.from(root.getElementsByTagName("h2")))
+			.concat(Array.from(root.getElementsByTagName("h3")));
+		for (const elt of elts) {
+			if (elt.id == null) continue;
+			const mark = document.createElement("img");
+			mark.src = "{{ '/assets/images/link.svg' | relative_url }}";
+			const url = new URL(window.location.href);
+			url.hash = elt.id
+				.replace(/^main_content_title$/, "main_content");
+			mark.className = "link-icon-left";
+			mark.style.visibility = "hidden";
+			mark.style.opacity = 0;
+			mark.addEventListener("click", function() {
+				navigator.clipboard.writeText(url.href);
+				roger("Link is copied to clipboard");
+			});
+			const c = document.createElement("span");
+			while (elt.firstChild != null)
+				c.appendChild(elt.removeChild(elt.firstChild));
+			c.style.whiteSpace = "normal";
+			elt.style.whiteSpace = "nowrap";
+			elt.insertBefore(c, elt.firstChild);
+			elt.insertBefore(mark, elt.firstChild);
+			elt.addEventListener("mouseover", function() {
+				mark.style.visibility = "visible";
+				mark.style.opacity = 1;
+			});
+			elt.addEventListener("mouseout", function() {
+				mark.style.visibility = "hidden";
+				mark.style.opacity = 0;
+			});
+		}
+	})();
 })();

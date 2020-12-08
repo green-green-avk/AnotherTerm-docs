@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+ width="auto" height="1em"
+ viewBox="0 0 8 8">
+ <style>
+  .line {
+   fill: none;
+   stroke: #FFFFFF;
+   stroke-width: 0.5;
+   stroke-opacity: 1;
+   stroke-linejoin: round;
+  }
+ </style>
+ <path class="line" transform="rotate(30,4,4)"
+  d="M3.5,6q-1,0,-1,-1v-2q0,-1,1,-1h1q1,0,1,1v2q0,1,-1,1v1q2,0,2,-2v-2q0,-2,-2,-2h-1q-2,0,-2,2v2q0,2,2,2z"/>
+</svg>
