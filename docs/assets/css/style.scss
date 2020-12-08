@@ -24,11 +24,12 @@ ul.no-bullet li {
 }
 
 .btn {
+	box-shadow: none;
 	transition: all 1s ease-out;
 }
 
 .btn:hover {
-	border-color: #A3AE67;
+	box-shadow: 0 0 1em #A3AE67;
 }
 
 .btn:active {
@@ -36,17 +37,25 @@ ul.no-bullet li {
 	transition: none;
 }
 
+option {
+	background-color: #000;
+	color: #FFF;
+}
+
 .link-shield {
-	transition: all 1s ease-out;
-	border-radius: 0.5em;
 	margin: 1em;
+	padding: 0;
 	line-height: 1;
+	border-radius: 0.5em;
+	transition: all 1s ease-out;
 }
 
 .link-shield img {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	vertical-align: middle;
+	border-radius: 0.5em;
+	background: #2222 center url('../images/shield-bg.svg');
 }
 
 .link-shield:hover {
@@ -173,7 +182,7 @@ li {
 }
 
 ul li {
-	list-style-image:url('../images/li.svg');
+	list-style-image: url('../images/li.svg');
 	margin-left: 1.5em;
 }
 

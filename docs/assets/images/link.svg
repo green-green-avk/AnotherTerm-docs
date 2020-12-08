@@ -6,7 +6,7 @@
  <style>
   .line {
    fill: none;
-   stroke: #FFFFFF;
+   stroke: #FFF;
    stroke-width: 0.5;
    stroke-opacity: 1;
    stroke-linejoin: round;
