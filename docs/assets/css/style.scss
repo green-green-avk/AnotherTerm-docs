@@ -29,10 +29,13 @@ ul.no-bullet li {
 }
 
 .btn:hover {
-	box-shadow: 0 0 1em #A3AE67;
+	box-shadow: 0 0 0.5em #A3AE67;
+	border-color: #A3AE67;
 }
 
 .btn:active {
+	box-shadow: 0 0 0.5em #A3AE67;
+	border-color: #A3AE67;
 	background: #A3AE67;
 	transition: none;
 }
@@ -43,7 +46,7 @@ option {
 }
 
 .link-shield {
-	margin: 1em;
+	margin: 0.5em;
 	padding: 0;
 	line-height: 1;
 	border-radius: 0.5em;
