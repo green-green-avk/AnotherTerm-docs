@@ -185,8 +185,15 @@ li {
 }
 
 ul li {
-	list-style-image: url('../images/li.svg');
+/*	list-style-image: url('../images/li.svg');*/
+	list-style-image: none;
+	list-style-type: '>>';
 	margin-left: 1.5em;
+}
+
+ul li::marker {
+	content: '>>';
+	color: #B5E853;
 }
 
 ul[type="none"] li,
