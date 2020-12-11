@@ -16,6 +16,7 @@ div.toc {
 	float: right;
 	border-left: 1px dashed #b5e853;
 	border-bottom: 1px dashed #b5e853;
+	padding-right: 1em;
 }
 
 ul[type="none"] li,
@@ -128,7 +129,7 @@ roger {
 @media (max-width: 12in) {
 
 body {
-	font-size: 2.5mm;
+	font-size: 3mm;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -185,21 +186,37 @@ li {
 }
 
 ul li {
-/*	list-style-image: url('../images/li.svg');*/
 	list-style-image: none;
-	list-style-type: '>>';
-	margin-left: 1.5em;
+	list-style-type: '>> ';
+	margin-left: 2em;
 }
 
 ul li::marker {
-	content: '>>';
+	content: '>> ';
 	color: #B5E853;
 }
 
+.toc ul li {
+	list-style-type: '>';
+	margin-left: 1em;
+}
+
+.toc ul li::marker {
+	content: '>';
+}
+
 ul[type="none"] li,
-ul.no-bullet li,
-dd {
+ul.no-bullet li {
 	list-style: none;
+	margin-left: 1em;
+}
+
+ul[type="none"] li::marker,
+ul.no-bullet li::marker {
+	content: none;
+}
+
+dd {
 	margin-left: 1em;
 }
 
@@ -222,6 +239,17 @@ pre {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+}
+
+@media (max-width: 5in) {
+
+div.toc {
+	padding-left: 5%;
+	padding-right: 5%;
+	border-left: none;
+	float: none;
 }
 
 }
