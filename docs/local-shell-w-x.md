@@ -60,4 +60,6 @@ done
 {:.clipboard}
 and manually prepending the "Exectute" field value of each related favorite by `sh `.
 
-## [Related Issue](https://github.com/green-green-avk/AnotherTerm/issues/5){:target="_blank"}
+## Related Issues
+
+* [#5](https://github.com/green-green-avk/AnotherTerm/issues/5){:target="_blank"}

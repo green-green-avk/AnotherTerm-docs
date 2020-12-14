@@ -36,36 +36,31 @@
 		const root = document.getElementById("main_content");
 		const elts = Array.from(root.getElementsByTagName("h1"))
 			.concat(Array.from(root.getElementsByTagName("h2")))
-			.concat(Array.from(root.getElementsByTagName("h3")));
+			.concat(Array.from(root.getElementsByTagName("h3")))
+			.concat(Array.from(root.getElementsByTagName("dt")));
 		for (const elt of elts) {
-			if (elt.id == null) continue;
+			if (elt.id == null || elt.id == "") continue;
 			const mark = document.createElement("img");
 			mark.src = "{{ '/assets/images/link.svg' | relative_url }}";
 			const url = new URL(window.location.href);
 			url.hash = elt.id
 				.replace(/^main_content_title$/, "main_content");
 			mark.className = "link-icon-left";
-			mark.style.visibility = "hidden";
+			mark.style.position = "absolute";
 			mark.style.opacity = 0;
 			mark.addEventListener("click", function() {
 				navigator.clipboard.writeText(url.href);
 				roger("Link is copied to clipboard");
 			});
-			const c = document.createElement("span");
-			while (elt.firstChild != null)
-				c.appendChild(elt.removeChild(elt.firstChild));
-			c.style.whiteSpace = "normal";
-			elt.style.whiteSpace = "nowrap";
-			elt.insertBefore(c, elt.firstChild);
+			elt.style.position = "relative";
 			elt.insertBefore(mark, elt.firstChild);
 			elt.addEventListener("mouseover", function() {
-				mark.style.visibility = "visible";
 				mark.style.opacity = 1;
 			});
 			elt.addEventListener("mouseout", function() {
-				mark.style.visibility = "hidden";
 				mark.style.opacity = 0;
 			});
+
 		}
 	})();
 })();

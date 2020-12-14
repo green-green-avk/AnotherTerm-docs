@@ -24,16 +24,16 @@ Manual as of version <kbd>MkIIIq</kbd> and later:
 (Beware, <kbd>Ctrl</kbd>-<kbd>C</kbd> etc. are not captured by a PTY in this mode.)</li>
 </ul>
 
-<h3>Commands:</h3>
+<h3 id="commands">Commands</h3>
 
 <dl>
 
-<dt><pre>
+<dt id="cmd_help"><pre>
 help
 </pre></dt>
 <dd>This message.</dd><br/>
 
-<dt><pre>
+<dt id="cmd_notify"><pre>
 notify [-i|--id &lt;id&gt;] [--] [&lt;message&gt;]
 notify -r|--remove -i|--id &lt;id&gt;
 </pre></dt>
@@ -71,7 +71,7 @@ example: <code>tar -czv * | $TERMSH uri -w</code></li>
 </ul>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_view_edit"><pre>
 view|edit [&lt;options...&gt;] [--] &lt;file|URI&gt;
 </pre></dt>
 <dd>
@@ -100,7 +100,7 @@ to use <code>&lt;package&gt;</code> as it's prefix:<br/>
 </ul>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_send"><pre>
 send [&lt;options...&gt;] [--] [&lt;file|URI&gt; ...]
 </pre></dt>
 <dd>
@@ -146,7 +146,7 @@ Streaming will not work with them in the case above.</p>
 This will.</p>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_pick"><pre>
 pick [&lt;options...&gt;] [--] [&lt;path&gt;]
 </pre></dt>
 <dd>
@@ -174,7 +174,7 @@ if a URI is specified.
 <pre>"$TERMSH" pick | tar -zxv</pre>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_copy"><pre>
 copy [-f|--force] [--insecure] [--progress] [-fp|--from-path|-fu|--from-uri &lt;from&gt;] [-tp|--to-path|-tu|--to-uri &lt;to&gt;]
 </pre></dt>
 <dd>
@@ -190,7 +190,7 @@ If <code>&lt;from&gt;</code> or <code>&lt;to&gt;</code> is not specified,
 </ul>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_cat"><pre>
 cat [--insecure] [--progress] [&lt;URI&gt; ...]
 </pre></dt>
 <dd>
@@ -212,21 +212,21 @@ uri="$("$TERMSH" pick -u)"
 </pre>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_name"><pre>
 name &lt;URI&gt;
 </pre></dt>
 <dd>
 Get the name provided by content provider (or deduced from the URI)*
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_size"><pre>
 size [--insecure] &lt;URI&gt;
 </pre></dt>
 <dd>
 Get the size provided by content provider (or <code>null</code> if not defined)
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_serial"><pre>
 serial -l|--list
 serial [-a|--adapter &lt;address&gt;] [-i|--insecure] [&lt;baudrate&gt;[/&lt;databits&gt;[/&lt;stopbits&gt;[/&lt;parity&gt;[/&lt;flowcontrol&gt;]]]]]
 </pre></dt>
@@ -253,7 +253,7 @@ cannot be applied to Bluetooth dongles using the Android Bluetooth stack.<br/>
 See <a target="_blank" href="issues.html#bluetooth-uart-dongles-support">details</a>.</p>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_uri-encode"><pre>
 uri-encode &lt;string&gt; [&lt;allowed&gt;]
 </pre></dt>
 <dd>URL-escape a <code>&lt;string&gt;</code> but don't touch characters from
@@ -266,12 +266,12 @@ It escapes according to the <code>application/x-www-form-urlencoded</code> MIME 
 <code>[A-Za-z0-9_!.~\'()*-]</code> are always unaffected.</p>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_uri-decode"><pre>
 uri-decode &lt;string&gt;
 </pre></dt>
 <dd>URL-unescape a <code>&lt;string&gt;</code>.</dd><br/>
 
-<dt><pre>
+<dt id="cmd_request-permission"><pre>
 request-permission &lt;name&gt; &lt;message&gt;
 </pre></dt>
 <dd>Ask the user by a dialog.
@@ -288,12 +288,12 @@ request-permission &lt;name&gt; &lt;message&gt;
 </ul>
 </dd><br/>
 
-<dt><pre>
+<dt id="cmd_revoke-permission"><pre>
 revoke-permission &lt;name&gt;
 </pre></dt>
 <dd>Just revoke.</dd><br/>
 
-<dt><pre>
+<dt id="cmd_has-favorite"><pre>
 has-favorite &lt;name&gt;
 </pre></dt>
 <dd>Return <code>0</code> exit code if a favorite named <code>&lt;name&gt;</code> exists,
@@ -301,7 +301,7 @@ has-favorite &lt;name&gt;
 <p><em>'Favorite management' permission must be granted in a favorite starting the shell from which
 this command is called. Exit code <code>1</code> will be returned otherwise.</em></p></dd><br/>
 
-<dt><pre>
+<dt id="cmd_create-shell-favorite"><pre>
 create-shell-favorite [-t|--term &lt;terminal_string&gt;] &lt;name&gt; &lt;execute&gt;
 </pre></dt>
 <dd>Create a shell favorite named <code>&lt;name&gt;</code>
@@ -310,7 +310,7 @@ It fails with exit code <code>2</code> if <code>&lt;name&gt;</code> is already i
 <p><em>'Favorite management' permission must be granted in a favorite starting the shell from which
 this command is called. Exit code <code>1</code> will be returned otherwise.</em></p></dd><br/>
 
-<dt><pre>
+<dt id="cmd_plugin"><pre>
 plugin [--] &lt;package_name&gt; [&lt;args...&gt;]
 plugin -h|--help [--] &lt;package_name&gt;
 </pre></dt>
@@ -318,7 +318,7 @@ plugin -h|--help [--] &lt;package_name&gt;
 <p><em>'Plugins execution' permission must be granted in a favorite starting the shell from which
 this command is called. Exit code <code>1</code> will be returned otherwise.</em></p></dd><br/>
 
-<dt><pre>
+<dt id="cmd_wakelock"><pre>
 wakelock [is-held|acquire [&lt;timeout&gt;]|release]
 </pre></dt>
 <dd><p><code>is-held</code> returns:
