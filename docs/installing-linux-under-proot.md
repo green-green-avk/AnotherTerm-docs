@@ -65,6 +65,8 @@ $DATA_DIR/root - auxiliary tools installiation dir
                                 |run - symlink to the run script
 ```
 
+[`$TERMSH`](local-shell-utility.html#main_content) is bound as `/bin/termsh`.
+
 If you want to access the application's private directory (where all your PRoot rootfses with their metadata are located) from your PRooted environment, see `/etc/proot/run.cfg`.
 
 PRoot run script source: <https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/assets/run-tpl>{:target="_blank"}{:.long-url}

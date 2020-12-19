@@ -12,7 +12,7 @@ Environment variables:
   *`android.intent.extra.HTML_TEXT`*
   or *`android.intent.extra.TEXT`* if former is not defined.
   <br/>Suffix `_URI` is used
-  if input text is &gt; 4096&#160;B and cached by Another Term under a content URI
+  if input text is &gt;&nbsp;4096&nbsp;B and cached by Another&nbsp;Term under a content URI
   (see [`termsh uri`](local-shell-utility.html#cmd_uri)).
   <br/>Any text will be represented as an HTML and encoded appropriately if needed.
 
