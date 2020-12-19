@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define [`TERMSH_UID`](#TERMSH_UID) environment variable (see description below) in case,
 you are using any chrooted environment where an emulated user ID is not the same as the real one.
 
-Manual as of version <kbd>MkIIIq</kbd> and later:
+Manual as of version <kbd>MkIIIv26</kbd> and later:
 
 ## Location
 
@@ -210,6 +210,61 @@ If no URIs are given, the <i>stdin</i> will be used.
 uri="$("$TERMSH" pick -u)"
 "$TERMSH" cat "$uri" > "$("$TERMSH" name "$uri").new"
 </pre>
+</dd><br/>
+
+<dt id="cmd_with-uris"><pre>
+with-uris &lt;name&gt; &lt;arg0&gt; [&lt;args...&gt;] &lt;URIs&gt;
+</pre></dt>
+<dd>
+It's supposed to be used with <span markdown="1">
+[content sharing, viewing and editing](local-shell-share-input.html#main_content)
+</span> feature.
+It runs a command with specified <code>&lt;URIs&gt;</code> represented by the <i>procfs fd</i> entries.
+The <code>&lt;URIs&gt;</code> is a single argument with the entries delimited by whitespaces.
+The URIs' content provider must be able to return the whole file descriptors for them.
+<p>It returns the actual command exit status and <code>127</code> or <code>1</code>
+in case of own failure.</p>
+<p>Effect is the same as of
+<pre>execp(name, arg0, args..., "/proc/PID/fd/FD_URI0 /proc/PID/fd/FD_URI1 ...")</pre></p>
+<h4>Example:</h4>
+<p markdown="1">(Presuming
+[Linux under PRoot](installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue)
+is installed.)</p>
+<div markdown="1">`~/edit.sh`:
+
+```sh
+#!/bin/bash
+
+msg() {
+ echo
+ echo "$1"
+ echo
+ read -n 1 -s -p 'Press any key' -t 5
+}
+
+if [[ -n $INPUT_URI ]]
+then
+ case "$INPUT_MIME" in
+ text/*)
+  termsh with-uris mcedit mcedit "$INPUT_URI"
+  ;;
+ *)
+  termsh with-uris mcview mcview "$INPUT_URI"
+  ;;
+ esac
+else
+ msg 'Nothing to open'
+fi
+```
+
+</div>
+<div markdown="1">*Execute* field in favorite settings:
+
+```sh
+/system/bin/sh "$DATA_DIR/proots/linuxcontainers-debian-buster/run" '' '~/edit.sh'
+```
+
+</div>
 </dd><br/>
 
 <dt id="cmd_name"><pre>
