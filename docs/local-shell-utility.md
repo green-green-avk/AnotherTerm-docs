@@ -275,7 +275,7 @@ else
 fi
 ```
 </div>
-<div markdown="1">*Execute* field in favorite settings:
+<div markdown="1">**"Execute"** field in favorite settings:
 ```sh
 /system/bin/sh "$DATA_DIR/proots/linuxcontainers-debian-buster/run" '' '~/edit.sh'
 ```
