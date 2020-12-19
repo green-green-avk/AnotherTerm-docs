@@ -25,7 +25,7 @@ when `termsh uri -l` can be used.
   or *`android.intent.extra.TEXT`* if former is not defined.
   <br/>Suffix `_URI` is used
   if input text is &gt;&nbsp;4096&nbsp;B and cached by Another&nbsp;Term under a content URI
-  (see [`termsh uri`](local-shell-utility.html#cmd_uri)).
+  (see [`termsh uri`](local-shell-utility.html#cmd_uri){:target="_blank"}).
   <br/>Any text will be represented as an HTML and encoded appropriately if needed.
 
 * `INPUT_URIS`{:.clipboard} &#x2014;
@@ -51,5 +51,5 @@ when `termsh uri -l` can be used.
 * `INPUT_URI`{:.clipboard} &#x2014;
   content URI.
 
-[`termsh with-uris`](local-shell-utility.html#cmd_with-uris)
+[`termsh with-uris`](local-shell-utility.html#cmd_with-uris){:target="_blank"}
 is supposed to be used with the `INPUT_URI`.

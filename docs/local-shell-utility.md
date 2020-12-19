@@ -92,9 +92,11 @@ to use <code>&lt;package&gt;</code> as it's prefix:<br/>
 <code>foo.bar/.Act</code> => <code>foo.bar/foo.bar.Act</code>).</li>
 </ul>
 <h4>Example:</h4>
-<pre>
+<div markdown="1">
+```sh
 "$TERMSH" view -r 'green_green_avk.anotherterm.FavoriteEditorActivity' -u 'local-terminal:/opts?execute=my_awesome_script'
-</pre>
+```
+</div>
 </li>
 <li><code>-u|--uri</code> &#x2014; use URI instead of file.</li>
 </ul>
@@ -138,12 +140,21 @@ if no <code>--text &lt;text&gt;</code> is specified.</li>
 <i><code>android.intent.extra.BCC</code></i>.</li>
 </ul>
 <h4>Examples:</h4>
-<p><pre>convert cat.jpg -grayscale average - | "$TERMSH" send -m image/jpeg --subject 'My cat' --text 'Attached.' -</pre>
-<b>Note:</b> Many applications, including the Google GMail client,
+<div markdown="1">
+
+```sh
+convert cat.jpg -grayscale average - | "$TERMSH" send -m image/jpeg --subject 'My cat' --text 'Attached.' -
+```
+**Note:** Many applications, including the Google GMail client,
 require the stream size to be known beforehand...
-Streaming will not work with them in the case above.</p>
-<p><pre>convert cat.jpg -grayscale average cat_gray.jpg &amp;&amp; "$TERMSH" send --subject 'My cat' --text 'Attached.' cat_gray.jpg</pre>
-This will.</p>
+Streaming will not work with them in the case above.
+
+```sh
+convert cat.jpg -grayscale average cat_gray.jpg && "$TERMSH" send --subject 'My cat' --text 'Attached.' cat_gray.jpg
+```
+This will.
+
+</div>
 </dd><br/>
 
 <dt id="cmd_pick"><pre>
@@ -170,8 +181,12 @@ if a URI is specified.
 <li><code>-f|--force</code> &#x2014; permit destination overwriting.</li>
 </ul>
 <h4>Examples:</h4>
-<pre>"$TERMSH" pick .</pre>
-<pre>"$TERMSH" pick | tar -zxv</pre>
+<div markdown="1">
+```sh
+"$TERMSH" pick .
+"$TERMSH" pick | tar -zxv
+```
+</div>
 </dd><br/>
 
 <dt id="cmd_copy"><pre>
@@ -203,13 +218,15 @@ If no URIs are given, the <i>stdin</i> will be used.
 <li><code>--progress</code> &#x2014; output current progress to <i>stderr</i>.</li>
 </ul>
 <h4>Examples:</h4>
-<pre>
+<div markdown="1">
+```sh
 "$TERMSH" cat "content://$APP_ID.linksprovider/html/some_url_to_be_wrapped_into_html"
-</pre>
-<pre>
+```
+```sh
 uri="$("$TERMSH" pick -u)"
 "$TERMSH" cat "$uri" > "$("$TERMSH" name "$uri").new"
-</pre>
+```
+</div>
 </dd><br/>
 
 <dt id="cmd_with-uris"><pre>
@@ -217,7 +234,7 @@ with-uris &lt;name&gt; &lt;arg0&gt; [&lt;args...&gt;] &lt;URIs&gt;
 </pre></dt>
 <dd>
 It's supposed to be used with <span markdown="1">
-[content sharing, viewing and editing](local-shell-share-input.html#main_content)
+[content sharing, viewing and editing](local-shell-share-input.html#main_content){:target="_blank"}
 </span> feature.
 It runs a command with specified <code>&lt;URIs&gt;</code> represented by the <i>procfs fd</i> entries.
 The <code>&lt;URIs&gt;</code> is a single argument with the entries delimited by whitespaces.
@@ -228,10 +245,9 @@ in case of own failure.</p>
 <pre>execp(name, arg0, args..., "/proc/PID/fd/FD_URI0 /proc/PID/fd/FD_URI1 ...")</pre></p>
 <h4>Example:</h4>
 <p markdown="1">(Presuming
-[Linux under PRoot](installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue)
+[Linux under PRoot](installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue){:target="_blank"}
 is installed.)</p>
 <div markdown="1">`~/edit.sh`:
-
 ```sh
 #!/bin/bash
 
@@ -249,6 +265,8 @@ then
   termsh with-uris mcedit mcedit "$INPUT_URI"
   ;;
  *)
+  export USE_OWN=1 # - marker for mc.ext
+  # to avoid using Android applications as viewers
   termsh with-uris mcview mcview "$INPUT_URI"
   ;;
  esac
@@ -256,14 +274,11 @@ else
  msg 'Nothing to open'
 fi
 ```
-
 </div>
 <div markdown="1">*Execute* field in favorite settings:
-
 ```sh
 /system/bin/sh "$DATA_DIR/proots/linuxcontainers-debian-buster/run" '' '~/edit.sh'
 ```
-
 </div>
 </dd><br/>
 

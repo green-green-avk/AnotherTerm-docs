@@ -27,6 +27,9 @@ Your bug reports seem the only way to help with it.
 
 ## Known issues
 
+### The "Linux under PRoot" feature and Android&nbsp;10
+See solutions [here](local-shell-w-x.html#main_content){:target="_blank"}.
+
 ### Touch screen mouse
 Not all Android deployments have the same touch event propagation logic and could improperly support
 [`android:windowEnableSplitTouch="true"`](https://developer.android.com/reference/android/R.attr.html#windowEnableSplitTouch){:target="_blank"}.
@@ -35,9 +38,6 @@ As a result the touch screen mouse feature does not work properly on **Samsung G
 
 The workaround looks relatively simple.
 Please, ask me if you think, you need it.
-
-### The "Linux under PRoot" feature and Android&nbsp;10
-See [here](local-shell-w-x.html#main_content){:target="_blank"}.
 
 ### **termsh**
 It seems, access to `/proc/self/fd/` is restricted for the Dalvik VM process on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2

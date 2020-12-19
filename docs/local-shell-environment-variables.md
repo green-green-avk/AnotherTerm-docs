@@ -57,4 +57,4 @@ vars:
 * `{{ var.name }}`{:#{{ var.name }}}{:.clipboard} --- {{ var.desc }}
 {% endfor %}
 
-See also: [Content sharing with Another Term](local-shell-share-input.html#main_content)
+See also: [Content sharing with Another Term](local-shell-share-input.html#main_content){:target="_blank"}
