@@ -26,6 +26,9 @@ Manual as of version <kbd>MkIIIv26</kbd> and later:
 
 <h3 id="commands">Commands</h3>
 
+<p><b>Note:</b> Any UI elements (except notifications) and related commands
+will block until a terminal activity corresponding to the related session is shown.</p>
+
 <dl>
 
 <dt id="cmd_help"><pre>
