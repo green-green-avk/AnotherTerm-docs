@@ -286,14 +286,15 @@ fi
 name &lt;URI&gt;
 </pre></dt>
 <dd>
-Get the name provided by content provider (or deduced from the URI)*
+Get the name provided by content provider (or deduced from the URI)*.
 </dd><br/>
 
 <dt id="cmd_size"><pre>
 size [--insecure] &lt;URI&gt;
 </pre></dt>
 <dd>
-Get the size provided by content provider (or <code>null</code> if not defined)
+Get the size provided by content provider or HTTP <code>content-length</code> header
+(or <code>null</code> if not defined).
 </dd><br/>
 
 <dt id="cmd_serial"><pre>
