@@ -59,8 +59,8 @@ $DATA_DIR/root - auxiliary tools installiation dir
          |proots/<install-dir-1>
                 |...
                 |<install-dir-n>/root/ - rootfs
-                                     |etc/proot/run - the run script
-                                               |run.cfg - the run script configuration
+                                |    |etc/proot/run - the run script
+                                |              |run.cfg - the run script configuration
                                 |tmp - PRoot tmp dir
                                 |run - symlink to the run script
 ```
