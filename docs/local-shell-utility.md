@@ -129,7 +129,7 @@ The Google GMail client, for example, treats absence of the size as zero size ev
 <li><code>--text &lt;text&gt;</code> &#x2014;
 <i><code>android.intent.extra.TEXT</code></i>.</li>
 <li><code>--text-stdin</code> &#x2014;
-the same but from the <i>stdin</i>***.</li>
+the same but from the <i>stdin</i><span markdown="1">[^2]</span>.</li>
 <li><code>--html &lt;HTML&gt;</code> &#x2014;
 <i><code>android.intent.extra.HTML_TEXT</code></i>.
 <br/><i><code>android.intent.extra.TEXT</code></i> will be set to
@@ -137,7 +137,7 @@ the same but from the <i>stdin</i>***.</li>
 if no <code>--text &lt;text&gt;</code> or
 <code>--text-stdin</code> is specified.</li>
 <li><code>--html-stdin</code> &#x2014;
-the same but from the <i>stdin</i>***.</li>
+the same but from the <i>stdin</i><span markdown="1">[^2]</span>.</li>
 <li><code>--subject &lt;subject&gt;</code> &#x2014;
 <i><code>android.intent.extra.SUBJECT</code></i>.</li>
 <li><code>--email-to &lt;address[ address]...&gt;</code> &#x2014;
@@ -177,7 +177,7 @@ pick [&lt;options...&gt;] [--] [&lt;path&gt;]
 Show document picker dialog and put the selected content (or its URI) to:
 <ul>
 <li>file if <code>&lt;path&gt;</code> is a file;</li>
-<li>file with the name provided by the content provider (or deduced from the URI)*
+<li>file with the name provided by the content provider (or deduced from the URI)<span markdown="1">[^1]</span>
 if <code>&lt;path&gt;</code> is a directory;</li>
 <li><i>stdout</i> if nothing is specified.</li>
 </ul>
@@ -211,6 +211,7 @@ The source URI scheme could be <code>content</code>, <code>http</code> or <code>
 The destination URI scheme could be <code>content</code> only.
 If <code>&lt;from&gt;</code> or <code>&lt;to&gt;</code> is not specified,
 <i>stdin</i> or <i>stdout</i> will be used respectively.
+<code>&lt;to&gt;</code> can be a directory<span markdown="1">[^1]</span>.
 <ul type="none">
 <li><code>-f|--force</code> &#x2014; permit destination overwriting.</li>
 <li><code>--insecure</code> &#x2014; connect via HTTPS even in case of invalid certificate.</li>
@@ -299,7 +300,7 @@ fi
 name &lt;URI&gt;
 </pre></dt>
 <dd>
-Get the name provided by content provider (or deduced from the URI)*.
+Get the name provided by content provider (or deduced from the URI)<span markdown="1">[^1]</span>.
 </dd><br/>
 
 <dt id="cmd_size"><pre>
@@ -424,17 +425,12 @@ with one millisecond granularity.</p>
 
 </dl>
 
-## Notes
-
-{: .no-bullet}
-* \* --- If file name deduction fails, `unnamed` is used and
-exit code `2` is returned.
-* ** --- Any UI element started by a script will not be shown and block
-until related shell session UI become active.
-* *** --- The scratchpad marshalling limit applies.
-
 ## Environment variables
 
 {: .no-bullet}
 * `TERMSH_UID`{:#TERMSH_UID}{:.clipboard} --- a real UID of this application used for spoofing detection.
 It should be set by the user in case the emulated UID is different (chrooted environment, for example).
+
+[^1]: If file name deduction fails, `unnamed` is used and exit code `2` is returned.
+
+[^2]: The scratchpad marshalling limit applies.

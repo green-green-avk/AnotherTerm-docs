@@ -58,3 +58,4 @@ vars:
 {% endfor %}
 
 See also: [Content sharing with Another Term](local-shell-share-input.html#main_content){:target="_blank"}
+and [Start a session by an intent](start-a-session-by-an-intent.html#main_content){:target="_blank"}

@@ -3,7 +3,7 @@ title: Start a session by an intent
 ---
 Android has no means to determine the intent source
 (the Android own permission model is not flexible enough to pair arbitrary applications)
-and the automation software like Tasker
+and the automation software like **Tasker**
 do not usually provide any simple means to bind to a service
 (in which case an application credentials check is possible).
 So, a *"token"* field has been added to the favorite parameters
@@ -42,6 +42,6 @@ and prefixed by `INPUT_`. `…FAV_TOKEN` value will be hidden.
 
 ### Autorun on boot
 
-[Automate](https://llamalab.com/automate/){:target="_blank"} [flow file example]({{ '/assets/files/boot.flo' | relative_url }})
+An [**Automate**](https://llamalab.com/automate/){:target="_blank"} [flow file example]({{ '/assets/files/boot.flo' | relative_url }})
 ![Thumbnail]({{ '/assets/files/boot.png' | relative_url }}){:style="display:block"}
-***Note:** The Automate global setting "Run on system startup" must be set and the flow launched.*
+***Note:** The **Automate** global setting "Run on system startup" must be set and the flow launched.*

@@ -21,5 +21,5 @@ Copy-paste snippet to download, build and install:
 ```
 {:.clipboard}
 
-**Note:** Don't forget that busybox is usually statically linked with libusb, so install `usbutils` package if you want to use `lsusb` etc.
+**Note:** Don't forget that BusyBox is usually statically linked with libusb, so install `usbutils` package if you want to use `lsusb` etc.
 (in case of Alpine Linux at least).
