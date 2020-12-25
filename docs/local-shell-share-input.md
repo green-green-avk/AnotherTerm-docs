@@ -22,6 +22,12 @@ There are no other related time limitations in Android.
 
 ## Environment variables
 
+* `INPUT_ACTION`{:.clipboard} &#x2014;
+  `Intent.getAction()`.
+
+* `INPUT_MIME`{:.clipboard} &#x2014;
+  `Intent.getType()`.
+
 ### Sharing
 
 * `INPUT_HTML`{:.clipboard}[2|3|...][`_URI`{:.clipboard}] &#x2014;
@@ -35,9 +41,6 @@ There are no other related time limitations in Android.
 * `INPUT_URIS`{:.clipboard} &#x2014;
   a space separated list of *`android.intent.extra.STREAM`*.
 
-* `INPUT_MIME`{:.clipboard} &#x2014;
-  `Intent.getType()`.
-
 * `INPUT_SUBJECT`{:.clipboard} &#x2014;
   *`android.intent.extra.SUBJECT`*.
 
@@ -45,12 +48,6 @@ There are no other related time limitations in Android.
   *`android.intent.extra.{EMAIL|CC|BCC}`* respectively.
 
 ### Viewing and editing
-
-* `INPUT_ACTION`{:.clipboard} &#x2014;
-  `Intent.getAction()`.
-
-* `INPUT_MIME`{:.clipboard} &#x2014;
-  `Intent.getType()`.
 
 * `INPUT_URI`{:.clipboard} &#x2014;
   content URI.

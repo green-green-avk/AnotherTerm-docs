@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define [`TERMSH_UID`](#TERMSH_UID) environment variable (see description below) in case,
 you are using any chrooted environment where an emulated user ID is not the same as the real one.
 
-Manual as of version <kbd>MkIIIv26</kbd> and later:
+Manual as of version <kbd>MkIIIv27</kbd> and later:
 
 ## Location
 
@@ -128,11 +128,16 @@ The Google GMail client, for example, treats absence of the size as zero size ev
 <li><code>-p|--prompt &lt;prompt&gt;</code> &#x2014; to show in the chooser dialog.</li>
 <li><code>--text &lt;text&gt;</code> &#x2014;
 <i><code>android.intent.extra.TEXT</code></i>.</li>
+<li><code>--text-stdin</code> &#x2014;
+the same but from the <i>stdin</i>***.</li>
 <li><code>--html &lt;HTML&gt;</code> &#x2014;
 <i><code>android.intent.extra.HTML_TEXT</code></i>.
 <br/><i><code>android.intent.extra.TEXT</code></i> will be set to
 <code>Html.fromHtml(&lt;HTML&gt;)</code>
-if no <code>--text &lt;text&gt;</code> is specified.</li>
+if no <code>--text &lt;text&gt;</code> or
+<code>--text-stdin</code> is specified.</li>
+<li><code>--html-stdin</code> &#x2014;
+the same but from the <i>stdin</i>***.</li>
 <li><code>--subject &lt;subject&gt;</code> &#x2014;
 <i><code>android.intent.extra.SUBJECT</code></i>.</li>
 <li><code>--email-to &lt;address[ address]...&gt;</code> &#x2014;
@@ -157,6 +162,11 @@ convert cat.jpg -grayscale average cat_gray.jpg && "$TERMSH" send --subject 'My 
 ```
 This will.
 
+Or just [resharing](local-shell-share-input.html#main_content){:target="_blank"} text content by value:
+```sh
+"$TERMSH" cat "$INPUT_URI" | "$TERMSH" send --text-stdin
+```
+can be useful to create an e-mail letter using a text file as its content.
 </div>
 </dd><br/>
 
@@ -300,6 +310,14 @@ Get the size provided by content provider or HTTP <code>content-length</code> he
 (or <code>null</code> if not defined).
 </dd><br/>
 
+<dt id="cmd_mime"><pre>
+mime [--insecure] &lt;URI&gt;
+</pre></dt>
+<dd>
+Get the mime-type provided by content provider or HTTP <code>content-type</code> header
+(or <code>*/*</code> if not defined).
+</dd><br/>
+
 <dt id="cmd_serial"><pre>
 serial -l|--list
 serial [-a|--adapter &lt;address&gt;] [-i|--insecure] [&lt;baudrate&gt;[/&lt;databits&gt;[/&lt;stopbits&gt;[/&lt;parity&gt;[/&lt;flowcontrol&gt;]]]]]
@@ -413,6 +431,7 @@ with one millisecond granularity.</p>
 exit code `2` is returned.
 * ** --- Any UI element started by a script will not be shown and block
 until related shell session UI become active.
+* *** --- The scratchpad marshalling limit applies.
 
 ## Environment variables
 
