@@ -50,7 +50,10 @@ vars:
   - name: SHELL_SESSION_TOKEN
     desc: |
       associated with related data including **termsh** permissions.
-      It can be unset to avoid propagation of any permissions.
+      It can be unset to avoid propagation of any permissions and
+      block any dialogs and activities opening by **termsh**.
+      Use [`termsh revoke-permission`](local-shell-utility.html#cmd_revoke-permission)
+      for granular revokation.
 ---
 
 {: .no-bullet}{% for var in page.vars %}
