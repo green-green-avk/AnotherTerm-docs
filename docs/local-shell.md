@@ -24,8 +24,8 @@ This is the way this access control has been implemented:
 * `SHELL_SESSION_TOKEN` environment variable contains the unique key of this session data
 and is used by **termsh** to determine its rights.
 * The session data is revoked when the terminal window is closed.
-* `SHELL_SESSION_TOKEN` is also used to determine when a sessions has its terminal window shown
-as **termsh** blocks exectution and awaits it to show any dialog or activity.
+* `SHELL_SESSION_TOKEN` is also used to determine when a session has its terminal window shown
+because **termsh** blocks exectution and awaits it to show any dialog or activity.
 
 Another concern was about checking the server side credentials from inside of a PRooted environment to filter out possible spoofing.
 It has been solved by introducing `TERMSH_UID` environment variable to be set to the real UID.
