@@ -430,8 +430,8 @@ with one millisecond granularity.</p>
 {: .no-bullet}
 * `TERMSH_UID`{:#TERMSH_UID}{:.clipboard} --- a real UID of this application used for spoofing detection.
 It should be set by the user in case the emulated UID is different (chrooted environment, for example).
-* `SHELL_SESSION_TOKEN`{:#SHELL_SESSION_TOKEN}{:.clipboard} --- session permissions and terminal window token.
-Set by **Another Term** itself.
+* `SHELL_SESSION_TOKEN`{:#SHELL_SESSION_TOKEN}{:.clipboard} --- a session permissions and terminal window token.
+Set by **Another&nbsp;Term** itself.
 
 [^1]: If file name deduction fails, `unnamed` is used and exit code `2` is returned.
 
