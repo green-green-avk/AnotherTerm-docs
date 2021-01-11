@@ -86,6 +86,15 @@ rm -rf "$DATA_DIR/proots/<target_subdir_name>"
 
 Copy-paste snippets for download and install:
 
+with chooser:
+
+```sh
+( S=repo-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && sh ./$S )
+```
+{:.clipboard}
+
+or:
+
 <div style="border-left: 1px dashed #b5e853; border-right: 1px dashed #b5e853; border-radius: 1em; margin: 0 -1em 0 -1em; padding: 0 1em 0 1em;">
 <select id="distro" class="btn"></select><select id="version" class="btn"></select>
 <pre id="arches" style="display: inline-block; margin: 0; vertical-align: middle; white-space: pre-wrap;"></pre>
