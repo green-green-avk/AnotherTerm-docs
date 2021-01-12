@@ -74,7 +74,7 @@ $DATA_DIR
    |run - symlink to the run script
 ```
 
-[`$TERMSH`](local-shell-utility.html#main_content) is bound as `/bin/termsh`.
+[`$TERMSH`](local-shell-utility.html#main_content){:target="_blank"} is bound as `/bin/termsh`.
 
 If you want to access the application's private directory (where all your PRoot rootfses with their metadata are located) from your PRooted environment, see `/etc/proot/run.cfg`.
 
