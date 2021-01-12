@@ -57,21 +57,21 @@ Directory tree:
 ```
 $DATA_DIR
 |root - auxiliary tools installiation dir
- |proots
-  |<install-dir-1>
-  |...
-  |<install-dir-n>
-   |root - rootfs
-   ||.proot.meta - PRoot meta data (will be refactored in future)
-   ||etc
-   |||proot
-   ||||run - run script
-   ||||run.cfg - run script configuration
-   ||||...
-   |||...
-   ||...
-   |tmp - PRoot tmp dir
-   |run - symlink to the run script
+|proots
+ |<install-dir-1>
+ |...
+ |<install-dir-n>
+  |root - rootfs
+  ||.proot.meta - PRoot meta data (will be refactored in future)
+  ||etc
+  |||proot
+  ||||run - run script
+  ||||run.cfg - run script configuration
+  ||||...
+  |||...
+  ||...
+  |tmp - PRoot tmp dir
+  |run - symlink to the run script
 ```
 
 [`$TERMSH`](local-shell-utility.html#main_content){:target="_blank"} is bound as `/bin/termsh`.
