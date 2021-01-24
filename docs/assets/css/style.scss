@@ -102,13 +102,13 @@ overlay {
 	pointer-events: none;
 	display: grid;
 	position: fixed;
+	z-index: 32;
 	left: 0%;
 	right: 0%;
 	top: 0%;
 	bottom: 0%;
 	justify-items: center;
 	align-items: center;
-	z-index: 32;
 }
 
 overlay.roger {
@@ -265,6 +265,7 @@ div.toc {
 .tab-bottom {
 	float: right;
 	float: inline-end;
+	z-index: 16;
 	margin-top: 0;
 	width: 2em;
 	height: 2em;
