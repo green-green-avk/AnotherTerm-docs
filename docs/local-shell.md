@@ -1,5 +1,5 @@
 ---
-title: Local Shell
+title: Local shell
 ---
 ## Environment
 

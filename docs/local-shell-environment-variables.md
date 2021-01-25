@@ -1,5 +1,5 @@
 ---
-title: Local Shell Environment Variables
+title: Local shell environment variables
 vars:
   - name: DATA_DIR
     desc: default persistent data directory.

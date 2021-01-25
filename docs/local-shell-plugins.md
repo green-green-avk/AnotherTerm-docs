@@ -1,5 +1,5 @@
 ---
-title: Local Shell Plugins
+title: Local shell plugins
 ---
 They resembles the **Termux** ones but with an access control and an ability to add them by creating new APKs (without recompiling the existing common one).
 

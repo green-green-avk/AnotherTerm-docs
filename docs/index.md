@@ -29,7 +29,7 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * access USB and Bluetooth serial dongles right from the shell:
   ```sh
-  ... | $TERMSH serial 9600 | ...
+  ... | "$TERMSH" serial 9600 | ...
   ```
   or **python3** for example:
   ```python

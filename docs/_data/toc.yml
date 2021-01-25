@@ -1,8 +1,8 @@
 - title: Introduction
   url: /
-- title: Local Shell
+- title: Local shell
   url: /local-shell.html
-- title: Environment Variables
+- title: Environment variables
   url: /local-shell-environment-variables.html
   level: 1
 - title: '**termsh**'
