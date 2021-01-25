@@ -90,7 +90,7 @@ class Serial:
   if insecure:
    cmd += ('-i',)
   if cfg is not None:
-   cmd += str(cfg)
+   cmd += (str(cfg),)
   self.proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
   self.err = None
 
