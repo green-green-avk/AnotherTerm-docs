@@ -2,6 +2,8 @@
 title: Serial port
 ---
 ## HTTP server for remote access
+
+{:style="clear:both"}
 ### server.py
 ```python
 #!/usr/bin/python3

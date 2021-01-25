@@ -1,14 +1,13 @@
 ---
 title: Processing content with Linux applications
 ---
-[^1]: It is supposed that PRooted environment is installed by [the linuxcontainers.org script]({{ '/installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue' | relative_url }}) and the "execute" field should be corrected accordingly to a desired root FS directory.
-
 ## Open or save
 
 For **mcedit** lovers. Feel free to use **Emacs** though.
 
 [Session profile settings quick URI](local-terminal:/opts?perm_favmgmt=false&shareable=true&charset=UTF-8&screen_cols=0&screen_rows=0&keymap=&wakelock.acquire_on_connect=true&terminal_string=xterm&perm_pluginexec=true&font_size_auto=false&wakelock.release_on_disconnect=true&execute=%22%24DATA_DIR%2Fproots%2Flinuxcontainers-debian-buster%2Frun%22%20''%20'~%2Fcontent-open-save.sh'&name=Open%20or%20Save&terminate.on_disconnect=true)[^1]
 
+{:style="clear:both"}
 ### content-open-save.sh
 ```sh
 #!/bin/bash
@@ -117,3 +116,5 @@ send_as_text() {
 }
 ```
 {:.clipboard}
+
+[^1]: It is supposed that PRooted environment is installed by [the linuxcontainers.org script]({{ '/installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue' | relative_url }}) and the "execute" field should be corrected accordingly to a desired root FS directory.
