@@ -26,5 +26,13 @@
 - title: Android&nbsp;10 note
   url: /local-shell-w-x.html
   level: 1
+- title: Usage examples
+  level: 1
+- title: Processing content with Linux applications
+  url: /local-shell-examples/open-inside.html
+  level: 2
+- title: Serial port
+  url: /local-shell-examples/serial-port.html
+  level: 2
 - title: Bugs and issues
   url: /issues.html
