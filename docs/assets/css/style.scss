@@ -37,20 +37,24 @@ ul.no-bullet li {
 }
 
 .btn:hover {
-	box-shadow: 0 0 0.5em #A3AE67;
 	border-color: #A3AE67;
+	box-shadow: 0 0 0.5em #A3AE67;
 }
 
 .btn:active {
-	box-shadow: 0 0 0.5em #A3AE67;
-	border-color: #A3AE67;
 	background: #A3AE67;
+	border-color: #A3AE67;
+	box-shadow: 0 0 0.5em #A3AE67;
 	transition: none;
 }
 
 option {
 	background-color: #000;
 	color: #FFF;
+}
+
+#downloads .btn {
+	margin: 0.2ex;
 }
 
 .link-shield {
