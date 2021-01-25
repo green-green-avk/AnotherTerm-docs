@@ -35,16 +35,44 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
   ```python
   import subprocess
 
+  class ConnException(Exception):
+   pass
+
   class Serial:
    def __init__(self):
-    self.proc = subprocess.Popen(('termsh', 'serial', '9600'), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=None)
+    self.proc = subprocess.Popen(('termsh', 'serial'), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    self.err = None
+
+   def check(self):
+    if self.err is not None:
+     raise ConnException(self.err)
+    r = self.proc.poll()
+    if r is None:
+     return
+    self.err = self.proc.stderr.read().decode()
+    raise ConnException(self.err)
 
    def read(self, n):
-    return self.proc.stdout.read(n)
+    self.check()
+    try:
+     return self.proc.stdout.read(n)
+    except BrokenPipeError as e:
+     raise ConnException(e)
+
+   def read1(self, n):
+    self.check()
+    try:
+     return self.proc.stdout.read1(n)
+    except BrokenPipeError as e:
+     raise ConnException(e)
 
    def write(self, v):
-    self.proc.stdin.write(v)
-    self.proc.stdin.flush()
+    self.check()
+    try:
+     self.proc.stdin.write(v)
+     self.proc.stdin.flush()
+    except BrokenPipeError as e:
+     raise ConnException(e)
 
    def stop(self):
     self.proc.terminate()
@@ -56,5 +84,6 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
     self.stop()
     return False
   ```
+  {:.clipboard}
 
 * but no `am` command analog yet.
