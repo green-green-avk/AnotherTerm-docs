@@ -3,6 +3,8 @@ title: Serial port
 ---
 ## HTTP server for remote access
 
+**Note:** `termsh` here is a PRoot binding of `"$TERMSH"`.
+
 {:style="clear:both"}
 ### server.py
 ```python
