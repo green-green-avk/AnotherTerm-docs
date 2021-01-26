@@ -3,7 +3,13 @@ title: Serial port
 ---
 ## HTTP server for remote access
 
-To read: `GET http://<host:port>/readbytes`; responds as described in <https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event_stream_format>{:target="_blank"} as
+To read:
+```
+GET http://<host:port>/readbytes
+```
+responds as described in
+<https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#event_stream_format>{:target="_blank"}
+as
 ```
 event: bytes
 data: <couples_of_hexidecimal_digits>
@@ -11,7 +17,10 @@ data: <couples_of_hexidecimal_digits>
 ...
 ```
 
-To write: `GET http://<host:port>/writebytes/<couples_of_hexidecimal_digits>`
+To write:
+```
+GET http://<host:port>/writebytes/<couples_of_hexidecimal_digits>
+```
 
 **Note:** `termsh` here is a PRoot binding of `"$TERMSH"`.
 
