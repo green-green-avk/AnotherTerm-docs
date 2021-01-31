@@ -92,7 +92,9 @@ msg_ok() {
 }
 
 msg_wait() {
+ echo -en '\e[?1004h'
  read -n 1 -s -p '   *** Press any key ***'
+ echo -en '\e[?1004l'
 }
 
 save_uri() {
