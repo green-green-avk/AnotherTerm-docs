@@ -119,4 +119,4 @@ send_as_text() {
 ```
 {:.clipboard}
 
-[^1]: It is supposed that the enclosing PRooted environment is installed by [the linuxcontainers.org script]({{ '/installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue' | relative_url }}) and the "execute" field should be corrected accordingly to a desired root FS directory.
+[^1]: It is supposed that the enclosing PRooted environment is installed by [the linuxcontainers.org script]({{ '/installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue' | relative_url }}){:target="_blank"} and the "execute" field should be corrected accordingly to a desired root FS directory.

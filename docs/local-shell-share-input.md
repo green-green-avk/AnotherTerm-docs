@@ -52,5 +52,9 @@ There are no other related time limitations in Android.
 * `INPUT_URI`{:.clipboard} &#x2014;
   content URI.
 
+---
+
 [`termsh with-uris`](local-shell-utility.html#cmd_with-uris){:target="_blank"}
-is supposed to be used with the `INPUT_URI`.
+is supposed to be used with these `INPUT[...]_URI[S]`.
+
+[Some examples]({{ '/local-shell-examples/open-inside.html#main_content' | relative_url }}){:target="_blank"}
