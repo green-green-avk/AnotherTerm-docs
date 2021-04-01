@@ -36,7 +36,10 @@ javax.net.ssl.SSLProtocolException: SSL handshake aborted: ssl=0x62633510: Failu
 error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure (external/openssl/ssl/s23_clnt.c:741 0x5b08cd5c:0x00000000)
 ```
 
-The workaround is to manually download content with your preferred browser.
+Possible workarounds:
+1. Using of some compatible proxy.
+2. Manual download by your preferred browser.
+
 I'll possibly create some better solution later.
 
 ### Touch screen mouse
