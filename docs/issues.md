@@ -30,6 +30,15 @@ Your bug reports seem the only way to help with it.
 ### The "Linux under PRoot" feature and Android&nbsp;10
 See solutions [here](local-shell-w-x.html#main_content){:target="_blank"}.
 
+### **termsh** SSL handshake error on very old Androids
+```
+javax.net.ssl.SSLProtocolException: SSL handshake aborted: ssl=0x62633510: Failure in SSL library, usually a protocol error
+error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure (external/openssl/ssl/s23_clnt.c:741 0x5b08cd5c:0x00000000)
+```
+
+The workaround is to manually download content with your preferred browser.
+I'll possibly create some better solution later.
+
 ### Touch screen mouse
 Not all Android deployments have the same touch event propagation logic and could improperly support
 [`android:windowEnableSplitTouch="true"`](https://developer.android.com/reference/android/R.attr.html#windowEnableSplitTouch){:target="_blank"}.
