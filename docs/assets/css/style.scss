@@ -31,6 +31,42 @@ ul.no-bullet li {
 	list-style: none;
 }
 
+$tree-marker: "\\\00A0";
+$tree-marker-empty: "\00A0\00A0";
+
+ul.tree, ul.tree ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+ul.tree li {
+	border-left: 2px solid #B5E853;
+	list-style: none;
+	margin-left: 2ex;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+ul.tree li::before {
+	content: $tree-marker;
+	color: #B5E853;
+}
+
+ul.tree li:last-child {
+	border-left-style: hidden;
+	padding-left: 2px;
+}
+
+ul.tree li.ellipsis::before {
+	content: $tree-marker-empty;
+}
+
+ul.tree li.ellipsis {
+	border-left-style: dotted;
+	padding-left: 0;
+}
+
 .btn {
 	box-shadow: none;
 	transition: all 1s ease-out;
@@ -199,12 +235,12 @@ li {
 
 ul li {
 	list-style-image: none;
-	list-style-type: '>> ';
+	list-style-type: '>>\00a0';
 	margin-left: 2em;
 }
 
 ul li::marker {
-	content: '>> ';
+	content: '>>\00a0';
 	color: #B5E853;
 }
 
@@ -215,6 +251,34 @@ ul li::marker {
 
 .toc ul li::marker {
 	content: '>';
+}
+
+ul.tree li {
+	border-left: 2px solid #B5E853;
+	list-style: none;
+	margin-left: 2ex;
+}
+
+ul.tree li::marker {
+	content: none;
+}
+
+ul.tree li::before {
+	content: $tree-marker;
+}
+
+ul.tree li:last-child {
+	border-left-style: hidden;
+	padding-left: 2px;
+}
+
+ul.tree li.ellipsis::before {
+	content: $tree-marker-empty;
+}
+
+ul.tree li.ellipsis {
+	border-left-style: dotted;
+	padding-left: 0;
 }
 
 ul[type="none"] li,

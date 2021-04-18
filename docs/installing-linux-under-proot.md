@@ -54,25 +54,25 @@ Run without arguments to see defaults.
 ```
 
 Directory tree:
-```
-$DATA_DIR
-|root - auxiliary tools installiation dir
-|proots
- |<install-dir-1>
- |...
- |<install-dir-n>
-  |root - rootfs
-  ||.proot.meta - PRoot meta data (will be refactored in future)
-  ||etc
-  |||proot
-  ||||run - run script
-  ||||run.cfg - run script configuration
-  ||||...
-  |||...
-  ||...
-  |tmp - PRoot tmp dir
-  |run - symlink to the run script
-```
+
+* `$DATA_DIR`
+  * `root` --- auxiliary tools installiation dir
+  * `proots`
+    * *\<install-dir-1\>*
+    * {:.ellipsis}...
+    * *\<install-dir-n\>*
+      * `root` --- rootfs
+        * `.proot.meta` --- PRoot meta data (will be refactored in future)
+        * `etc`
+          * `proot`
+            * `run` --- run script
+            * `run.cfg` --- run script configuration
+            * {:.ellipsis}...
+          * {:.ellipsis}...
+        * {:.ellipsis}...
+      * `tmp` --- PRoot tmp dir
+      * `run` --- symlink to the run script
+{:.tree}
 
 [`$TERMSH`](local-shell-utility.html#main_content){:target="_blank"} is bound as `/bin/termsh`.
 
