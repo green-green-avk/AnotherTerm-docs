@@ -23,7 +23,7 @@ These crash reports are of no use for me as long as they contain nothing but fun
 and all of them are from the Android framework code.
 
 Your bug reports seem the only way to help with it.
-(I think, it's not a good case to use **Google Analytics**; you probably too.)
+(I think, it's not a good case to use **Google Analytics**; you do probably, too.)
 
 ## Known issues
 
