@@ -63,6 +63,10 @@ Directory tree:
     * *\<install-dir-n\>*
       * `root` --- rootfs
         * `.proot.meta` --- PRoot meta data (will be refactored in future)
+        * `bin`
+          * `_termsh` --- PRoot binding of termsh (`$LIB_DIR/libtermsh.so`)
+          * `termsh` --- script that executes `_termsh` with `LD_*` variables unset
+          * {:.ellipsis}...
         * `etc`
           * `proot`
             * `run` --- run script
@@ -74,7 +78,7 @@ Directory tree:
       * `run` --- symlink to the run script
 {:.tree}
 
-[`$TERMSH`](local-shell-utility.html#main_content){:target="_blank"} is bound as `/bin/termsh`.
+[`$TERMSH`](local-shell-utility.html#main_content){:target="_blank"} is set to `/bin/termsh`.
 
 If you want to access the application's private directory (where all your PRoot rootfses with their metadata are located) from your PRooted environment, see `/etc/proot/run.cfg`.
 
