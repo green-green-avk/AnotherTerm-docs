@@ -2,9 +2,9 @@
 title: Installing Linux under PRoot
 head: installing-linux-under-proot.head.html
 ---
-***Note:** The information provided here is about running third-party software.
-The Another Term author is not responsible for any results of use or misuse of it.
-Use it on your own risk!*
+*__DISCLAIMER:__ The information provided here is about running THIRD-PARTY software.
+The Another Term author is NOT responsible for any results of use or misuse of it.
+__Use it on your own risk!__*
 
 ## Preface
 
