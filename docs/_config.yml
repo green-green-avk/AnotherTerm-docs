@@ -1,3 +1,9 @@
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/header.png
+
 project_url: https://github.com/green-green-avk/AnotherTerm
 
 theme: jekyll-theme-hacker
