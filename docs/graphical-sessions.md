@@ -13,12 +13,10 @@ Available in development versions only:
 
 ---
 
-The main problems with X applications on Android are performance
-and lack of good screen input methods;
-* Termux + XServer? --- No way.
-* VNC with a client and server on the same machine is a complete joke.
+The main problems with X applications on Android are low performance
+and lack of good screen input methods.
 
-Current solution addresses both.
+Current solution addresses both of them.
 
 
 ### UI and screen input
@@ -41,14 +39,20 @@ due to its unusual DPI ratio. Just tune up your widget frameworks / applications
 
 ### How to use
 
-See [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"} before.
+See
+[Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"}
+and
+[Installing System&nbsp;V **shmem** wrapper for nonrooted Android](installing-sysv-shmem-for-nonrooted-android.md#main_content){:target="_blank"}
+before.
 
 UNIX socket name (Linux abstract namespace):<br/>`green_green_avk.anotherterm`{:.clipboard}[.*variant*]`.wlterm`{:.clipboard}
 <br/>**Note:** client UID check ID is enforced:
 only processes of the same Android application &amp; user are allowed to connect.
 
 {:style="clear:both"}
-Xwayland start script example:
+An example of the script to start Xwayland inside PRoot:
+
+`/root/wlstart-X`:
 ```python
 #!/usr/bin/python3
 
@@ -56,7 +60,7 @@ import socket
 import os
 import subprocess
 
-wl_sock = "\0green_green_avk.anotherterm.debug.wlterm" # <= socket of your build variant
+wl_sock = "\0green_green_avk.anotherterm.wlterm" # <= socket of your build variant
 
 def connect(addr):
  s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
@@ -87,7 +91,47 @@ proc.wait()
 ```
 {:.clipboard}
 
-*Further documentation + scripts are about to come...*
+{:style="clear:both"}
+`/home/my_acct/wlstart-WM`:
+```sh
+#!/bin/bash
+
+read -r pid
+read -r display
+export DISPLAY=":$display"
+~/startwm </dev/tty >/dev/tty 2>&1
+echo "stopping X at PID $pid..."
+kill "$pid"
+```
+{:.clipboard}
+
+{:style="clear:both"}
+`/home/my_acct/startwm`:
+```sh
+#!/bin/bash
+
+WM=startxfce4
+#WM=icewm
+
+LD_PRELOAD=/opt/shm/lib/libandroid-shmem.so "$WM"
+
+killall gpg-agent ssh-agent xscreensaver
+```
+{:.clipboard}
+
+{:style="clear:both"}
+*"Execute"* field:
+```
+/system/bin/sh \
+"$DATA_DIR/proots/linuxcontainers-debian-buster/run" \
+0:0 ./wlstart-X | \
+/system/bin/sh \
+"$DATA_DIR/proots/linuxcontainers-debian-buster/run" \
+'' ./wlstart-WM
+```
+{:.clipboard}
+
+***Further documentation + scripts are about to come...***
 
 
 ### Implementation details
