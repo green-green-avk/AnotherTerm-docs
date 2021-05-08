@@ -3,18 +3,21 @@ title: Graphical sessions
 ---
 ## Minimalistic Wayland protocol support
 
-The main problems with X applications on Android are performance and UI;
+The main problems with X applications on Android are performance
+and lack of good screen input methods;
 * Termux + XServer? --- No way.
 * VNC with a client and server on the same machine is a complete joke.
 
 Current solution addresses both.
 
 
-### UI
+### UI and screen input
 
 [![screenshot]({{ '/assets/images/screenshot-wayland-1.thumb.jpg' | relative_url }}){:.screenshot-phone}]({{ '/assets/images/screenshot-wayland-1.jpg' | relative_url }})
 
-Screen keyboard / mouse.
+{:style="overflow:hidden"}
+* Desktop size matches a phone screen size and follows any changes.
+* Fully functional screen keyboard / mouse.
 Yes, you can drag with middle mouse button and hold
 <kbd>Shift</kbd> and/or <kbd>Ctrl</kbd> in the same time.
 <br/>**Blender ready multi-touch screen input!**
@@ -84,7 +87,7 @@ proc.wait()
 Only `wl_shm` interface is supported at the moment.
 with possible future support of `zwp_linux_dmabuf_v1` interface / **libmesa**.
 
-Supported surface roles:
+The only supported surface roles:
 * `toplevel` (`wl_shell_surface`);
 * `cursor` (`wl_pointer`).
 
