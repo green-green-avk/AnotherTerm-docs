@@ -3,6 +3,16 @@ title: Graphical sessions
 ---
 ## Minimalistic Wayland protocol support
 
+---
+
+***<hl>EXPERIMENTAL</hl>***
+
+Available in development versions only:
+* [MKIV\* releases](https://github.com/green-green-avk/AnotherTerm/releases){:target="_blank"}
+* [Wayland branch](https://github.com/green-green-avk/AnotherTerm/tree/Wayland){:target="_blank"}
+
+---
+
 The main problems with X applications on Android are performance
 and lack of good screen input methods;
 * Termux + XServer? --- No way.
@@ -29,15 +39,13 @@ due to its unusual DPI ratio. Just tune up your widget frameworks / applications
 <br style="clear:both"/>
 
 
-### Where to get
-
-* [MKIV\* releases](https://github.com/green-green-avk/AnotherTerm/releases){:target="_blank"}
-* [Wayland branch](https://github.com/green-green-avk/AnotherTerm/tree/Wayland){:target="_blank"}
-
-
 ### How to use
 
+See [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"} before.
+
 UNIX socket name (Linux abstract namespace):<br/>`green_green_avk.anotherterm`{:.clipboard}[.*variant*]`.wlterm`{:.clipboard}
+<br/>**Note:** client UID check ID is enforced:
+only processes of the same Android application &amp; user are allowed to connect.
 
 {:style="clear:both"}
 Xwayland start script example:

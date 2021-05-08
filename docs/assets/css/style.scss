@@ -18,6 +18,8 @@ div.toc {
 	border-left: 1px dashed #b5e853;
 	border-bottom: 1px dashed #b5e853;
 	padding-right: 1em;
+	margin-left: 1ex;
+	margin-bottom: 1ex;
 }
 
 div.footnotes {
@@ -131,18 +133,28 @@ option {
 	text-shadow: white 0 0 2ex, white 0 0 2ex;
 }
 
+.long-url {
+	display: inline-block;
+	overflow-wrap: anywhere;
+}
+
 kbd {
+	display: inline-block;
+	white-space: nowrap;
+	margin: 0 0.1ex;
+	padding: 0.1ex 0.6ex;
+	border: 1px solid #A3AE67;
+	border-radius: 1ex;
+	background: #203000;
+}
+
+hl {
 	display: inline-block;
 	white-space: nowrap;
 	margin: 0 0.1em;
 	padding: 0.1em 0.6em;
 	border: 1px solid #A3AE67;
 	border-radius: 1ex;
-}
-
-.long-url {
-	display: inline-block;
-	overflow-wrap: anywhere;
 }
 
 overlay {
@@ -333,6 +345,7 @@ div.toc {
 	padding-right: 5%;
 	border-left: none;
 	float: none;
+	margin: 0;
 }
 
 }
