@@ -15,16 +15,16 @@ Current solution addresses both.
 
 [![screenshot]({{ '/assets/images/screenshot-wayland-1.thumb.jpg' | relative_url }}){:.screenshot-phone}]({{ '/assets/images/screenshot-wayland-1.jpg' | relative_url }})
 
-{:style="overflow:hidden"}
-* Desktop size matches a phone screen size and follows any changes.
-* Fully functional screen keyboard / mouse.
-Yes, you can drag with middle mouse button and hold
+Desktop size matches a phone screen size and follows any changes.
+
+Fully functional screen keyboard / mouse.
+Yes, you can drag with the middle mouse button and hold
 <kbd>Shift</kbd> and/or <kbd>Ctrl</kbd> in the same time.
 <br/>**Blender ready multi-touch screen input!**
 
-**Note:** This compositor provides screen size from the Android metrics data.
+**Note:** The physical screen size is provided to the applications exactly as it is reported by Android.
 This means that some UI (Qt and Gtk at least) could look weird on a phone screen
-with the default DPI settings. Just tune it up.
+due to its unusual DPI ratio. Just tune up your widget frameworks / applications DPI settings.
 
 <br style="clear:both"/>
 
