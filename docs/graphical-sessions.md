@@ -50,7 +50,7 @@ UNIX socket name (Linux abstract namespace):<br/>`green_green_avk.anotherterm`{:
 only processes of the same Android application &amp; user are allowed to connect.
 
 {:style="clear:both"}
-An example of the script to start Xwayland inside PRoot:
+An example of the script set to start Xwayland inside PRoot:
 
 `/root/wlstart-X`:
 ```python
@@ -121,7 +121,7 @@ killall gpg-agent ssh-agent xscreensaver
 
 {:style="clear:both"}
 *"Execute"* field:
-```
+```sh
 /system/bin/sh \
 "$DATA_DIR/proots/linuxcontainers-debian-buster/run" \
 0:0 ./wlstart-X | \
