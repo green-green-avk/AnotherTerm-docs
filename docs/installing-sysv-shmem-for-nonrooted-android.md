@@ -1,7 +1,7 @@
 ---
-title: Installing System&nbsp;V **shmem** wrapper for nonrooted Android
+title: Installing **System&nbsp;V shmem ashmem** wrapper for nonrooted Android
 ---
-Android does not provide the System&nbsp;V **shmem** calls
+Android does not provide the **System&nbsp;V shmem** calls
 due to possibility of orphaned memory mappings accumulation.
 A better organised **ashmem** mechanism is provided instead.
 This wrapper library provides **shmem** calls emulation for dynamically linked software.

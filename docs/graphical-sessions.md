@@ -13,7 +13,7 @@ Available in development versions only:
 
 ---
 
-The main problems with X applications on Android are low performance
+The main problems with X&nbsp;applications on Android are low performance
 and lack of good screen input methods.
 
 Current solution addresses both of them.
@@ -42,7 +42,7 @@ due to its unusual DPI ratio. Just tune up your widget frameworks / applications
 See
 [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"}
 and
-[Installing System&nbsp;V **shmem** wrapper for nonrooted Android](installing-sysv-shmem-for-nonrooted-android.md#main_content){:target="_blank"}
+[Installing **System&nbsp;V shmem ashmem** wrapper for nonrooted Android](installing-sysv-shmem-for-nonrooted-android.html#main_content){:target="_blank"}
 before.
 
 UNIX socket name (Linux abstract namespace):<br/>`green_green_avk.anotherterm`{:.clipboard}[.*variant*]`.wlterm`{:.clipboard}
