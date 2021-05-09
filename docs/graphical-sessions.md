@@ -136,7 +136,7 @@ killall gpg-agent ssh-agent xscreensaver
 
 ### Implementation details
 
-Only `wl_shm` interface is supported at the moment.
+Only `wl_shm` interface is supported at the moment
 with possible future support of `zwp_linux_dmabuf_v1` interface / **libmesa**.
 
 The only supported surface roles:
