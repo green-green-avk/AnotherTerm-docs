@@ -7,7 +7,8 @@ A better organised **ashmem** mechanism is provided instead.
 This wrapper library provides **shmem** calls emulation for dynamically linked software.
 
 *__Warning:__ It will not work on Android&nbsp;10 with Google Play and `.redist` __Another Term__ flavors.
-<br/>See <https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory>{:target="_blank"}{:.long-url}*
+<br/>See <https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory>{:target="_blank"}{:.long-url}
+<br/>__The solution is in progress...__*
 
 It's supposed to use a PRooted environment to install it
 (see [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"} first).
