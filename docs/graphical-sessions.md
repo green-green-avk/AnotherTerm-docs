@@ -28,7 +28,7 @@ Desktop size matches a phone screen size and follows any changes.
 Fully functional screen keyboard / mouse.
 Yes, you can drag with the middle mouse button and hold
 <kbd>Shift</kbd> and/or <kbd>Ctrl</kbd> in the same time.
-<br/>**Blender ready multi-touch screen input!**
+<br/>**Blender-ready multi-touch screen input!**
 
 **Note:** The physical screen size is provided to the applications exactly as it is reported by Android.
 This means that some UI (Qt and Gtk at least) could look weird on a phone screen
