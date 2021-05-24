@@ -21,7 +21,9 @@ Current solution addresses both of them.
 
 ### UI and screen input
 
-[![screenshot]({{ '/assets/images/screenshot-wayland-1.thumb.jpg' | relative_url }}){:.screenshot-phone}]({{ '/assets/images/screenshot-wayland-1.jpg' | relative_url }})
+[![Screenshot 1]({{ '/assets/images/screenshot-wayland-1.thumb.jpg' | relative_url }}){:.screenshot-phone style="max-width:25%"}]({{ '/assets/images/screenshot-wayland-1.jpg' | relative_url }})
+
+[![Screenshot 2]({{ '/assets/images/screenshot-wayland-2.thumb.jpg' | relative_url }}){:.screenshot-phone style="max-width:25%;float:right"}]({{ '/assets/images/screenshot-wayland-2.jpg' | relative_url }})
 
 Desktop size matches a phone screen size and follows any changes.
 
