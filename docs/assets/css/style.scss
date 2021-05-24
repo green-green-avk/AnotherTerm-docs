@@ -30,9 +30,21 @@ div.footnotes {
 
 img.screenshot-phone {
 	width: 16em;
+	max-width: 100%;
+}
+
+img.screenshot-phone-left {
+	width: 16em;
 	max-width: 50%;
 	margin-right: 1ex;
 	float: left;
+}
+
+img.screenshot-phone-right {
+	width: 16em;
+	max-width: 50%;
+	margin-left: 1ex;
+	float: right;
 }
 
 ul[type="none"] li,

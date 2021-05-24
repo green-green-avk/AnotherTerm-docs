@@ -20,7 +20,7 @@ For creating new plugins or other than **Another Term** clients to use existing 
 ## ACL UI
 
 ### Client (e.g., Another Term) side
-![screenshot-client]({{ '/assets/images/local-shell-plugins-ui-client.png' | relative_url }}){:.screenshot-phone}
+![screenshot-client]({{ '/assets/images/local-shell-plugins-ui-client.png' | relative_url }}){:.screenshot-phone-left}
 
 {:style="overflow:hidden"}
 * <kbd>Enabled</kbd> --- each plugin can be manually switched on/off any moment.
@@ -29,14 +29,14 @@ For creating new plugins or other than **Another Term** clients to use existing 
 <br style="clear:both"/>
 
 ### Server (plugin) side (optional)
-![screenshot-server]({{ '/assets/images/local-shell-plugins-ui-server.png' | relative_url }}){:.screenshot-phone}
+![screenshot-server]({{ '/assets/images/local-shell-plugins-ui-server.png' | relative_url }}){:.screenshot-phone-left}
 
 If a plugin provides some critical information, the user must also explicitly authorize it to do so for each particular application.
 It is supposed to show this dialog when the user enables the plugin in a client application.
 
 <br style="clear:both"/>
 
-![screenshot-server-2]({{ '/assets/images/local-shell-plugins-ui-server-2.png' | relative_url }}){:.screenshot-phone}
+![screenshot-server-2]({{ '/assets/images/local-shell-plugins-ui-server-2.png' | relative_url }}){:.screenshot-phone-left}
 
 It is also supposed to show the permission revocation UI somewhere under the launcher icon of the plugin.
 
