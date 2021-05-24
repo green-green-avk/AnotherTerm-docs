@@ -20,8 +20,8 @@
 - title: Installing Linux under PRoot
   url: /installing-linux-under-proot.html
   level: 1
-- title: Installing **System&nbsp;V shmem ashmem** wrapper for nonrooted Android
-  url: /installing-sysv-shmem-for-nonrooted-android.html
+- title: Installing shared memory APIs emulation for nonrooted Android
+  url: /installing-linux-apis-emulation-for-nonrooted-android.html
   level: 1
 - title: Graphical sessions
   url: /graphical-sessions.html

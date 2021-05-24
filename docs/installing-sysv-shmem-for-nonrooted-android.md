@@ -2,13 +2,17 @@
 title: Installing **System&nbsp;V shmem ashmem** wrapper for nonrooted Android
 ---
 Android does not provide the **System&nbsp;V shmem** calls
-due to possibility of orphaned memory mappings accumulation.
+due to possibility of orphaned memory allocations accumulation.
 A better organised **ashmem** mechanism is provided instead.
 This wrapper library provides **shmem** calls emulation for dynamically linked software.
 
 *__Warning:__ It will not work on Android&nbsp;10 with Google Play and `.redist` __Another Term__ flavors.
-<br/>See <https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory>{:target="_blank"}{:.long-url}
-<br/>__The solution is in progress...__*
+<br/>See <https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory>{:target="_blank"}{:.long-url}*
+
+<hl><span markdown="1">
+*__Better solution:__
+[Installing shared memory APIs emulation for nonrooted Android](installing-linux-apis-emulation-for-nonrooted-android.html#main_content){:target="_blank"}.*
+</span></hl>
 
 It's supposed to use a PRooted environment to install it
 (see [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"} first).

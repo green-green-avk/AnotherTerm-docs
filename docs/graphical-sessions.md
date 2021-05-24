@@ -42,10 +42,11 @@ due to its unusual DPI ratio. Just tune up your widget frameworks / applications
 See
 [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"}
 and
-[Installing **System&nbsp;V shmem ashmem** wrapper for nonrooted Android](installing-sysv-shmem-for-nonrooted-android.html#main_content){:target="_blank"}
+[Installing shared memory APIs emulation for nonrooted Android](installing-linux-apis-emulation-for-nonrooted-android.html#main_content){:target="_blank"}
 before.
 
-UNIX socket name (Linux abstract namespace):<br/>`green_green_avk.anotherterm`{:.clipboard}[.*variant*]`.wlterm`{:.clipboard}
+UNIX socket name (Linux abstract namespace):
+<br/>`green_green_avk.anotherterm`{:.clipboard}[.*variant*]`.wlterm`{:.clipboard}
 <br/>**Note:** client UID check ID is enforced:
 only processes of the same Android application &amp; user are allowed to connect.
 
@@ -58,35 +59,51 @@ An example of the script set to start Xwayland inside PRoot:
 
 import socket
 import os
+import signal
 import subprocess
+import uuid
 
-wl_sock = "\0green_green_avk.anotherterm.wlterm" # <= socket of your build variant
+wl_sock = "\0" + os.environ["APP_ID"] + ".wlterm"
+
+res_uuid = uuid.uuid4().hex
+res_auth = uuid.uuid4().hex
 
 def connect(addr):
- s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
- s.connect(addr)
- return s
+ sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+ sock.connect(addr)
+ return sock
 
-s = connect(wl_sock) # Xwayland does not support Linux abstract namespace and needs a little help here...
+def onSignal(sig, fr):
+ global proc
+ proc.terminate()
+ exit(0)
+
+sock = connect(wl_sock) # Xwayland does not support Linux abstract namespace and needs a little help here...
 
 dispFdOut, dispFd = os.pipe()
 
-os.set_inheritable(s.fileno(), True)
+os.set_inheritable(sock.fileno(), True)
 os.set_inheritable(dispFd, True)
 
-os.environ["WAYLAND_SOCKET"] = str(s.fileno())
+os.environ["WAYLAND_SOCKET"] = str(sock.fileno())
 #os.environ["WAYLAND_DEBUG"] = "1"
 os.environ["XDG_RUNTIME_DIR"] = "/home/my_acct" # <= user home dir - a good place for Xwayland socket / wl_shm in-memory files (delete-after-open)
-os.environ["LD_PRELOAD"] = "/opt/shm/lib/libandroid-shmem.so"
+os.environ["LD_PRELOAD"] = "/opt/shm/lib/libwrapdroid-shm-sysv.so"
+os.environ["LIBWRAPDROID_SOCKET_NAME"] = os.environ["APP_ID"] + ".reswrap." + res_uuid
+os.environ["LIBWRAPDROID_AUTH_KEY"] = res_auth
 ttyFd = os.open("/dev/tty", os.O_RDWR, 0o777)
 proc = subprocess.Popen(("Xwayland", "-ac", "-shm",
  "-displayfd", str(dispFd), "-noreset"),
- pass_fds=(s.fileno(),dispFd), stdin=ttyFd, stdout=ttyFd, stderr=ttyFd) # yep, connect to the controlling TTY directly
+ pass_fds=(sock.fileno(),dispFd), stdin=ttyFd, stdout=ttyFd, stderr=ttyFd) # yep, connect to the controlling TTY directly
+for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGQUIT, signal.SIGPIPE):
+ signal.signal(sig, onSignal)
 os.close(ttyFd)
-s.close()
-print(proc.pid, flush=True) # and yep, put PID and...
+sock.close()
+print(proc.pid, flush=True)
+print(res_uuid, flush=True)
+print(res_auth, flush=True)
 with os.fdopen(dispFdOut) as f:
- print(f.readline().strip(), flush=True) # ...display number to the stdout.
+ print(f.readline().strip(), flush=True)
 proc.wait()
 ```
 {:.clipboard}
@@ -97,7 +114,11 @@ proc.wait()
 #!/bin/bash
 
 read -r pid
+read -r RES_UUID
+read -r RES_AUTH
 read -r display
+export RES_UUID
+export RES_AUTH
 export DISPLAY=":$display"
 ~/startwm </dev/tty >/dev/tty 2>&1
 echo "stopping X at PID $pid..."
@@ -113,9 +134,14 @@ kill "$pid"
 WM=startxfce4
 #WM=icewm
 
-LD_PRELOAD=/opt/shm/lib/libandroid-shmem.so "$WM"
+export LIBWRAPDROID_SOCKET_NAME="$APP_ID.reswrap.$RES_UUID"
+export LIBWRAPDROID_AUTH_KEY="$RES_AUTH"
+/opt/shm/bin/libwrapdroid-server &
+WRAPDROID_PID=$!
+LD_PRELOAD=/opt/shm/lib/libwrapdroid-shm-sysv.so:/opt/shm/lib/libwrapdroid-shm-posix.so "$WM"
 
-killall gpg-agent ssh-agent xscreensaver
+killall -wq gpg-agent ssh-agent xscreensaver
+kill $WRAPDROID_PID
 ```
 {:.clipboard}
 
