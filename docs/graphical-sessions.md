@@ -77,35 +77,41 @@ def connect(addr):
 
 def onSignal(sig, fr):
  global proc
- proc.terminate()
+ if proc is not None:
+  proc.terminate()
  exit(0)
 
-sock = connect(wl_sock) # Xwayland does not support Linux abstract namespace and needs a little help here...
+sock = connect(wl_sock)
 
-dispFdOut, dispFd = os.pipe()
+proc = None
 
-os.set_inheritable(sock.fileno(), True)
-os.set_inheritable(dispFd, True)
+for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGQUIT, signal.SIGPIPE):
+ signal.signal(sig, onSignal)
 
 os.environ["WAYLAND_SOCKET"] = str(sock.fileno())
 #os.environ["WAYLAND_DEBUG"] = "1"
-os.environ["XDG_RUNTIME_DIR"] = "/home/my_acct" # <= user home dir - a good place for Xwayland socket / wl_shm in-memory files (delete-after-open)
+os.environ["XDG_RUNTIME_DIR"] = "/home/my_acct"
 os.environ["LD_PRELOAD"] = "/opt/shm/lib/libwrapdroid-shm-sysv.so"
 os.environ["LIBWRAPDROID_SOCKET_NAME"] = os.environ["APP_ID"] + ".reswrap." + res_uuid
 os.environ["LIBWRAPDROID_AUTH_KEY"] = res_auth
+
+dispFdOut, dispFd = os.pipe()
 ttyFd = os.open("/dev/tty", os.O_RDWR, 0o777)
+
 proc = subprocess.Popen(("Xwayland", "-ac", "-shm",
  "-displayfd", str(dispFd), "-noreset"),
- pass_fds=(sock.fileno(),dispFd), stdin=ttyFd, stdout=ttyFd, stderr=ttyFd) # yep, connect to the controlling TTY directly
-for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGQUIT, signal.SIGPIPE):
- signal.signal(sig, onSignal)
+ pass_fds=(sock.fileno(),dispFd), stdin=ttyFd, stdout=ttyFd, stderr=ttyFd)
+
 os.close(ttyFd)
+os.close(dispFd)
 sock.close()
+
 print(proc.pid, flush=True)
 print(res_uuid, flush=True)
 print(res_auth, flush=True)
 with os.fdopen(dispFdOut) as f:
  print(f.readline().strip(), flush=True)
+
 proc.wait()
 ```
 {:.clipboard}
