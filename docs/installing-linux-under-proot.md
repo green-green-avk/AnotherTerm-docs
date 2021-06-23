@@ -56,7 +56,7 @@ Run without arguments to see defaults.
 Directory tree:
 
 * `$DATA_DIR`
-  * `root` --- auxiliary tools installiation dir
+  * `root` --- auxiliary tools dir
   * `proots`
     * *\<install-dir-1\>*
     * {:.ellipsis}...
