@@ -15,8 +15,7 @@ since November&#xA0;1&#xA0;2020.
 
 2. Any application targets API >= 29 cannot `execve()` any binaries
 from file tree locations writable by it on Android&#xA0;10 and higher.
-This new behavior interferes with the "Linux under PRoot" feature
-in its current state.
+This new behavior interferes with the "Linux under PRoot" feature.
 
 ## Solutions
 
