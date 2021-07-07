@@ -13,8 +13,9 @@ checkbox should be set in a session profile to make it visible.
 **Note1:** Any URIs passed to Another&nbsp;Term are accessible
 from all of its local shell sessions.
 However there is no way to enumerate them
-except cases of large texts sharing by value (see below)
-when `termsh uri -l` can be used.
+except cases of large texts sharing by value (see below) when
+[`termsh uri -l`](local-shell-utility.html#cmd_uri){:target="_blank"}
+can be used.
 
 **Note2:** Passed URIs must be opened not later than a couple of seconds
 since a sessions started: they will expire otherwise.
