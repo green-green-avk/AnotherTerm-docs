@@ -4,7 +4,10 @@ title: Local shell
 ## Environment
 
 Android has a Linux kernel and permits applications to execute arbitrary binaries with some restrictions comparing to a usual Linux box.
-Some people see it as the main Android advantage against iOS. iOS requires Qemu emulation to run arbitrary binaries that significantly impacts performance.
+Some people see it as the main Android advantage against iOS.
+<br/>*iOS implementations, [UTM](https://getutm.app/){:target="_blank"} for example,
+[require sideload (and developer account) for older device versions and jailbreak for newer ones](https://getutm.app/install/){:target="_blank"}
+that is not a pleasant experience; QEMU also makes some performance impact.*
 
 ### Some notes
 
@@ -12,6 +15,8 @@ Some people see it as the main Android advantage against iOS. iOS requires Qemu 
 If you want to run some daemon, keep open at least one terminal window in order to keep it alive.
 
 * [The "Linux under PRoot" feature and Android&nbsp;10](local-shell-w-x.html#main_content){:target="_blank"}.
+
+* [Android's shell and utilities](https://android.googlesource.com/platform/system/core/+/master/shell_and_utilities/README.md){:target="_blank"}.
 
 ## About sandboxes
 
