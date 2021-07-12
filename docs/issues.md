@@ -46,10 +46,15 @@ I'll possibly create some better solution later.
 Not all Android deployments have the same touch event propagation logic and could improperly support
 [`android:windowEnableSplitTouch="true"`](https://developer.android.com/reference/android/R.attr.html#windowEnableSplitTouch){:target="_blank"}.
 As a result the touch screen mouse feature does not work properly on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2
-(the only known device at the moment).
+(the only known affected device at the moment).
 
 The workaround looks relatively simple.
 Please, ask me if you think, you need it.
+
+### **termsh** segfault on Androids&nbsp;4.0\[.X\]
+Spotted in the only available test environment: *Android API&nbsp;15 x86* image from Android Studio.
+
+Please, ask me if you think, you need it fixed.
 
 ### **termsh**
 It seems, access to `/proc/self/fd/` is restricted for the Dalvik VM process on **Samsung Galaxy Note II** (SCH_I605) with Android 4.4.2
