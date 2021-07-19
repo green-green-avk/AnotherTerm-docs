@@ -178,7 +178,3 @@ The only supported surface roles:
 * `cursor` (`wl_pointer`).
 
 No translation / rotation of buffers.
-
-No `wl_touch` support.
-(Anyway there is no reason as long as anything significant
-like Blender or InkScape does not support it.)
