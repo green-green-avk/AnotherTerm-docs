@@ -90,7 +90,7 @@ to send this intent to. <code>&lt;recipient&gt;</code> can be:
 <li>An activity class name of this application.</li>
 <li>An activity of another application in form:
 <code>&lt;package&gt;/&lt;activity_class&gt;</code><br/>
-(<code>&lt;activity_class&gt;</code> can begin with a <code>.</code> (dot)
+(<code>&lt;activity_class&gt;</code> can begin with a '<code>.</code>' (dot)
 to use <code>&lt;package&gt;</code> as it's prefix:<br/>
 <code>foo.bar/.Act</code> => <code>foo.bar/foo.bar.Act</code>).</li>
 </ul>
@@ -113,7 +113,7 @@ Send (<i><code>android.intent.action.SEND</code></i> or
 <i><code>android.intent.action.SEND_MULTIPLE</code></i>).
 <br/><code>&lt;file|URI&gt;</code> is treated as a file path if it does not match
 <code>/^(?:[a-z0-9+.-]+):\/\//i</code>.
-<br/><code>-</code> is used to represent the <i>stdin</i>.
+<br/>'<code>-</code>' is used to represent the <i>stdin</i>.
 <br/>Command exits after a stream was sent or after interaction with user
 if a file or URI is specified.
 <ul type="none">
@@ -223,8 +223,8 @@ If <code>&lt;from&gt;</code> or <code>&lt;to&gt;</code> is not specified,
 cat [--insecure] [--progress] [&lt;URI&gt; ...]
 </pre></dt>
 <dd>
-Concatenate specified URIs content to the <i>stdout</i>, <code>-</code> is used to represent
-the <i>stdin</i>.
+Concatenate specified URIs content to the <i>stdout</i>,
+'<code>-</code>' is used to represent the <i>stdin</i>.
 The URIs scheme could be <code>content</code>, <code>http</code> or <code>https</code>.
 If no URIs are given, the <i>stdin</i> will be used.
 <ul type="none">
