@@ -2,10 +2,14 @@
 title: Local shell environment variables
 vars:
   - name: DATA_DIR
-    desc: default persistent data directory.
+    desc: |
+      default persistent data directory.
+      <br/>**It will be deleted when this application is uninstalled.**
 
   - name: PROTECTED_DATA_DIR
-    desc: default device-protected persistent data directory (set if available).
+    desc: |
+      default device-protected persistent data directory (set if available).
+      <br/>**It will be deleted when this application is uninstalled.**
 
   - name: SHARED_DATA_DIR
     desc: |
@@ -13,7 +17,7 @@ vars:
       where the application can place persistent files it owns
       (set if available).
       Any other application with the storage access permissions can also access this place.
-
+      <br/>**It will be deleted when this application is uninstalled.**
   - name: EXTERNAL_DATA_DIR
     desc: an alias to `SHARED_DATA_DIR`.
 
