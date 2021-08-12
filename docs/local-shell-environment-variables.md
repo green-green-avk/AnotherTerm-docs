@@ -18,6 +18,7 @@ vars:
       (set if available).
       Any other application with the storage access permissions can also access this place.
       <br/>**It will be deleted when this application is uninstalled.**
+
   - name: EXTERNAL_DATA_DIR
     desc: an alias to `SHARED_DATA_DIR`.
 
