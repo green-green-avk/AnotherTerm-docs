@@ -247,7 +247,9 @@ uri="$("$TERMSH" pick -u)"
 with-uris &lt;name&gt; &lt;arg0&gt; [&lt;args...&gt;] &lt;URIs&gt;
 </pre></dt>
 <dd>
-It's supposed to be used with <span markdown="1">
+<p><b>Warning:</b>
+This command will probably not work with <b>Android versions&nbsp;&#x2265;&nbsp;10</b>.</p>
+This command is supposed to be used with <span markdown="1">
 [content sharing, viewing and editing](local-shell-share-input.html#main_content){:target="_blank"}
 </span> feature.
 It runs a command with specified <code>&lt;URIs&gt;</code> represented by the <i>procfs fd</i> entries.
@@ -257,8 +259,6 @@ The URIs' content provider must be able to return the whole file descriptors for
 in case of own failure.</p>
 <p>Effect is the same as of
 <pre>execp(name, arg0, args..., "/proc/PID/fd/FD_URI0 /proc/PID/fd/FD_URI1 ...")</pre></p>
-<p><b>Note:</b>
-This command will probably not work with <b>Android versions&nbsp;&#x2265;&nbsp;10</b>.</p>
 <h4>Example:</h4>
 <p markdown="1">(Presuming
 [Linux under PRoot](installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue){:target="_blank"}
