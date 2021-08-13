@@ -5,7 +5,7 @@ title: Processing content with Linux applications
 
 For **mcedit** lovers. Feel free to use **Emacs** though.
 
-[Session profile settings quick URI](local-terminal:/opts?perm_favmgmt=false&shareable=true&charset=UTF-8&screen_cols=0&screen_rows=0&keymap=&wakelock.acquire_on_connect=true&terminal_string=xterm&perm_pluginexec=true&font_size_auto=false&wakelock.release_on_disconnect=true&execute=%22%24DATA_DIR%2Fproots%2Flinuxcontainers-debian-buster%2Frun%22%20''%20'~%2Fcontent-open-save.sh'&name=Open%20or%20Save&terminate.on_disconnect=true)[^1]
+[Session profile settings quick URI](local-terminal:/opts?perm_favmgmt=false&shareable=true&charset=UTF-8&screen_cols=0&screen_rows=0&keymap=&wakelock.acquire_on_connect=true&terminal_string=xterm&perm_pluginexec=true&font_size_auto=false&wakelock.release_on_disconnect=true&execute=/system/bin/sh%20%22%24DATA_DIR%2Fproots%2Flinuxcontainers-debian-buster%2Frun%22%20''%20'~%2Fcontent-open-save.sh'&name=Open%20or%20Save&terminate.on_disconnect=true)[^1]
 
 {:style="clear:both"}
 ### content-open-save.sh
@@ -47,7 +47,7 @@ msg_wait
 To quick substitute text file content as the body of a new e-mail letter,
 for example.
 
-[Session profile settings quick URI](local-terminal:/opts?perm_favmgmt=false&shareable=true&charset=UTF-8&screen_cols=0&screen_rows=0&keymap=&wakelock.acquire_on_connect=true&terminal_string=xterm&perm_pluginexec=true&font_size_auto=false&wakelock.release_on_disconnect=true&execute=%22%24DATA_DIR%2Fproots%2Flinuxcontainers-debian-buster%2Frun%22%20''%20'~%2Fcontent-send-as-text.sh'&name=Send%20as%20text&terminate.on_disconnect=true)[^1]
+[Session profile settings quick URI](local-terminal:/opts?perm_favmgmt=false&shareable=true&charset=UTF-8&screen_cols=0&screen_rows=0&keymap=&wakelock.acquire_on_connect=true&terminal_string=xterm&perm_pluginexec=true&font_size_auto=false&wakelock.release_on_disconnect=true&execute=/system/bin/sh%20%22%24DATA_DIR%2Fproots%2Flinuxcontainers-debian-buster%2Frun%22%20''%20'~%2Fcontent-send-as-text.sh'&name=Send%20as%20text&terminate.on_disconnect=true)[^1]
 
 ### content-send-as-text.sh
 ```sh
