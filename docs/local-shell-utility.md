@@ -257,6 +257,8 @@ The URIs' content provider must be able to return the whole file descriptors for
 in case of own failure.</p>
 <p>Effect is the same as of
 <pre>execp(name, arg0, args..., "/proc/PID/fd/FD_URI0 /proc/PID/fd/FD_URI1 ...")</pre></p>
+<p><b>Note:</b>
+This command will probably not work with <b>Android versions&nbsp;&#x2265;&nbsp;10</b>.</p>
 <h4>Example:</h4>
 <p markdown="1">(Presuming
 [Linux under PRoot](installing-linux-under-proot.html#making-it-quick-linuxcontainersorg-to-the-rescue){:target="_blank"}
