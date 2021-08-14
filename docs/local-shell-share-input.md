@@ -60,6 +60,6 @@ There are no other related time limitations in Android.
 | [`copy`](local-shell-utility.html#cmd_copy){:target="_blank"}
 | [`with-uris`](local-shell-utility.html#cmd_with-uris){:target="_blank"}
 etc.
-<br/>is supposed to be used with these `INPUT[...]_URI[S]`.
+<br/>are supposed to be used with these `INPUT[...]_URI[S]`.
 
 [Some examples]({{ '/local-shell-examples/open-inside.html#main_content' | relative_url }}){:target="_blank"}
