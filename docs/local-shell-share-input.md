@@ -21,6 +21,8 @@ can be used.
 since a sessions started: they will expire otherwise.
 There are no other related time limitations in Android.
 
+For version <hl>MkIIIv42</hl> and later:
+
 ## Environment variables
 
 * `INPUT_ACTION`{:.clipboard} &#x2014;
@@ -31,13 +33,18 @@ There are no other related time limitations in Android.
 
 ### Sharing
 
+* `INPUT_TEXT`{:.clipboard}[2|3|...][`_URI`{:.clipboard}] &#x2014;
+  *`android.intent.extra.TEXT`* if plain.
+
+* `INPUT_SPANNED`{:.clipboard}[2|3|...][`_URI`{:.clipboard}] &#x2014;
+  *`android.intent.extra.TEXT`* if formatted (will be represented as HTML).
+
 * `INPUT_HTML`{:.clipboard}[2|3|...][`_URI`{:.clipboard}] &#x2014;
-  *`android.intent.extra.HTML_TEXT`*
-  or *`android.intent.extra.TEXT`* if former is not defined.
-  <br/>Suffix `_URI` is used
-  if input text is &gt;&nbsp;4096&nbsp;B and cached by Another&nbsp;Term under a content URI
-  (see [`termsh uri`](local-shell-utility.html#cmd_uri){:target="_blank"}).
-  <br/>Any text will be represented as an HTML and encoded appropriately if needed.
+  *`android.intent.extra.HTML_TEXT`*.
+
+**Note:** Suffix `_URI` is used
+if input text is &gt;&nbsp;4096&nbsp;B and cached by Another&nbsp;Term under a content URI
+(see [`termsh uri`](local-shell-utility.html#cmd_uri){:target="_blank"}).
 
 * `INPUT_URIS`{:.clipboard} &#x2014;
   a space separated list of *`android.intent.extra.STREAM`*.
