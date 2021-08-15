@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define [`TERMSH_UID`](#TERMSH_UID) environment variable (see description below) in case,
 you are using any chrooted environment where an emulated user ID is not the same as the real one.
 
-Manual as of version <hl>MkIIIv27</hl> and later:
+For version <hl>MkIIIv27</hl> and later:
 
 ## Location
 
