@@ -5,7 +5,7 @@ title: Bugs and issues
 Please, don't hesitate to post them [here](https://github.com/green-green-avk/AnotherTerm/issues){:target="_blank"} or:
 
 * Linux installation related:
-  [scripts](https://github.com/green-green-avk/AnotherTerm-scripts){:target="_blank"} /
+  [scripts](https://github.com/green-green-avk/AnotherTerm-scripts/issues){:target="_blank"} /
   [**PRoot**](https://github.com/green-green-avk/proot/issues){:target="_blank"} /
   [**minitar**](https://github.com/green-green-avk/build-libarchive-minitar-android/issues){:target="_blank"};
 * **libusb** wrapper related:
