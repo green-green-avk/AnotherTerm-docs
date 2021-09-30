@@ -1,7 +1,7 @@
 ---
 title: Installing **libusb** for nonrooted Android
 ---
-This approach could give you a way to, for example, flashing and debugging of MCUs right from your regular stock phone without rooting it.
+This approach could give you a way to, for example, flashing and debugging of MCUs right from your regular phone without rooting it.
 OpenOCD seems working pretty well with Olimex ARM-USB-TINY at least.
 
 In contrast with Termux, there is no special command line utility for it: the helper service is already running inside Another Term.
