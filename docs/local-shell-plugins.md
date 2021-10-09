@@ -15,6 +15,8 @@ For creating new plugins or other than **Another Term** clients to use existing 
 
 * <https://github.com/green-green-avk/AnotherTermShellPluginUtils>{:target="_blank"} --- basic API.
 * <https://github.com/green-green-avk/AnotherTermShellPluginUtils-Perms>{:target="_blank"} --- access permissions management library.
+* <https://github.com/green-green-avk/AnotherTermShellPluginUtils-Side-Application>{:target="_blank"} --- Android&nbsp;11 queries: application side.
+* <https://github.com/green-green-avk/AnotherTermShellPluginUtils-Side-Plugin>{:target="_blank"} --- Android&nbsp;11 queries: plugin side.
 
 {:style="clear:both"}
 ## ACL UI
