@@ -414,7 +414,7 @@ plugin -h|--help [--] &lt;package_name&gt;
 this command is called. Exit code <code>1</code> will be returned otherwise.</em></p></dd><br/>
 
 <dt id="cmd_wakelock"><pre>
-wakelock [is-held|acquire [&lt;timeout&gt;]|release]
+wakelock {is-held|acquire [&lt;timeout&gt;]|release}
 </pre></dt>
 <dd><p><code>is-held</code> returns:
 <ul type="none">
