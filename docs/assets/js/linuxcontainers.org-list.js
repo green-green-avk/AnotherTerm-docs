@@ -33,7 +33,7 @@
 		return '( S=install-linuxcontainers.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && sh ./$S -a ' + distro + ' ' + version + ' )';
 	}
 	// Temporary solution with a CORS proxy:
-	// const src = "https://cors-anywhere.herokuapp.com/https://us.images.linuxcontainers.org/meta/1.0/index-user";
+	// const src = "https://cors-anywhere.herokuapp.com/https://images.linuxcontainers.org/meta/1.0/index-user";
 	// Finally: caching proxy:
 	const src = "https://small-proxy-301517.wm.r.appspot.com/linuxcontainers.idx";
 	fetch(src).then(resp => {

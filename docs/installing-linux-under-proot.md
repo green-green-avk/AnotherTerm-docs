@@ -31,7 +31,7 @@ See [here](local-shell-w-x.html#main_content){:target="_blank"}.
 
 Their images are licensed under: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/){:target="_blank"}
 
-List of the images: [Page](https://us.images.linuxcontainers.org/){:target="_blank"} / [Index file](https://us.images.linuxcontainers.org/meta/1.0/index-user){:target="_blank"}
+List of the images: [Page](https://images.linuxcontainers.org/){:target="_blank"} / [Index file](https://images.linuxcontainers.org/meta/1.0/index-user){:target="_blank"}
 
 PRoot version used: <https://github.com/green-green-avk/proot>{:target="_blank"}{:.long-url}
 
