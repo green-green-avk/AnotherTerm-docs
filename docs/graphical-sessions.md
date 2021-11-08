@@ -55,6 +55,8 @@ only processes of the same Android application &amp; user are allowed to connect
 {:style="clear:both"}
 An example of the script set to start Xwayland inside PRoot:
 
+#### Scripts to be added into the PRooted environment
+
 `/root/wlstart-X`:
 ```python
 #!/usr/bin/python3
@@ -154,7 +156,11 @@ kill $WRAPDROID_PID
 {:.clipboard}
 
 {:style="clear:both"}
+#### The startup profile
+
 *"Execute"* field:
+
+![Example]({{ '/assets/images/screenshot-wayland-howto-fav.thumb.png' | relative_url }}){:.screenshot-phone-left style="max-width:25%;margin-right:-5%;position:relative;z-index:-1"}
 ```sh
 /system/bin/sh \
 "$DATA_DIR/proots/linuxcontainers-debian-buster/run" \
@@ -164,6 +170,12 @@ kill $WRAPDROID_PID
 '' ./wlstart-WM
 ```
 {:.clipboard}
+
+Or a
+[[quick settings link](local-terminal:/opts?perm_favmgmt=false&shareable=false&charset=UTF-8&screen_cols=0&screen_rows=0&keymap=&wakelock.acquire_on_connect=true&terminal_string=xterm&perm_pluginexec=false&font_size_auto=false&wakelock.release_on_disconnect=true&execute=%2Fsystem%2Fbin%2Fsh%20%5C%0A%22%24DATA_DIR%2Fproots%2Flinuxcontainers-debian-buster%2Frun%22%20%5C%0A0%3A0%20.%2Fwlstart-X%20%5C%0A%7C%20%5C%0A%2Fsystem%2Fbin%2Fsh%20%5C%0A%22%24DATA_DIR%2Fproots%2Flinuxcontainers-debian-buster%2Frun%22%20%5C%0A''%20.%2Fwlstart-WM&name=linuxcontainers-debian-buster%20%F0%9F%96%A5%20%26%20WM&term_compliance=ansi&terminate.on_disconnect=false)]
+for **Another Term**.
+
+Just replace the `linuxcontainers-debian-buster` with your installation directory.
 
 ***Further documentation + scripts are about to come...***
 
