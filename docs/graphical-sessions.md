@@ -150,7 +150,7 @@ export LIBWRAPDROID_AUTH_KEY="$RES_AUTH"
 WRAPDROID_PID=$!
 LD_PRELOAD=/opt/shm/lib/libwrapdroid-shm-sysv.so:/opt/shm/lib/libwrapdroid-shm-posix.so "$WM"
 
-killall -wq gpg-agent ssh-agent xscreensaver
+killall -wq gpg-agent ssh-agent xscreensaver xiccd
 kill $WRAPDROID_PID
 ```
 {:.clipboard}
