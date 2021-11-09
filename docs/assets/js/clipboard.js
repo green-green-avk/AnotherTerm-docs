@@ -37,7 +37,8 @@
 		const elts = Array.from(root.getElementsByTagName("h1"))
 			.concat(Array.from(root.getElementsByTagName("h2")))
 			.concat(Array.from(root.getElementsByTagName("h3")))
-			.concat(Array.from(root.getElementsByTagName("dt")));
+			.concat(Array.from(root.getElementsByTagName("dt")))
+			.concat(Array.from(root.getElementsByClassName("link")));
 		for (const elt of elts) {
 			if (elt.id == null || elt.id == "") continue;
 			const mark = document.createElement("img");

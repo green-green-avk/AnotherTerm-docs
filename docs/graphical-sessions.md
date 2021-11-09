@@ -57,7 +57,7 @@ An example of the script set to start Xwayland inside PRoot:
 
 #### Scripts to be added into the PRooted environment
 
-`/root/wlstart-X`:
+`/root/wlstart-X`{:.link#script-wlstart-X}:
 ```python
 #!/usr/bin/python3
 
@@ -119,7 +119,7 @@ proc.wait()
 {:.clipboard}
 
 {:style="clear:both"}
-`/home/my_acct/wlstart-WM`:
+`/home/my_acct/wlstart-WM`{:.link#script-wlstart-WM}:
 ```sh
 #!/bin/bash
 
@@ -137,7 +137,7 @@ kill "$pid"
 {:.clipboard}
 
 {:style="clear:both"}
-`/home/my_acct/startwm`:
+`/home/my_acct/startwm`{:.link#script-startwm}:
 ```sh
 #!/bin/bash
 
@@ -158,7 +158,7 @@ kill $WRAPDROID_PID
 {:style="clear:both"}
 #### The startup profile
 
-*"Execute"* field:
+*"Execute"*{:.link#field-execute} field:
 
 ![Example]({{ '/assets/images/screenshot-wayland-howto-fav.thumb.png' | relative_url }}){:.screenshot-phone-left style="max-width:25%;margin-right:-5%;position:relative;z-index:-1"}
 ```sh
