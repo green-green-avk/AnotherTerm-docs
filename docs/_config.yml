@@ -4,6 +4,8 @@ defaults:
     values:
       image: /assets/images/header.png
 
+feature_img: /assets/images/feat.png
+
 project_url: https://github.com/green-green-avk/AnotherTerm
 
 theme: jekyll-theme-hacker
