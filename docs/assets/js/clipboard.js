@@ -61,7 +61,31 @@
 			elt.addEventListener("mouseout", function() {
 				mark.style.opacity = 0;
 			});
-
 		}
+	})();
+	function getCodeBlocks() {
+		return document.querySelectorAll("pre code");
+	}
+	const languageDetectRe = /\blang(?:uage)?-([\w-]+)\b/i;
+	function getCodeLanguage(elt) {
+		do {
+			const match = languageDetectRe.exec(elt.className);
+			if (match && match[1])
+				return match[1];
+		} while (elt = elt.parentNode);
+		return null;
+	}
+	(function() {
+		if (hljs == null) return;
+		hljs.configure({
+			ignoreUnescapedHTML: true,
+			throwUnescapedHTML: false
+		});
+		getCodeBlocks().forEach(elt => {
+			const lang = getCodeLanguage(elt);
+			const cl = lang != null ? "language-" + lang : "no-highlight";
+			elt.className = [elt.className, cl].join(" ");
+		});
+		hljs.highlightAll();
 	})();
 })();

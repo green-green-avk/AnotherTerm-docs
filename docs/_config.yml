@@ -9,3 +9,9 @@ feature_img: /assets/images/feat.png
 project_url: https://github.com/green-green-avk/AnotherTerm
 
 theme: jekyll-theme-hacker
+
+# --- Keep static syntax highlighting yet
+#kramdown:
+#  syntax_highlighter_opts:
+#    disable: true
+# ---

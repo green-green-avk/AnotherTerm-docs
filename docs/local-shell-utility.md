@@ -10,13 +10,17 @@ you are using any chrooted environment where an emulated user ID is not the same
 
 For version <hl>MkIIIv27</hl> and later:
 
+{:style="clear:both"}
 ## Location
 
-`TERMSH="$LIB_DIR/libtermsh.so"`{:.clipboard}
+```sh
+TERMSH="$LIB_DIR/libtermsh.so"
+```
+{:.clipboard}
 
 ## Usage
 
-```
+```sh
 "$TERMSH" [-r|--raw] <command> [<args...>]
 ```
 <ul type="none">

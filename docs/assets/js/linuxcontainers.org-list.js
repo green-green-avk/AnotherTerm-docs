@@ -51,7 +51,14 @@
 				const version = wVersion.value;
 				if (distro == null || version == null) return;
 				wArches.innerText = Array.from(list.get(distro).get(version).keys()).join(", ");
-				wSnippet.innerText = wrapIntoScript(distro, version);
+				const snippet = wrapIntoScript(distro, version);
+				if (hljs != null) {
+					wSnippet.className = "hljs";
+					wSnippet.innerHTML = hljs.highlight(snippet, {language: "sh", ignoreIllegals: true}).value;
+				} else {
+					wSnippet.className = "";
+					wSnippet.innerText = snippet;
+				}
 			};
 			wDistro.oninput = () => {
 				clearOpts(wVersion);

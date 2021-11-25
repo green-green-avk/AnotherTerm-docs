@@ -116,7 +116,7 @@ or:
 <div style="border-left: 1px dashed #b5e853; border-right: 1px dashed #b5e853; border-radius: 1em; margin: 0 -1em 0 -1em; padding: 0 1em 0 1em;">
 <select id="distro" class="btn"></select><select id="version" class="btn"></select>
 <pre id="arches" style="display: inline-block; margin: 0; vertical-align: middle; white-space: pre-wrap;"></pre>
-<pre id="snippet" class="clipboard"></pre>
+<pre class="clipboard"><code id="snippet"></code></pre>
 </div>
 
 [[Alpine key map settings](termkeymap:/v2?4489=%1B%5B15%3B2~&448b=%1B%5B18%3B2~&4485=%1BO2P&488=%1BO2S&48b=%1B%5B18%3B2~&48a=%1B%5B17%3B2~&487=%1BO2R&4487=%1BO2R&485=%1BO2P&489=%1B%5B15%3B2~&486=%1BO2Q&448a=%1B%5B17%3B2~&4486=%1BO2Q&4488=%1BO2S&name=Alpine)]
