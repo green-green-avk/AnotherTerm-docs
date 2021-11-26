@@ -147,11 +147,13 @@ option {
 
 .long-url {
 	display: inline-block;
+	line-height: normal;
 	overflow-wrap: anywhere;
 }
 
 kbd {
 	display: inline-block;
+	line-height: normal;
 	white-space: nowrap;
 	margin: 0 0.1ex;
 	padding: 0.1ex 0.6ex;
@@ -162,6 +164,7 @@ kbd {
 
 hlt {
 	display: inline-block;
+	line-height: normal;
 	white-space: nowrap;
 	margin: 0 0.1em;
 	padding: 0.1em 0.6em;
