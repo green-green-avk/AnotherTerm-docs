@@ -63,7 +63,7 @@ It effectively blocks new files creation by **termsh** (as it interferes with th
 The debug version of the **Another Term** APK with the default Android Studio signature works correct though.
 {:style="text-decoration: line-through"}
 
-Fixed in [<hl>MkIIIv</hl>](https://github.com/green-green-avk/AnotherTerm/commit/2d9f6b4a4a9a7f1996d7981aab1002ecf46573dc){:target="_blank"}.
+Fixed in [<hlt>MkIIIv</hlt>](https://github.com/green-green-avk/AnotherTerm/commit/2d9f6b4a4a9a7f1996d7981aab1002ecf46573dc){:target="_blank"}.
 
 ### USB UART dongles support
 Due to an USB bug in Android itself, it's highly recommended not to use the USB UART

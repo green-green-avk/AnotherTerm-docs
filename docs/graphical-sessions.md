@@ -5,7 +5,7 @@ title: Graphical sessions
 
 ---
 
-***<hl>EXPERIMENTAL</hl>***
+***<hlt>EXPERIMENTAL</hlt>***
 
 Available in development versions only:
 * [MKIV\* releases](https://github.com/green-green-avk/AnotherTerm/releases){:target="_blank"}

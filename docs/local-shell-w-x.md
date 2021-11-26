@@ -1,7 +1,7 @@
 ---
 title: The&nbsp;"Linux under PRoot" feature and Android&nbsp;10
 ---
-*__<hl>DISCLAIMER:</hl>__ The information provided here is about changes in
+*__<hlt>DISCLAIMER:</hlt>__ The information provided here is about changes in
 [the approach](installing-linux-under-proot.html#main_content){:target="_blank"}
 of running THIRD-PARTY software.
 The Another Term copyright holder and contributors are NOT responsible

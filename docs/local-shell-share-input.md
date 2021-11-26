@@ -21,7 +21,7 @@ can be used.
 since a sessions started: they will expire otherwise.
 There are no other related time limitations in Android.
 
-For version <hl>MkIIIv42</hl> and later:
+For version <hlt>MkIIIv42</hlt> and later:
 
 ## Environment variables
 
