@@ -23,7 +23,7 @@
   <body>
 
     <header>
-      {% if site.feature_img %}<img src="{{ site.feature_img | relative_url }}" style="z-index:-1;position:absolute;top:0;right:0" />{% endif %}
+      {% if site.feature_img %}<img alt="" src="{{ site.feature_img | relative_url }}" style="z-index:-1;position:absolute;top:0;right:0" />{% endif %}
       <div class="container">
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
