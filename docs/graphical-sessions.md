@@ -55,7 +55,8 @@ only processes of the same Android application &amp; user are allowed to connect
 {:style="clear:both"}
 An example of the script set to start Xwayland inside PRoot:
 
-#### Scripts to be added into the PRooted environment{:.link#scripts}
+{:.link#scripts}
+#### Scripts to be added into the PRooted environment
 
 <https://github.com/green-green-avk/AnotherTerm-scripts/tree/master/Xwayland>{:target="_blank"}
 
