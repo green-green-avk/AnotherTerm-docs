@@ -55,105 +55,9 @@ only processes of the same Android application &amp; user are allowed to connect
 {:style="clear:both"}
 An example of the script set to start Xwayland inside PRoot:
 
-#### Scripts to be added into the PRooted environment
+#### Scripts to be added into the PRooted environment{:.link#scripts}
 
-`/root/wlstart-X`{:.link#script-wlstart-X}:
-```python
-#!/usr/bin/python3
-
-import socket
-import os
-import signal
-import subprocess
-import uuid
-
-wl_sock = "\0" + os.environ["APP_ID"] + ".wlterm"
-
-res_uuid = uuid.uuid4().hex
-res_auth = uuid.uuid4().hex
-
-def connect(addr):
- sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
- sock.connect(addr)
- return sock
-
-def onSignal(sig, fr):
- global proc
- if proc is not None:
-  proc.terminate()
- exit(0)
-
-sock = connect(wl_sock)
-
-proc = None
-
-for sig in (signal.SIGTERM, signal.SIGINT, signal.SIGQUIT, signal.SIGPIPE):
- signal.signal(sig, onSignal)
-
-os.environ["WAYLAND_SOCKET"] = str(sock.fileno())
-#os.environ["WAYLAND_DEBUG"] = "1"
-os.environ["XDG_RUNTIME_DIR"] = "/home/my_acct"
-os.environ["LD_PRELOAD"] = "/opt/shm/lib/libwrapdroid-shm-sysv.so"
-os.environ["LIBWRAPDROID_SOCKET_NAME"] = os.environ["APP_ID"] + ".reswrap." + res_uuid
-os.environ["LIBWRAPDROID_AUTH_KEY"] = res_auth
-
-dispFdOut, dispFd = os.pipe()
-ttyFd = os.open("/dev/tty", os.O_RDWR, 0o777)
-
-proc = subprocess.Popen(("Xwayland", "-ac", "-shm",
- "-displayfd", str(dispFd), "-noreset"),
- pass_fds=(sock.fileno(),dispFd), stdin=ttyFd, stdout=ttyFd, stderr=ttyFd)
-
-os.close(ttyFd)
-os.close(dispFd)
-sock.close()
-
-print(proc.pid, flush=True)
-print(res_uuid, flush=True)
-print(res_auth, flush=True)
-with os.fdopen(dispFdOut) as f:
- print(f.readline().strip(), flush=True)
-
-proc.wait()
-```
-{:.clipboard}
-
-{:style="clear:both"}
-`/home/my_acct/wlstart-WM`{:.link#script-wlstart-WM}:
-```sh
-#!/bin/bash
-
-read -r pid
-read -r RES_UUID
-read -r RES_AUTH
-read -r display
-export RES_UUID
-export RES_AUTH
-export DISPLAY=":$display"
-~/startwm </dev/tty >/dev/tty 2>&1
-echo "stopping X at PID $pid..."
-kill "$pid"
-```
-{:.clipboard}
-
-{:style="clear:both"}
-`/home/my_acct/startwm`{:.link#script-startwm}:
-```sh
-#!/bin/bash
-
-WM=startxfce4
-#WM=icewm
-
-export LIBWRAPDROID_SOCKET_NAME="$APP_ID.reswrap.$RES_UUID"
-export LIBWRAPDROID_AUTH_KEY="$RES_AUTH"
-/opt/shm/bin/libwrapdroid-server &
-WRAPDROID_PID=$!
-LD_PRELOAD=/opt/shm/lib/libwrapdroid-shm-sysv.so:/opt/shm/lib/libwrapdroid-shm-posix.so "$WM"
-
-killall -wq gpg-agent ssh-agent xscreensaver xiccd
-kill $WRAPDROID_PID
-```
-{:.clipboard}
+<https://github.com/green-green-avk/AnotherTerm-scripts/tree/master/Xwayland>
 
 {:style="clear:both"}
 #### The startup profile
@@ -164,7 +68,8 @@ kill $WRAPDROID_PID
 ```sh
 /system/bin/sh \
 "$DATA_DIR/proots/linuxcontainers-debian-buster/run" \
-0:0 ./wlstart-X | \
+0:0 ./wlstart-X \
+| \
 /system/bin/sh \
 "$DATA_DIR/proots/linuxcontainers-debian-buster/run" \
 '' ./wlstart-WM
