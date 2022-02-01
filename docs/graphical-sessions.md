@@ -57,7 +57,7 @@ An example of the script set to start Xwayland inside PRoot:
 
 #### Scripts to be added into the PRooted environment{:.link#scripts}
 
-<https://github.com/green-green-avk/AnotherTerm-scripts/tree/master/Xwayland>
+<https://github.com/green-green-avk/AnotherTerm-scripts/tree/master/Xwayland>{:target="_blank"}
 
 {:style="clear:both"}
 #### The startup profile
