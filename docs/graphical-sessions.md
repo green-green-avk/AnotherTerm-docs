@@ -52,6 +52,15 @@ UNIX socket name (Linux abstract namespace):
 <br/>**Note:** client UID check ID is enforced:
 only processes of the same Android application &amp; user are allowed to connect.
 
+In order to implement international symbols input and clipboard integration as long as **Xwayland** does not support appropriate Wayland interfaces,
+the decision to use a dedicated helper was made. (I'm not a fan of an additional **Xwayland** fork support.)
+
+The built-in helper protocol is accessible via pre-created special object with ID `2` (subject to change in future);
+it is silently removed on the first access to the **display** (ID `1`) object avoiding any interference with the Wayland protocol
+(at least in terms of **Xwayland** implementation).
+<br/><https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/protocol/wl_own_helper.java>{:target="_blank"}
+<br/>*More information is to be added...*
+
 {:style="clear:both"}
 An example of the script set to start Xwayland inside PRoot:
 
