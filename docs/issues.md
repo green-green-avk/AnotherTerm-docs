@@ -37,8 +37,9 @@ error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure
 ```
 
 Possible workarounds:
-1. Using of some compatible proxy.
-2. Manual download by your preferred browser.
+1. Installing new certs into the user-added CA store on an Android device ([Android&nbsp;6.0 and lower at the moment](https://developer.android.com/training/articles/security-config#CustomTrust)).
+2. Using of some compatible proxy.
+3. Manual download by your preferred browser.
 
 I'll possibly create some better solution later.
 
