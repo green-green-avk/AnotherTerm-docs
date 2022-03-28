@@ -6,11 +6,11 @@ Android has no means to determine the intent source
 and the automation software like **Tasker**
 do not usually provide any simple means to bind to a service
 (in which case an application credentials check is possible).
-So, a *"token"* field has been added to the favorite parameters
+So, the *"token"* field has been added to the favorite parameters
 to mitigate this situation. This field stores a unique ID
-that acts as a passphrase to start the session.
+that acts as a passphrase to start a session.
 
-The script is being executed inside a session
+A script is being executed inside the session
 is supposed to control the number of running session instances.
 
 Intent parameters to start a session:
