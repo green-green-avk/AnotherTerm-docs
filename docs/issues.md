@@ -37,9 +37,16 @@ error:14077410:SSL routines:SSL23_GET_SERVER_HELLO:sslv3 alert handshake failure
 ```
 
 Possible workarounds:
-1. Installing new certs into the user-added CA store on an Android device ([Android&nbsp;6.0 and lower at the moment](https://developer.android.com/training/articles/security-config#CustomTrust){:target="_blank"}).
-2. Using of some compatible proxy.
-3. Manual download by your preferred browser.
+
+1. Installing new certs into the user-added CA store on an Android device
+   ([Android&nbsp;6.0 and lower at the moment](https://developer.android.com/training/articles/security-config#CustomTrust){:target="_blank"}).
+
+2. Using [ready-to-use statically linked `wget` for Android](https://github.com/pelya/wget-android/tree/master/android){:target="_blank"}.
+   <br/>Details: <https://android.stackexchange.com/a/246596/373188>{:target="_blank"}
+
+3. Using of some compatible proxy.
+
+4. Manual download by your preferred browser.
 
 I'll possibly create some better solution later.
 
