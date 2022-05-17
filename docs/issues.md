@@ -43,6 +43,19 @@ Possible workarounds:
 
 I'll possibly create some better solution later.
 
+{:#android9-uvc}
+### Android&nbsp;9 and UVC (`USB_CLASS_VIDEO`) external USB cameras ([**libusb** helper feature](installing-libusb-for-nonrooted-android.html#main_content){:target="_blank"})
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+```
+
+is required to connect to any `USB_CLASS_VIDEO` device since Android&nbsp;9:
+<https://developer.android.com/reference/android/hardware/usb/UsbManager.html#requestPermission(android.hardware.usb.UsbDevice,%20android.app.PendingIntent)>{:target="_blank"}
+
+Also consider this Android&nbsp;10 bug: <https://issuetracker.google.com/issues/145082934>{:target="_blank"}
+
+I'm going to fix it in some way; probably by adding this permission request into <hlt>oldgood</hlt> and <hlt>redist</hlt> flavours.
+
 ### Touch screen mouse
 Not all Android deployments have the same touch event propagation logic and could improperly support
 [`android:windowEnableSplitTouch="true"`](https://developer.android.com/reference/android/R.attr.html#windowEnableSplitTouch){:target="_blank"}.
