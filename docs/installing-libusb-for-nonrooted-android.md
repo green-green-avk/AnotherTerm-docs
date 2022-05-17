@@ -21,5 +21,7 @@ Copy-paste snippet to download, build and install:
 ```
 {:.clipboard}
 
-**Note:** Don't forget that BusyBox is usually statically linked with libusb, so install `usbutils` package if you want to use `lsusb` etc.
+**Note&nbsp;1:** Don't forget that BusyBox is usually statically linked with libusb, so install `usbutils` package if you want to use `lsusb` etc.
 (in case of Alpine Linux at least).
+
+**Note&nbsp;2:** Please, be aware of [Android&nbsp;9+ and USB cameras](issues.html#android9-uvc){:target="_blank"} situation.
