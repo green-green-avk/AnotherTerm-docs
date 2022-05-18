@@ -98,7 +98,13 @@ Alas, UART port settings (*baud rate*, *data bits*, *stop bits*, *parity*, *flow
 using the Android Bluetooth stack.
 See <https://stackoverflow.com/a/23888958/13020093>{:target="_blank"} for the details.
 
-The workaround looks impossible.
+The workaround looks impossible???
+<br/>*Need to check
+[BluetoothDevice#createInsecureL2capChannel(int)](https://developer.android.com/reference/android/bluetooth/BluetoothDevice#createInsecureL2capChannel(int\)){:target="_blank"}
+and
+[BluetoothDevice#createL2capChannel(int)](https://developer.android.com/reference/android/bluetooth/BluetoothDevice#createL2capChannel(int\)){:target="_blank"}
+newly added in Android&nbsp;10 (API&nbsp;29)
+as a possible solution...*
 
 ### Hardware input devices
 Please, be aware, that key mapping of hardware input devices is provided by device vendors
