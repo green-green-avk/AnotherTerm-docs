@@ -61,7 +61,7 @@ is required to connect to any `USB_CLASS_VIDEO` device since Android&nbsp;9:
 
 Also consider this Android&nbsp;10 bug: <https://issuetracker.google.com/issues/145082934>{:target="_blank"}
 
-I'm going to fix it in some way; probably by adding this permission request into <hlt>oldgood</hlt> and <hlt>redist</hlt> flavours.
+**Fixed** in [<hlt>MkIIIv53</hlt> and <hlt>MkIV-dev20</hlt>](https://github.com/green-green-avk/AnotherTerm/releases){:target="_blank"} by adding this permission request into <hlt>oldgood</hlt> and <hlt>redist</hlt> flavors.
 
 ### Touch screen mouse
 Not all Android deployments have the same touch event propagation logic and could improperly support
