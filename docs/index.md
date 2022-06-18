@@ -12,6 +12,24 @@ Built-in SSH client has also been added.
 
 See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/README.md){:target="_blank"}.
 
+## Built-in screen keyboard gesture wheel
+
+```
+              Shift-Key
+              (usually)
+Alt-Shift-key     ⇑
+  (usually)   ⇖
+
+   Alt-Key  ⇐    Key    ⇒  Ctrl-Key
+  (usually)                (usually)
+
+                  ⇓
+                Cancel
+          (and a good place
+       to keep a finger down to
+      display available gestures)
+```
+
 ## Shell features
 
 * passing content between shell and Android applications — see [**termsh** commands list](local-shell-utility.html#main_content)
