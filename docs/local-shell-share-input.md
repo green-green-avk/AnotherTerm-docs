@@ -13,7 +13,7 @@ checkbox should be set in a session profile to make it visible.
 **Note&nbsp;1:** Any URIs passed to Another&nbsp;Term are accessible
 from all of its local shell sessions.
 However there is no way to enumerate them
-except cases of large texts sharing by value (see below) when
+except cases of large texts sharing by value (see [below](#large-content-caching-under-uri)) when
 [`termsh uri -l`](local-shell-utility.html#cmd_uri){:target="_blank"}
 can be used.
 
@@ -42,7 +42,7 @@ For version <hlt>MkIIIv42</hlt> and later:
 * `INPUT_HTML`{:.clipboard}[2|3|...][`_URI`{:.clipboard}] &#x2014;
   *`android.intent.extra.HTML_TEXT`*.
 
-**Note:** Suffix `_URI` is used
+**Note:**{:#large-content-caching-under-uri} Suffix `_URI` is used
 if input text is &gt;&nbsp;4096&nbsp;B and cached by Another&nbsp;Term under a content URI
 (see [`termsh uri`](local-shell-utility.html#cmd_uri){:target="_blank"}).
 
