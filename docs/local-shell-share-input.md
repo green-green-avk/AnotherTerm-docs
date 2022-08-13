@@ -10,7 +10,7 @@ from a session profile selected by user from an additional chooser dialog.
 **"Show in &#x00AB;share with&#x00BB; / &#x00AB;open in&#x00BB; chooser dialog"**
 checkbox should be set in a session profile to make it visible.
 
-**Note&nbsp;1:** Any URIs passed to Another&nbsp;Term are accessible
+**Note&nbsp;1:** Any URIs passed to **Another&nbsp;Term** are accessible
 from all of its local shell sessions.
 However there is no way to enumerate them
 except cases of large texts sharing by value (see [below](#large-content-caching-under-uri)) when
