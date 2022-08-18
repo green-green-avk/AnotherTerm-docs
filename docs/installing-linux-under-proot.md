@@ -39,10 +39,11 @@ Install script source: <https://github.com/green-green-avk/AnotherTerm-scripts/b
 
 Install script usage:
 ```
-sh ./install-linuxcontainers.sh [-a] [-d] <distro> <release> [<target_subdir_name>]
+sh ./install-linuxcontainers.sh [-a] [-d] [-e] [--] <distro> <release> [<target_subdir_name>]
 
   -a -- non-interactive mode
   -d -- do not use minitar and PRoot from a plugin if present
+  -e -- fail if no minitar or PRoot from a plugin are present
 
 Environment variables:
   REG_USER - user account name;
