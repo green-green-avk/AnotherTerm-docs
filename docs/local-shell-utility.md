@@ -429,6 +429,21 @@ wakelock {is-held|acquire [&lt;timeout&gt;]|release}
 with one millisecond granularity.</p>
 </dd><br/>
 
+<dt id="cmd_show-XWL-session"><pre>
+show-XWL-session &lt;UUID&gt;
+</pre></dt>
+<dd><p markdown="1">[***<hlt><hlt>MKIV-dev24</hlt> (Wayland) only</hlt>***](graphical-sessions.html#main_content){:target="_blank"}</p>
+<p>Show a running XWayland session terminal window.</p>
+<p><code>&lt;UUID&gt;</code> is the UUID previously passed as a Wayland helper UUID
+and can be passed as either a decimal
+or <code>0x</code>hexidecimal
+or <code>0</code>octal
+value.</p>
+<p markdown="1">
+[Example](https://github.com/green-green-avk/AnotherTerm-scripts/blob/11a531975a32d00e3177314cd8840c5188a218ca/Xwayland/user/startwm#L13){:target="_blank"}
+</p>
+</dd><br/>
+
 </dl>
 
 ## Environment variables
