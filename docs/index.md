@@ -15,19 +15,19 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 ## Built-in screen keyboard gesture wheel
 
 ```
-              Shift-Key
-              (usually)
-Alt-Shift-key     ⇑
+               Shift-Key
+               (usually)
+Alt-Shift-key      ⇑
   (usually)   ⇖
 
-   Alt-Key  ⇐    Key    ⇒  Ctrl-Key
-  (usually)                (usually)
+   Alt-Key  ⇐     Key     ⇒  Ctrl-Key
+  (usually)  (auto-repeat)   (usually)
 
-                  ⇓
-                Cancel
-          (and a good place
-       to keep a finger down to
-      display available gestures)
+                   ⇓
+                 Cancel
+           (and a good place
+        to keep a finger down to
+       display available gestures)
 ```
 
 ## Shell features
