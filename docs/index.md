@@ -40,7 +40,7 @@ Alt-Shift-key      ⇑
                  Cancel
            (and a good place
         to keep a finger down to
-       display available gestures)
+       observe available gestures)
 ```
 
 ## SSH features
