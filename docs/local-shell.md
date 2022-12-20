@@ -37,7 +37,7 @@ It has been solved by introducing `TERMSH_UID` environment variable to be set to
 
 ## Dedicated menu options
 
-<kbd>Send a Signal</kbd> --- If the terminal is in a mode, it does not intercept control bytes,
+<kbd>Send a Signal</kbd> --- If the terminal is in the raw mode, it does not intercept control bytes,
 this option helps to send a signal to the foreground process group.
 
 <kbd>Session Permissions</kbd> --- Acts exactly as named: provides a way to view / change them.
