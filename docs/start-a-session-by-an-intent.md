@@ -3,7 +3,7 @@ title: Start a session by an intent
 ---
 Android has no means to determine the intent source
 (the Android own permission model is not flexible enough to pair arbitrary applications)
-and the automation software like **Tasker**
+and the automation software like **Automate**
 do not usually provide any simple means to bind to a service
 (in which case an application credentials check is possible).
 So, the *"token"* field has been added to the favorite parameters
@@ -15,7 +15,7 @@ is supposed to control the number of running session instances.
 
 Intent parameters to start a session:
 
-**Intent target:** *service*
+**Intent target:** *service (start in foreground)*
 
 **Package (application ID):**
 `green_green_avk.anotherterm`{:.clipboard}[.*variant*]
@@ -35,7 +35,7 @@ with the value (of *String* type) from the *"token"* field of the desired favori
 
 All *String* **extras** will be passed to the environment variables named
 with the **extras** names converted as
-`.toUpperCase(Locale.ROOT).replaceAll("[^A-Z0-9_]", "_")`
+`String.toUpperCase(Locale.ROOT).replaceAll("[^A-Z0-9_]", "_")`
 and prefixed by `INPUT_`. `…FAV_TOKEN` value will be hidden.
 
 ## Usage examples
