@@ -8,7 +8,7 @@ and the "execute" field in the favorite editor contains proper `TERMSH` variable
 **Note:** Please, don't forget to define [`TERMSH_UID`](#TERMSH_UID) environment variable (see description below) in case,
 you are using any chrooted environment where an emulated user ID is not the same as the real one.
 
-For version <hlt>MkIIIv27</hlt> and later:
+For version <hlt>MkIIIv67</hlt> and later:
 
 {:style="clear:both"}
 ## Location
@@ -50,6 +50,15 @@ Display notification, <i>stdin</i> will be used if no message argument provided.
 <li><code>-i|--id &lt;id&gt;</code> &#x2014; notification id.</li>
 <li><code>-r|--remove</code> &#x2014; remove notification by id.</li>
 </ul>
+</dd><br/>
+
+<dt id="cmd_clipboard-copy"><pre>
+clipboard-copy [&lt;string&gt;]
+</pre></dt>
+<dd>
+Copy to clipboard (only when the user is interacting with the current session UI).<br/>
+If no <code>&lt;string&gt;</code> is provided, the <i>stdin</i> is used.
+<p><em>The <code>clipboard-copy</code> permission must be granted.</em></p>
 </dd><br/>
 
 <dt id="cmd_uri"><pre>
@@ -375,7 +384,7 @@ request-permission &lt;name&gt; &lt;message&gt;
 </pre></dt>
 <dd>Ask the user by a dialog.
 <ul type="none">
-<li><code>&lt;name&gt;</code> &#x2014; can be: <code>favmgmt</code>, <code>pluginexec</code>.</li>
+<li><code>&lt;name&gt;</code> &#x2014; can be: <code>favmgmt</code>, <code>pluginexec</code>, <code>clipboard-copy</code>.</li>
 <li><code>&lt;message&gt;</code> &#x2014; to show.</li>
 </ul>
 <p>Return codes:</p>
