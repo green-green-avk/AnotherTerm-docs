@@ -34,7 +34,7 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * Double height / width letters.
 
-* [Sixel graphics](https://en.wikipedia.org/wiki/Sixel) support.
+* [Sixel graphics](https://en.wikipedia.org/wiki/Sixel){:target="_blank"} support.
 
 
 ## SSH features
