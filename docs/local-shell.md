@@ -1,6 +1,7 @@
 ---
 title: Local shell
 ---
+
 ## Environment
 
 Android has a Linux kernel and permits applications to execute arbitrary binaries with some restrictions comparing to a usual Linux box.
@@ -18,6 +19,7 @@ If you want to run some daemon, keep open at least one terminal window in order 
 
 * [Android's shell and utilities](https://android.googlesource.com/platform/system/core/+/master/shell_and_utilities/README.md){:target="_blank"}.
 
+
 ## About sandboxes
 
 **PRoot** is able to isolate a rootfs environment on some level with relatively fine access permissions granularity.
@@ -34,6 +36,7 @@ because **termsh** blocks exectution and awaits it to show any dialog or activit
 
 Another concern was about checking the server side credentials from inside of a PRooted environment to filter out possible spoofing.
 It has been solved by introducing `TERMSH_UID` environment variable to be set to the real UID.
+
 
 ## Dedicated menu options
 

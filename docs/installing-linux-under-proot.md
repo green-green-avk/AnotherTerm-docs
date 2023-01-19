@@ -1,5 +1,5 @@
 ---
-title: Installing Linux under PRoot
+title: Installing Linux under **PRoot**
 head: installing-linux-under-proot.head.html
 ---
 *__<hlt>DISCLAIMER:</hlt>__ The information provided here is about running THIRD-PARTY software.

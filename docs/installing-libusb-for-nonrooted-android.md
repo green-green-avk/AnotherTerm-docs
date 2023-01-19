@@ -2,7 +2,7 @@
 title: Installing **libusb** for nonrooted Android
 ---
 This approach could give you a way to, for example, flashing and debugging of MCUs right from your regular phone without rooting it.
-OpenOCD seems working pretty well with Olimex ARM-USB-TINY at least.
+**OpenOCD** seems working pretty well with **Olimex ARM-USB-TINY** at least.
 
 In contrast with Termux, there is no special command line utility for it: the helper service is already running inside Another Term.
 Device enumeration and hot plug/unplug events are supported.
@@ -21,7 +21,7 @@ Copy-paste snippet to download, build and install:
 ```
 {:.clipboard}
 
-**Note&nbsp;1:** Don't forget that BusyBox is usually statically linked with libusb, so install `usbutils` package if you want to use `lsusb` etc.
+**Note&nbsp;1:** Don't forget that **BusyBox** is usually statically linked with libusb, so install `usbutils` package if you want to use `lsusb` etc.
 (in case of Alpine Linux at least).
 
 **Note&nbsp;2:** Please, be aware of [Android&nbsp;9+ and USB cameras](issues.html#android9-uvc){:target="_blank"} situation.

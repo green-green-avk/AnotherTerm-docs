@@ -17,7 +17,7 @@
 - title: Plugins
   url: /local-shell-plugins.html
   level: 1
-- title: Installing Linux under PRoot
+- title: Installing Linux under **PRoot**
   url: /installing-linux-under-proot.html
   level: 1
 - title: Installing shared memory APIs emulation for nonrooted Android

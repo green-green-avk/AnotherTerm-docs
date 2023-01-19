@@ -1,6 +1,7 @@
 ---
 title: Another Term
 ---
+
 ## What it is
 
 The successor of [Another Term Lite](https://github.com/green-green-avk/AnotherTermLite){:target="_blank"}.
@@ -12,9 +13,10 @@ Built-in SSH client has also been added.
 
 See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/README.md){:target="_blank"}.
 
+
 ## Terminal features
 
-* Sane built-in screen keyboard.
+* Sane built-in screen keyboard (with a key modifiers wheel).
 
 * Customizable key mapping profiles aka *"where is my <kbd>Backspace</kbd>?"* but much wider
   (**Alpine**, for example, has unusual key mappings for <kbd>Shift</kbd>-<kbd>F*</kbd>).
@@ -23,27 +25,18 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * Mouse support and screen mouse overlay for handy multitouch input.
 
-* VT52 mode support (like XTerm) because why not?
+* VT52 mode support (like **XTerm**) because why not?
 
-## Built-in screen keyboard gesture wheel
+### To be added in future
 
-```
-               Shift-Key
-               (usually)
-Alt-Shift-key      ⇑
-  (usually)   ⇖
+* Sixel graphics support.
 
-   Alt-Key  ⇐     Key     ⇒  Ctrl-Key
-  (usually)  (auto-repeat)   (usually)
-
-                   ⇓
-                 Cancel
-           (and a good place
-        to keep a finger down to
-       observe available gestures)
-```
 
 ## SSH features
+
+* Allowed encryption algorithms and their priority configuration on per session profile basis.
+
+* Encryption algorithms negotiation process and its result can be seen under the session <kbd>log</kbd> button.
 
 * Client certificate authentication.
 
@@ -51,12 +44,19 @@ Alt-Shift-key      ⇑
 
 * Additional shell channels can be opened in a live session.
 
+### To be added in future
+
+* SSH agent forwarding protocol support (rather sooner).
+
+* Kerberos 5 authentication (rather later).
+
+
 ## Local shell features
 
 * Passing content between shell and Android applications — see [**termsh** commands list](local-shell-utility.html#main_content)
   and [content sharing with Another Term](local-shell-share-input.html#main_content).
 
-* Implemented a bit better than Termux:
+* Implemented a bit better than **Termux**:
   * passing descriptors via `SCM_RIGHTS` ancillary messages instead of copying data;
   * credentials checking to prevent possible spoofing attacks;
   * proper chrooted environments support by [**termsh**](local-shell-utility.html#main_content)
@@ -67,9 +67,9 @@ Alt-Shift-key      ⇑
 
 * [Shell plugins](local-shell-plugins.html#main_content) in separate APKs with dev API and signature checking.
 
-* It's supposed to use PRoot with existing Linux repositories — [Installing Linux under PRoot](installing-linux-under-proot.html#main_content).
+* It's supposed to use **PRoot** with existing Linux repositories — [Installing Linux under PRoot](installing-linux-under-proot.html#main_content).
 
-* [libusb (with device enumeration and hot plug/unplug events) support on nonrooted Android](installing-libusb-for-nonrooted-android.html#main_content).
+* [**libusb** (with device enumeration and hot plug/unplug events) support on nonrooted Android](installing-libusb-for-nonrooted-android.html#main_content).
 
 * Access USB and Bluetooth serial dongles right from the shell:
   ```sh
