@@ -8,7 +8,7 @@ The successor of [Another Term Lite](https://github.com/green-green-avk/AnotherT
 
 Initially it was decided to fill the gap in USB serial dongle terminals
 that provide features allow comfortable work without a hardware keyboard.
-However as time passed, it has grown into something closer to [Termux](https://termux.com/){:target="_blank"}.
+However as time passed, it has grown into something closer to [**Termux**](https://termux.com/){:target="_blank"}.
 Built-in SSH client has also been added.
 
 See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/README.md){:target="_blank"}.
@@ -23,13 +23,18 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * Rich select and search features.
 
+* Customizable color mapping profiles.
+
 * Mouse support and screen mouse overlay for handy multitouch input.
 
 * VT52 mode support (like **XTerm**) because why not?
 
+{:#terminal-features-todo}
 ### To be added in future
 
-* Sixel graphics support.
+* Double height / width letters.
+
+* [Sixel graphics](https://en.wikipedia.org/wiki/Sixel) support.
 
 
 ## SSH features
@@ -44,11 +49,12 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * Additional shell channels can be opened in a live session.
 
+{:#ssh-features-todo}
 ### To be added in future
 
-* SSH agent forwarding protocol support (rather sooner).
+* SSH&nbsp;agent forwarding protocol support (rather sooner).
 
-* Kerberos 5 authentication (rather later).
+* Kerberos&nbsp;5 authentication (rather later).
 
 
 ## Local shell features
