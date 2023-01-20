@@ -1,6 +1,7 @@
 ---
 title: Installing **System&nbsp;V shmem ashmem** wrapper for nonrooted Android
 ---
+
 Android does not provide the **System&nbsp;V shmem** calls
 due to possibility of orphaned memory allocations accumulation.
 A better organised **ashmem** mechanism is provided instead.
@@ -15,7 +16,7 @@ This wrapper library provides **shmem** calls emulation for dynamically linked s
 </span></hlt>
 
 It's supposed to use a PRooted environment to install it
-(see [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"} first).
+(see [Installing Linux under **PRoot**](installing-linux-under-proot.html#main_content){:target="_blank"} first).
 
 Script to build it right on your phone (under PRooted Linux and with `bash` installed):
 
