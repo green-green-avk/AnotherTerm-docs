@@ -1,6 +1,7 @@
 ---
 title: Installing **libusb** for nonrooted Android
 ---
+
 This approach could give you a way to, for example, flashing and debugging of MCUs right from your regular phone without rooting it.
 **OpenOCD** seems working pretty well with **Olimex ARM-USB-TINY** at least.
 
@@ -8,7 +9,7 @@ In contrast with Termux, there is no special command line utility for it: the he
 Device enumeration and hot plug/unplug events are supported.
 
 It's supposed to use a PRooted environment to install this libusb version
-(see [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"} first).
+(see [Installing Linux under **PRoot**](installing-linux-under-proot.html#main_content){:target="_blank"} first).
 
 Script to build it right on your phone (under PRooted Linux and with `bash` installed):
 
