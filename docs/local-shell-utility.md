@@ -2,6 +2,7 @@
 layout: doc-xhtml
 title: '**termsh**'
 ---
+
 It resides in the native libraries directory in order to prevent accidental deletion
 and the "execute" field in the favorite editor contains proper `TERMSH` variable definition by default.
 
@@ -10,6 +11,7 @@ you are using any chrooted environment where an emulated user ID is not the same
 
 For version <hlt>MkIIIv67</hlt> and later:
 
+
 {:style="clear:both"}
 ## Location
 
@@ -17,6 +19,7 @@ For version <hlt>MkIIIv67</hlt> and later:
 TERMSH="$LIB_DIR/libtermsh.so"
 ```
 {:.clipboard}
+
 
 ## Usage
 
@@ -454,6 +457,7 @@ value.</p>
 </dd><br/>
 
 </dl>
+
 
 ## Environment variables
 

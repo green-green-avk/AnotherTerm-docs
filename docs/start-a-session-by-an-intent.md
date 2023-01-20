@@ -1,6 +1,7 @@
 ---
 title: Start a session by an intent
 ---
+
 Android has no means to determine the intent source
 (the Android own permission model is not flexible enough to pair arbitrary applications)
 and the automation software like **Automate**
@@ -37,6 +38,7 @@ All *String* **extras** will be passed to the environment variables named
 with the **extras** names converted as
 `String.toUpperCase(Locale.ROOT).replaceAll("[^A-Z0-9_]", "_")`
 and prefixed by `INPUT_`. `…FAV_TOKEN` value will be hidden.
+
 
 ## Usage examples
 

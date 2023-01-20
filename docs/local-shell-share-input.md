@@ -1,6 +1,7 @@
 ---
 title: Content sharing, viewing and editing with Another&nbsp;Term
 ---
+
 In order to process an *`android.intent.action.SEND`*,
 *`android.intent.action.SEND_MULTIPLE`*,
 *`android.intent.action.VIEW`* or
@@ -14,6 +15,7 @@ checkbox should be set in a session profile to make it visible.
 from all of its local shell sessions. The access control is to be implemented...
 
 For version <hlt>MkIIIv42</hlt> and later:
+
 
 ## Environment variables
 

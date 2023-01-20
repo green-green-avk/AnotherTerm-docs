@@ -10,6 +10,8 @@ This wrapper library provides **shmem** calls emulation for dynamically linked s
 *__Warning:__ It will not work on Android&nbsp;10 with Google Play and `.redist` __Another Term__ flavors.
 <br/>See <https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory>{:target="_blank"}{:.long-url}*
 
+***<hlt>DEPRECATED</hlt>***
+
 <hlt><span markdown="1">
 *__Better solution:__
 [Installing shared memory APIs emulation for nonrooted Android](installing-linux-apis-emulation-for-nonrooted-android.html#main_content){:target="_blank"}.*

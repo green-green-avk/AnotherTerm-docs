@@ -2,10 +2,12 @@
 title: Installing Linux under **PRoot**
 head: installing-linux-under-proot.head.html
 ---
+
 *__<hlt>DISCLAIMER:</hlt>__ The information provided here is about running THIRD-PARTY software.
 The Another Term copyright holder and contributors are NOT responsible
 for any results of use or misuse of it.
 <br/>__Use it on your own risk!__*
+
 
 ## Preface
 
@@ -23,9 +25,11 @@ that could be installed just by copy-paste of a short quick install snippet (see
 (there is no template just write as you wish) if something doesn't work as expected.
 Things are changing and new 3rd-party distributions could trigger some old god-forsaken bugs (mostly in **PRoot**).
 
+
 ## Android&nbsp;10 note
 
 See [here](local-shell-w-x.html#main_content){:target="_blank"}.
+
 
 ## Making it quick: linuxcontainers.org to the rescue
 
@@ -122,6 +126,7 @@ or:
 
 [[Alpine key map settings](termkeymap:/v2?4489=%1B%5B15%3B2~&448b=%1B%5B18%3B2~&4485=%1BO2P&488=%1BO2S&48b=%1B%5B18%3B2~&48a=%1B%5B17%3B2~&487=%1BO2R&4487=%1BO2R&485=%1BO2P&489=%1B%5B15%3B2~&486=%1BO2Q&448a=%1B%5B17%3B2~&4486=%1BO2Q&4488=%1BO2S&name=Alpine)]
 (for its specific mapping of <kbd>Shift</kbd>-<kbd>F*</kbd>)
+
 
 ## Other prebuilt Linux rootfses list
 

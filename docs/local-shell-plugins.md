@@ -1,22 +1,28 @@
 ---
 title: Local shell plugins
 ---
+
 They resembles the **Termux** ones but with an access control and an ability to add them by creating new APKs:
 * without recompiling the existing common one;
 * with an arbitrary application signature.
 
+
 ## Plugins list
+
 * <https://github.com/green-green-avk/AnotherTermShellPlugin-BatteryInfo>{:target="_blank"}
 * <https://github.com/green-green-avk/AnotherTermShellPlugin-Location>{:target="_blank"}
 * <https://github.com/green-green-avk/AnotherTermShellPlugin-Android10Essentials>{:target="_blank"}
 
+
 ## API
+
 For creating new plugins or other than **Another Term** clients to use existing plugins with.
 
 * <https://github.com/green-green-avk/AnotherTermShellPluginUtils>{:target="_blank"} --- basic API.
 * <https://github.com/green-green-avk/AnotherTermShellPluginUtils-Perms>{:target="_blank"} --- access permissions management library.
 * <https://github.com/green-green-avk/AnotherTermShellPluginUtils-Side-Application>{:target="_blank"} --- Android&nbsp;11 queries: application side.
 * <https://github.com/green-green-avk/AnotherTermShellPluginUtils-Side-Plugin>{:target="_blank"} --- Android&nbsp;11 queries: plugin side.
+
 
 {:style="clear:both"}
 ## ACL UI

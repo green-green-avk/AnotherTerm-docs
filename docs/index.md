@@ -29,8 +29,8 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * VT52 mode support (like **XTerm**) because why not?
 
-{:#terminal-features-todo}
 ### To be added in future
+{:#terminal-features-todo}
 
 * Double height / width letters.
 
@@ -49,8 +49,8 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * Additional shell channels can be opened in a live session.
 
-{:#ssh-features-todo}
 ### To be added in future
+{:#ssh-features-todo}
 
 * SSH&nbsp;agent forwarding protocol support (rather sooner).
 

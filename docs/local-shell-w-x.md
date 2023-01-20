@@ -1,12 +1,14 @@
 ---
 title: The&nbsp;"Linux under PRoot" feature and Android&nbsp;10
 ---
+
 *__<hlt>DISCLAIMER:</hlt>__ The information provided here is about changes in
 [the approach](installing-linux-under-proot.html#main_content){:target="_blank"}
 of running THIRD-PARTY software.
 The Another Term copyright holder and contributors are NOT responsible
 for any results of use or misuse of it.
 <br/>__Use it on your own risk!__*
+
 
 ## Facts
 
@@ -17,6 +19,7 @@ since November&#xA0;1&#xA0;2020.
 2. Any application targets API >= 29 cannot `execve()` any binaries
 from file tree locations writable by it on Android&#xA0;10 and higher.
 This new behavior interferes with the "Linux under PRoot" feature.
+
 
 ## Solutions
 
@@ -36,6 +39,7 @@ and thus keep the "Linux under PRoot" feature in a working state.
 (**Another Term** is a multi-purpose tool that's why
 it's better to avoid inflating its size with things that can never be used
 or substituted by users' own implementations.)
+
 
 ## Using **Another Term Shell Plugin - Android&#xA0;10 Essentials**
 {:#plugin}
@@ -59,6 +63,7 @@ done
 ```
 {:.clipboard}
 and manually prepending the "Exectute" field value of each related favorite by `sh `.
+
 
 ## Related Issues
 
