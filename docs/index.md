@@ -73,7 +73,7 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 
 * [Shell plugins](local-shell-plugins.html#main_content) in separate APKs with dev API and signature checking.
 
-* It's supposed to use **PRoot** with existing Linux repositories — [Installing Linux under PRoot](installing-linux-under-proot.html#main_content).
+* It's supposed to use **PRoot** with existing Linux repositories — [Installing Linux under **PRoot**](installing-linux-under-proot.html#main_content).
 
 * [**libusb** (with device enumeration and hot plug/unplug events) support on nonrooted Android](installing-libusb-for-nonrooted-android.html#main_content).
 
