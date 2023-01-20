@@ -1,13 +1,14 @@
 ---
 title: Installing shared memory APIs emulation for nonrooted Android
 ---
+
 Android does not provide neither the **System&nbsp;V** nor **Posix** shared memory kernel calls
 due to possibility of orphaned memory allocations accumulation.
 This wrapper library provides generic Linux **shmem** calls emulation for dynamically linked software.
 <br/>[&lt;&lt;Details...&gt;&gt;](https://github.com/green-green-avk/libwrapdroid#readme){:target="_blank"}
 
 It's supposed to use a PRooted environment to install it
-(see [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"} first).
+(see [Installing Linux under **PRoot**](installing-linux-under-proot.html#main_content){:target="_blank"} first).
 
 Script to build it right on your phone (under PRooted Linux and with `bash` installed):
 
