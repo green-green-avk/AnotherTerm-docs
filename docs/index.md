@@ -52,9 +52,19 @@ See [README.md](https://github.com/green-green-avk/AnotherTerm/blob/master/READM
 ### To be added in future
 {:#ssh-features-todo}
 
-* SSH&nbsp;agent forwarding protocol support (rather sooner).
+* Proxy support.
+  <br/><kbd>rather sooner</kbd>
 
-* Kerberos&nbsp;5 authentication (rather later).
+* Dynamic local port forwarding (SOCKS4&amp;5),
+  see [`ssh -D`](https://man.openbsd.org/ssh#D){:style="white-space:nowrap"}{:target="_blank"}.
+  <br/>*I see no reason to implement the remote one.*
+  <br/><kbd>rather sooner</kbd>
+
+* SSH&nbsp;agent forwarding protocol support.
+  <br/><kbd>rather sooner</kbd>
+
+* Kerberos&nbsp;5 authentication.
+  <br/><kbd>rather later</kbd>
 
 
 ## Local shell features
