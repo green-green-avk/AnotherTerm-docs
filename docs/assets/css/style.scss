@@ -126,8 +126,6 @@ option {
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;
-	border-radius: 0.5em;
-	background: #2222 center url('../images/shield-bg.svg');
 }
 
 .link-shield:hover {
@@ -139,6 +137,11 @@ option {
 	background-color: #A3AE67;
 	box-shadow: 0 0 1em #A3AE67;
 	transition: none;
+}
+
+.hexes-bg img {
+	border-radius: 0.5em;
+	background: #2222 center url('../images/shield-bg.svg');
 }
 
 *:not(section):target {

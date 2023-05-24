@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+ width="auto" height="4em"
+ viewBox="0 0 80 80">
+ <style>
+  .line {
+   stroke-width: 1;
+   stroke-opacity: 1;
+   stroke-linejoin: round;
+  }
+  .thin {
+   stroke-width: .5;
+  }
+  .thick {
+   stroke-width: 2;
+  }
+  .bg {
+   fill: black;
+   fill-opacity: 1;
+  }
+  .border {
+   stroke: white;
+   stroke-width: 1;
+   stroke-opacity: 1;
+   stroke-linejoin: round;
+  }
+ </style>
+ <defs>
+  <mask id="cup">
+   <rect fill="white" width="80" height="80"/>
+   <path class="line" stroke="black" fill="none" d="M8,24a32,8,0,0,1,64,0a32,8,180,0,1,-64,0"/>
+   <path class="line" stroke="black" fill="none" d="M56,64a16,4,0,0,1,-32,0"/>
+   <path class="line" stroke="black" fill="none" d="M72,28q0,16,-10,24t-6,10"/>
+   <path class="line" stroke="black" fill="none" d="M52,36c2,-2,6,-2,8,-2s6,4,0,12s-10,8,-10,12c0,2,-4,2,-4,0c0,-3,0,-3,4,-7"/>
+   <path class="line thin" stroke="black" fill="none" d="M18,28a32,8,0,0,1,44,0"/>
+  </mask>
+ </defs>
+ <rect fill="white" fill-opacity=".25"
+  x="1" y="1" width="78" height="78" rx="10" ry="10"/>
+ <rect class="border bg thick" mask="url(#cup)"
+  x="1" y="1" width="78" height="78" rx="10" ry="10"/>
+</svg>
