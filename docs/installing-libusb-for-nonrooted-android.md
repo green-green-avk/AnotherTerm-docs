@@ -13,12 +13,12 @@ It's supposed to use a PRooted environment to install this libusb version
 
 Script to build it right on your phone (under PRooted Linux and with `bash` installed):
 
-* [install-patched-libusb-1.0.23.sh - for Debian, Alpine, CentOS and supposedly Ubuntu](https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/install-patched-libusb-1.0.23.sh){:target="_blank"}
+* [install-patched-libusb-1.0.26.sh - for Debian, Alpine, CentOS and supposedly Ubuntu](https://github.com/green-green-avk/AnotherTerm-scripts/blob/master/install-patched-libusb-1.0.26.sh){:target="_blank"}
 
 {:style="clear:both"}
 Copy-paste snippet to download, build and install:
 ```sh
-( S=install-patched-libusb-1.0.23.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S )
+( S=install-patched-libusb-1.0.26.sh ; "$TERMSH" copy -f -fu "https://raw.githubusercontent.com/green-green-avk/AnotherTerm-scripts/master/$S" -tp . && chmod 755 $S && ./$S )
 ```
 {:.clipboard}
 
