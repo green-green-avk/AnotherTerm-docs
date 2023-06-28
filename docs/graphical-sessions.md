@@ -105,3 +105,8 @@ The only supported surface roles:
 * `cursor` (`wl_pointer`).
 
 No translation / rotation of buffers.
+
+
+### Bugs and issues
+
+* <https://github.com/green-green-avk/AnotherTerm/issues/41>{:target="_blank"}
