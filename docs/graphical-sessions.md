@@ -109,4 +109,4 @@ No translation / rotation of buffers.
 
 ### Bugs and issues
 
-* <https://github.com/green-green-avk/AnotherTerm/issues/41>{:target="_blank"}
+* <https://gitlab.freedesktop.org/xorg/xserver/-/issues/1560>{:target="_blank"}
