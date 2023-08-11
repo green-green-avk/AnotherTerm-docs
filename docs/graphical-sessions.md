@@ -8,8 +8,8 @@ title: Graphical sessions
 ***<hlt>EXPERIMENTAL</hlt>***
 
 Available in development versions only:
-* [MKIV\* releases](https://github.com/green-green-avk/AnotherTerm/releases){:target="_blank"}
-* [Wayland branch](https://github.com/green-green-avk/AnotherTerm/tree/Wayland){:target="_blank"}
+* [<hlt>MkIV*</hlt>](https://github.com/green-green-avk/AnotherTerm/releases){:target="_blank"} releases
+* [<hlt>Wayland</hlt>](https://github.com/green-green-avk/AnotherTerm/tree/Wayland){:target="_blank"} branch
 
 ---
 
