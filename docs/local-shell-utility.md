@@ -444,7 +444,7 @@ with one millisecond granularity.</p>
 <dt id="cmd_show-XWL-session"><pre>
 show-XWL-session &lt;UUID&gt;
 </pre></dt>
-<dd><p markdown="1">[***<hlt><hlt>MKIV-dev24</hlt> (Wayland) only</hlt>***](graphical-sessions.html#main_content){:target="_blank"}</p>
+<dd><p markdown="1">[***<hlt><hlt>MkIV-dev24</hlt> and later (Wayland only)</hlt>***](graphical-sessions.html#main_content){:target="_blank"}</p>
 <p>Show a running XWayland session terminal window.</p>
 <p><code>&lt;UUID&gt;</code> is the UUID previously passed as a Wayland helper UUID
 and can be passed as either a decimal
