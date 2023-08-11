@@ -14,7 +14,7 @@ Available in development versions only:
 ---
 
 The main problems with X&nbsp;applications on Android are low performance
-and lack of good screen input methods.
+and lack of good touch screen input methods.
 
 Current solution addresses both of them.
 
