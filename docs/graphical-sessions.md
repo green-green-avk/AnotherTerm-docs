@@ -41,11 +41,12 @@ due to its unusual DPI ratio. Just tune up your widget frameworks / applications
 
 ### How to use
 
-See
-[Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"}
-and
-[Installing shared memory APIs emulation for nonrooted Android](installing-linux-apis-emulation-for-nonrooted-android.html#main_content){:target="_blank"}
-before.
+#### Prerequisites
+
+* [Installing Linux under PRoot](installing-linux-under-proot.html#main_content){:target="_blank"}
+* [Installing shared memory APIs emulation for nonrooted Android](installing-linux-apis-emulation-for-nonrooted-android.html#main_content){:target="_blank"}
+
+#### API
 
 UNIX socket name (Linux abstract namespace):
 <br/>`green_green_avk.anotherterm`{:.clipboard}[.*variant*]`.wlterm`{:.clipboard}
@@ -58,7 +59,7 @@ the decision to use a dedicated helper was made. (I'm not a fan of an additional
 The built-in helper protocol is accessible via pre-created special object with ID `2` (subject to change in future);
 it is silently removed on the first access to the **display** (ID `1`) object avoiding any interference with the Wayland protocol
 (at least in terms of **Xwayland** implementation).
-<br/><https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/protocol/wl_own_helper.java>{:target="_blank"}
+<br/>See <https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/protocol/wl_own_helper.java>{:target="_blank"}
 <br/>*More information is to be added...*
 
 {:style="clear:both"}
