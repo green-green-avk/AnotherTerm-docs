@@ -102,10 +102,10 @@ Only `wl_shm` interface is supported at the moment
 with possible future support of `zwp_linux_dmabuf_v1` interface / **libmesa**.
 
 The only supported surface roles:
-* `toplevel` (`wl_shell_surface`);
+* `toplevel` (`wl_shell` / `wl_shell_surface` and `xdg_wm_base` / `xdg_surface` / `xdg_toplevel`);
 * `cursor` (`wl_pointer`).
 
-No translation / rotation of buffers.
+See <https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/WlTermServer.java>{:target="_blank"} for details.
 
 
 ### Bugs and issues
