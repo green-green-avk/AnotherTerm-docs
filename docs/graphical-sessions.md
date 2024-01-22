@@ -59,7 +59,7 @@ the decision to use a dedicated helper was made. (I'm not a fan of an additional
 The built-in helper protocol is accessible via pre-created special object with ID `2` (subject to change in future);
 it is silently removed on the first access to the **display** (ID `1`) object avoiding any interference with the Wayland protocol
 (at least in terms of **Xwayland** implementation).
-<br/>See <https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/protocol/wl_own_helper.java>{:target="_blank"}
+<br/>See <https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/protocol/wl_own_helper.java>{:target="_blank"}{:.long-url}
 <br/>*More information is to be added...*
 
 {:style="clear:both"}
@@ -68,7 +68,7 @@ An example of the script set to start Xwayland inside PRoot:
 {:.link#scripts}
 #### Scripts to be added into the PRooted environment
 
-<https://github.com/green-green-avk/AnotherTerm-scripts/tree/master/Xwayland>{:target="_blank"}
+<https://github.com/green-green-avk/AnotherTerm-scripts/tree/master/Xwayland>{:target="_blank"}{:.long-url}
 
 {:style="clear:both"}
 #### The startup profile
@@ -105,9 +105,9 @@ The only supported surface roles:
 * `toplevel` (`wl_shell` / `wl_shell_surface` and `xdg_wm_base` / `xdg_surface` / `xdg_toplevel`);
 * `cursor` (`wl_pointer`).
 
-See <https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/WlTermServer.java>{:target="_blank"} for details.
+See <https://github.com/green-green-avk/AnotherTerm/blob/Wayland/app/src/main/java/green_green_avk/anotherterm/wlterm/WlTermServer.java>{:target="_blank"}{:.long-url} for details.
 
 
 ### Bugs and issues
 
-* <https://gitlab.freedesktop.org/xorg/xserver/-/issues/1560>{:target="_blank"}
+* <https://gitlab.freedesktop.org/xorg/xserver/-/issues/1560>{:target="_blank"}{:.long-url}
