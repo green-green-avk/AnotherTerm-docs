@@ -105,7 +105,7 @@ rm -rf "$DATA_DIR/proots/<target_subdir_name>"
 5. PROFIT
 
 **Note:** Very old Androids can have
-[an issue with downloading from **GitHub** by **termsh**](issues.html#termsh-ssl-handshake-error-on-very-old-androids).
+[an issue with downloading from **GitHub** by **termsh**](issues.html#termsh-ssl-handshake-error-on-very-old-androids){:target="_blank"}.
 
 Copy-paste snippets for download and install:
 
