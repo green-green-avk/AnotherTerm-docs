@@ -59,9 +59,10 @@ Display notification, <i>stdin</i> will be used if no message argument provided.
 clipboard-copy [&lt;string&gt;]
 </pre></dt>
 <dd>
-Copy to clipboard (only when the user is interacting with the current session UI).<br/>
-If no <code>&lt;string&gt;</code> is provided, the <i>stdin</i> is used.
-<p><em>The <code>clipboard-copy</code> permission must be granted.</em></p>
+Copy to clipboard (only when the user is interacting with the current session UI).
+<br/>If no <code>&lt;string&gt;</code> is provided, the <i>stdin</i> is used.
+<br/>It always uses <code>text/plain</code> mime type and presumes <code>UTF-8</code> input encoding.
+<p><em>The <code>clipboard-copy</code> permission must be granted. Exit code <code>1</code> will be returned otherwise.</em></p>
 </dd><br/>
 
 <dt id="cmd_uri"><pre>
